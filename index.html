@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      ZooBank Mockup 2
+    </title>
+    <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />    
+    <!--[if IE]>
+        <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <![endif]-->
+  </head>
+  <body>
+    <header id="header">
+      <div class="container">
+        <h1 class="logo">ZooBank</h1>
+        <p class="introduction"><span class="tagline">ZooBank is the official registry of zoological nomenclature.</span> It provides a means for authors and publishers to electronically register new nomenclatural acts, and assigns unique Life Science Identifiers (<abbr title="Life Science Identifier">lsid</abbr>s) to those names. </p>
+      </div>
+    </header>
+    <section id="registrationForm">
+      <form id="registration" class="uniForm inlineLabels" action="" method="post" accept-charset="utf-8" name="registration">
+        
+        <div class="container">
+          <h3 class="cta">Register a new name</h3>
+        </div>
+        <!--
+        
+          Nomenclatural Acts
+        
+        -->
+        
+        <fieldset id="nomenclatural_acts" class="inlineLabels">
+          <legend>Nomenclatural Acts</legend>
+          <div class="container">
+            <div class="msg">
+              <p class="infoMsg">All fields are required unless marked otherwise</p>
+            </div>
+            <div class="ctrlHolder">
+              <label for="rank_id">Taxonomic rank</label> <select id="rank_id" name="rank_id">
+                <option value="50">Family</option>
+                <option value="53" class="subCategory">&nbsp;&nbsp;&nbsp;Subfamily</option>
+                <option value="54" class="subCategory">&nbsp;&nbsp;&nbsp;Supertribe</option>
+                <option value="55" class="subCategory">&nbsp;&nbsp;&nbsp;Tribe</option>
+                <option value="56" class="subCategory">&nbsp;&nbsp;&nbsp;Subtribe</option>
+                <option value="60">Genus</option>
+                <option value="61" class="subCategory">&nbsp;&nbsp;&nbsp;Series</option>
+                <option value="62" class="subCategory">&nbsp;&nbsp;&nbsp;Subseries</option>
+                <option value="63" class="subCategory">&nbsp;&nbsp;&nbsp;Subgenus</option>
+                <option value="64" class="subCategory">&nbsp;&nbsp;&nbsp;Division</option>
+                <option value="65" class="subCategory">&nbsp;&nbsp;&nbsp;Section</option>
+                <option value="66" class="subCategory">&nbsp;&nbsp;&nbsp;Subsection</option>
+                <option value="67" class="subCategory">&nbsp;&nbsp;&nbsp;Group</option>
+                <option value="70" selected="selected">Species</option>
+                <option value="72" class="subCategory">&nbsp;&nbsp;&nbsp;Microspecies</option>
+                <option value="73" class="subCategory">&nbsp;&nbsp;&nbsp;Subspecies</option>
+                <option value="74" class="subCategory">&nbsp;&nbsp;&nbsp;Variety</option>
+                <option value="75" class="subCategory">&nbsp;&nbsp;&nbsp;Subvariety</option>
+                <option value="76" class="subCategory">&nbsp;&nbsp;&nbsp;Form</option>
+                <option value="77" class="subCategory">&nbsp;&nbsp;&nbsp;Subform</option>
+                <option value="78" class="subCategory">&nbsp;&nbsp;&nbsp;Infraspecies</option>
+                <option value="79" class="subCategory">&nbsp;&nbsp;&nbsp;altera</option>
+              </select>
+            </div>
+            <div class="ctrlHolder">
+              <label for="genus">Parent genus</label> <input name="genus" id="genus" placeholder="" size="35" maxlength="50" type="text" class="textInput required">
+            </div>
+            <div class="ctrlHolder">
+              <label for="species_epithet">Species epithet</label> <input name="species_epithet" id="species_epithet" placeholder="" size="35" maxlength="50" type="text" class="textInput required">
+            </div>
+          </div>
+        </fieldset>
+        
+        
+        <!--
+          Publication/Citation Information
+        -->
+        
+        <fieldset id="publication" class="inlineLabels">
+          <legend>Publication</legend>
+          <div class="container">
+            <div class="msg">
+              <p class="infoMsg">To register a new name, we need to know where it was (or will be) published.</p>
+            </div>
+            <div class="ctrlHolder">
+              <p class="label">Publication type</p>
+              <ul class="blockLabels">
+                <li>
+                  <label for="pubtype_1"><input type="radio" id="pubtype_1" name="pubtype" checked="checked"> Article in a journal, magazine, or other periodical</label>
+                </li>
+                <li>
+                  <label for="pubtype_2"><input type="radio" id="pubtype_2" name="pubtype"> Book or monograph</label>
+                </li>
+              </ul>
+            </div>
+            <div class="ctrlHolder">
+              <p class="label">Publication status</p>
+              <ul class="blockLabels">
+                <li>
+                  <label for="published_no"><input type="radio" id="published_no" name="published" checked="checked"> It has not yet been published</label>
+                </li>
+                <li>
+                  <label for="published_yes"><input type="radio" id="published_yes" name="published"> It was published on:</label>
+                </li>
+              </ul>
+            </div>
+            <div class="ctrlHolder">
+              <p class="label">Date of publication</p>
+              <ul class="alternate dateSelect">
+                <li>
+                  <label for="year">Year</label> <input name="year" id="year" placeholder="e.g. 1957" size="8" maxlength="4" type="text" class="textInput required auto">
+                </li>
+                <li>
+                  <label for="month">Month</label> <select name="month" id="month" class="selectInput auto">
+                    <option value='1'>January</option>
+                    <option value='2'>February</option>
+                    <option value='3'>March</option>
+                    <option value='4'>April</option>
+                    <option value='5'>May</option>
+                    <option value='6'>June</option>
+                    <option value='7'>July</option>
+                    <option value='8'>August</option>
+                    <option value='9'>September</option>
+                    <option value='10'>October</option>
+                    <option value='11'>November</option>
+                    <option value='12'>December</option>
+                  </select>
+                  <p class="formHint">Optional</p>
+                </li>
+                <li>
+                  <label for="day">Day</label> <input name="day" id="day" size="2" maxlength="2" type="text" class="textInput auto">
+                  <p class="formHint">Optional</p>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="ctrlHolder">
+              <p class="label">Authors</p>
+              <ul>
+                <li><input name="author1" id="author1" size="35" maxlength="50" type="text" class="textInput required" placeholder="Wilson, Edward O." /></li>
+                <li><input name="author2" id="author2" size="35" maxlength="50" type="text" class="textInput required" placeholder="add another author..." /></li>
+              </ul>
+            </div>
+
+            <div class="ctrlHolder">
+              <label for="title">Article title</label> <input name="title" id="title" placeholder="e.g. The Tenuis and Selenophora groups of the ant genus Ponera" size="35" maxlength="50" type="text" class="textInput required">
+              <p class="formHint">The title of this particular article</p>
+            </div>
+            <div class="ctrlHolder">
+              <label for="journal_name">Journal name</label> <input name="journal_name" id="journal_name" placeholder="e.g. Bulletin of the Museum of Comparative Zoology" size="35" maxlength="50" type="text" class="textInput required">
+              <p class="formHint">
+                The name of the journal that published this article
+              </p>
+            </div>
+            <fieldset class="optionalInformation">
+              <legend>Optional Citation Information</legend>
+              <div class="msg">
+                <p class="infoMsg">The following fields are optional, but are appreciated.</p>
+              </div>
+              <div class="ctrlGroup" id="volume_issue">
+                <div class="ctrlHolder">
+                  <label for="volume">Volume</label> <input name="volume" id="volume" placeholder="" size="35" maxlength="50" type="text" class="textInput">
+                </div>
+                <div class="ctrlHolder">
+                  <label for="issue">Issue</label> <input name="issue" id="issue" placeholder="" size="35" maxlength="50" type="text" class="textInput">
+                </div>
+              </div>
+              <div class="ctrlHolder">
+                <label for="pages">Pages</label> <input name="pages" id="pages" placeholder="" size="35" maxlength="50" type="text" class="textInput">
+              </div>
+              <div class="ctrlHolder">
+                <label for="language">Language</label> <input name="language" id="language" placeholder="" size="35" maxlength="50" type="text" class="textInput">
+              </div>
+            </fieldset>
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="ctrlHolder">
+            <a href="#" id="add_another_nomen" name="add_another_nomen"><img src="glyphicons_190_circle_plus.png">Add another Nomenclatural Act...</a>
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="buttonHolder">
+            <button type="submit" class="primaryAction">Register Names</button>
+          </div>
+        </fieldset>
+      </form>
+    </div><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" charset="utf-8">
+</script><script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript" charset="utf-8">
+</script><script src="https://raw.github.com/andyet/ICanHaz.js/master/ICanHaz.min.js" type="text/javascript" charset="utf-8">
+</script><script src="jquery.ui.autocomplete.custom.js" type="text/javascript" charset="utf-8">
+</script><script src="../uni-form/js/uni-form.jquery.js" type="text/javascript" charset="utf-8">
+</script><script src="scripts.js" type="text/javascript">
+</script>
+
+
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+  </body>
+</html>

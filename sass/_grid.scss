@@ -1,0 +1,83 @@
+$total-cols: 12;                    /* a 12-column grid */
+$col-width: 5em;                    /* each column is 4em wide */
+$gutter-width: 1em;                 /* 1em gutters between columns */
+$side-gutter-width: $gutter-width;  /* 1em padding at the edges of the page as well */
+
+
+@mixin grid-container {
+	@include container;
+	//@include susy-grid-background;
+}
+
+
+.container {
+	@include grid-container;
+}
+
+header .introduction {
+	@include full;
+}
+
+.cta {
+	@include alpha;
+	@include columns(5);
+}
+
+.uniForm {
+	.ctrlHolder {
+		@include full;
+		
+		ul {
+			.formHint{
+				@include reset-column;
+				@include prefix(0);
+			}
+			
+		}
+	}
+	
+	.msg {
+		@include full;
+		@include pad(2,3);
+	}
+	
+	.inlineLabels {
+		label,
+		.label,
+		.readOnlyLabel {
+			@include columns(2, 12);
+		}
+		
+		.textInput,  
+		.fileUpload,
+		.selectInput,
+		select,
+		textarea,
+		ul {
+			@include columns(5, 12);
+		}
+		
+		ul {
+			.textInput,  
+			.fileUpload,
+			.selectInput,
+			select,
+			textarea {
+				margin-left: 0;
+				margin-right: 0;
+				width: 100%;
+			}
+			
+		}
+		
+		.formHint {
+			@include columns(10, 12);
+			@include prefix(2, 12);
+			margin-left: 0; // This is added by uni-form, don't need with Susy
+		}
+	}
+}
+
+#registrationForm .optionalInformation .textInput {
+	@include columns(2, 12);
+}

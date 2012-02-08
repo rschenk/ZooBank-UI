@@ -1,0 +1,57 @@
+$base-size: 11px 14px; // 14px = body text, 11px = caption
+$ratio: $golden;
+/* modular scale:
+-2 -1 0  1  2  3  4  5  6  7  8
+ 7  9 11 14 18 23 29 37 47 59 75
+
+*/
+
+
+
+$serif-stack: Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Times New Roman", serif;;
+$sans-stack: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+$sans-stack: "Lucida Sans Unicode", "Lucida Grande", Arial, Verdana, sans-serif;
+
+@mixin serif-font {
+	font-family: $serif-stack;
+	font-variant-ligatures: common-ligatures;
+	text-rendering: optimizeLegibility;
+	
+}
+
+@mixin sans-font {
+	font-family: $sans-stack;
+}
+
+abbr {
+	font-variant: small-caps;
+}
+
+body {
+	@include sans-font;
+	font-size: ms(1);
+}
+
+#header {
+	.introduction {
+		@include serif-font;
+		font-size:   ms(3);
+		line-height: ms(3) * 1.3;
+	}
+	
+	.tagline {
+		font-size:   ms(5);
+		line-height: ms(5) * 1.1;
+	}
+}
+
+.cta {
+	font-size: ms(4);
+}
+
+.uniForm {
+	.formHint {
+		font-size:   ms(0);
+		line-height: ms(1);
+	}	
+}

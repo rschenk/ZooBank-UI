@@ -1,0 +1,708 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, /Users/rschenk/.rvm/gems/ruby-1.9.2-p290@zoobank/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 20, /Users/rschenk/.rvm/gems/ruby-1.9.2-p290@zoobank/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+}
+
+/* line 22, /Users/rschenk/.rvm/gems/ruby-1.9.2-p290@zoobank/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 24, /Users/rschenk/.rvm/gems/ruby-1.9.2-p290@zoobank/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 26, /Users/rschenk/.rvm/gems/ruby-1.9.2-p290@zoobank/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 28, /Users/rschenk/.rvm/gems/ruby-1.9.2-p290@zoobank/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 101, /Users/rschenk/.rvm/gems/ruby-1.9.2-p290@zoobank/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 30, /Users/rschenk/.rvm/gems/ruby-1.9.2-p290@zoobank/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 114, /Users/rschenk/.rvm/gems/ruby-1.9.2-p290@zoobank/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* colors */
+/* modular scale:
+-2 -1 0  1  2  3  4  5  6  7  8
+ 7  9 11 14 18 23 29 37 47 59 75
+
+*/
+/* line 26, /Users/rschenk/dev/zb/mockups/mockup2/sass/_typography.scss */
+abbr {
+  font-variant: small-caps;
+}
+
+/* line 30, /Users/rschenk/dev/zb/mockups/mockup2/sass/_typography.scss */
+body {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Arial, Verdana, sans-serif;
+  font-size: 14px;
+}
+
+/* line 36, /Users/rschenk/dev/zb/mockups/mockup2/sass/_typography.scss */
+#header .introduction {
+  font-family: Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Times New Roman", serif;
+  font-variant-ligatures: common-ligatures;
+  text-rendering: optimizeLegibility;
+  font-size: 23px;
+  line-height: 29.9px;
+}
+/* line 42, /Users/rschenk/dev/zb/mockups/mockup2/sass/_typography.scss */
+#header .tagline {
+  font-size: 37px;
+  line-height: 40.7px;
+}
+
+/* line 48, /Users/rschenk/dev/zb/mockups/mockup2/sass/_typography.scss */
+.cta {
+  font-size: 29px;
+}
+
+/* line 53, /Users/rschenk/dev/zb/mockups/mockup2/sass/_typography.scss */
+.uniForm .formHint {
+  font-size: 11px;
+  line-height: 14px;
+}
+
+/* ------------------------------------------------------------------------------
+
+   Copyright (c) 2010, Dragan Babic
+   
+   Permission is hereby granted, free of charge, to any person
+   obtaining a copy of this software and associated documentation
+   files (the "Software"), to deal in the Software without
+   restriction, including without limitation the rights to use,
+   copy, modify, merge, publish, distribute, sublicense, and/or sell
+   copies of the Software, and to permit persons to whom the
+   Software is furnished to do so, subject to the following
+   conditions:
+   
+   The above copyright notice and this permission notice shall be
+   included in all copies or substantial portions of the Software.
+   
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+   EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+   OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+   NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+   HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+   WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+   OTHER DEALINGS IN THE SOFTWARE.
+
+   ------------------------------------------------------------------------------ */
+/* #############################   GENERALS   ################################### */
+/* ------------------------------------------------------------------------------ */
+/* line 30, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+  /* reset stuff */
+  /* Some generals and more resets */
+  /* This are the main units that contain form elements */
+  /* Clear all floats */
+}
+/* line 34, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 39, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm fieldset legend {
+  margin: 0;
+  padding: 0;
+}
+/* line 43, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm .ctrlHolder, .uniForm .buttonHolder {
+  margin: 0;
+  padding: 0;
+  clear: both;
+}
+/* line 50, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm:after,
+.uniForm .buttonHolder:after,
+.uniForm .ctrlHolder:after,
+.uniForm .ctrlHolder .multiField:after,
+.uniForm .inlineLabel:after {
+  content: ".";
+  display: block;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+  clear: both;
+  min-height: 0;
+  visibility: hidden;
+}
+/* line 53, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm label,
+.uniForm button {
+  cursor: pointer;
+}
+
+/* ------------------------------------------------------------------------------ */
+/* ##########################   DEFAULT LAYOUT   ################################ */
+/* ------------------------------------------------------------------------------ */
+/*       Styles for form controls where labels are above the input elements       */
+/* ------------------------------------------------------------------------------ */
+/* line 62, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm {
+  /* Float the input elements */
+  /* Read-Only output */
+  /* Postition the hints */
+  /* Position the elements inside combo boxes (multiple inputs/selects/checkboxes/radio buttons per unit) */
+  /* Alternate layout */
+  /* Required fields asterisk styling */
+}
+/* line 64, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm label,
+.uniForm .label {
+  /*		display: block;
+  		float: none;
+  		margin: 0 0 .5em 0;
+  		padding: 0;
+  		line-height: 100%;
+  		width: auto; 
+  */
+}
+/* line 78, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm .textInput,
+.uniForm .fileUpload,
+.uniForm .selectInput,
+.uniForm select,
+.uniForm textarea {
+  float: left;
+  width: 53%;
+  margin: 0;
+}
+/* line 85, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm .readOnlyLabel {
+  margin: 0;
+  font-size: 1em;
+  font-weight: bold;
+}
+/* line 90, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm .readOnly {
+  font-size: .85em;
+}
+/* line 93, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm .readOnly .choiceLabel {
+  color: #777;
+  text-transform: uppercase;
+  font-size: .75em;
+  letter-spacing: .15em;
+}
+/* line 102, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm .formHint {
+  float: right;
+  width: 43%;
+  margin: 0;
+  clear: none;
+}
+/* line 110, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm ul {
+  float: left;
+  width: 53%;
+  margin: 0;
+  padding: 0;
+}
+/* line 116, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm ul li {
+  margin: 0 0 0.5em 0;
+  list-style: none;
+}
+/* line 120, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm ul li label {
+  /*				margin: 0;
+  				float: none;
+  				display: block;
+  				overflow: visible;*/
+}
+/* line 131, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm ul.alternate li {
+  float: left;
+  width: 30%;
+  margin-right: 3%;
+}
+/* line 136, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm ul.alternate li label {
+  float: none;
+  display: block;
+  width: 98%;
+}
+/* line 149, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm ul .textInput,
+.uniForm ul .selectInput,
+.uniForm ul select,
+.uniForm ul.alternate .textInput,
+.uniForm ul.alternate .selectInput,
+.uniForm ul.alternate select {
+  width: 98%;
+  margin-top: .5em;
+  display: block;
+  float: none;
+}
+/* line 158, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm label em,
+.uniForm .label em {
+  float: left;
+  width: 1em;
+  margin: 0 0 0 -1em;
+}
+
+/* ------------------------------------------------------------------------------ */
+/* #########################   ALTERNATE LAYOUT   ############################### */
+/* ------------------------------------------------------------------------------ */
+/*    Styles for form controls where labels are in line with the input elements   */
+/*    Set the class of the parent (preferably to a fieldset) to .inlineLabels     */
+/* ------------------------------------------------------------------------------ */
+/* line 172, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm .inlineLabels {
+  /* Float the input elements */
+  /* Postition the hints */
+  /* Position the elements inside combo boxes (multiple inputs/selects/checkboxes/radio buttons per unit) */
+  /* Alternate layout */
+  /* Required fields asterisk styling */
+}
+/* line 175, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm .inlineLabels label,
+.uniForm .inlineLabels .label,
+.uniForm .inlineLabels .readOnlyLabel {
+  /*			float: left;
+  			margin: .3em 2% 0 0;
+  			padding: 0;
+  			line-height: 1;
+  			position: relative;
+  			width: 32%;*/
+}
+/* line 184, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm .inlineLabels .readOnlyLabel {
+  margin: 0;
+}
+/* line 191, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm .inlineLabels .textInput,
+.uniForm .inlineLabels .fileUpload,
+.uniForm .inlineLabels .selectInput,
+.uniForm .inlineLabels select,
+.uniForm .inlineLabels textarea {
+  float: left;
+  width: 64%;
+}
+/* line 197, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm .inlineLabels .formHint {
+  clear: both;
+  float: none;
+  width: auto;
+  margin-left: 34%;
+  position: static;
+}
+/* line 206, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm .inlineLabels ul {
+  float: left;
+  width: 66%;
+}
+/* line 209, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm .inlineLabels ul li {
+  margin: .5em 0;
+}
+/* line 211, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm .inlineLabels ul li label {
+  float: none;
+  display: block;
+  width: 100%;
+}
+/* line 216, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm .inlineLabels ul.alternate li {
+  margin-right: 3%;
+  margin-top: .25em;
+}
+/* line 222, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm .inlineLabels ul li label .textInput,
+.uniForm .inlineLabels ul li label textarea,
+.uniForm .inlineLabels ul li label select {
+  /*			float: none;
+  			display: block;
+  			width: 98%;*/
+}
+/* line 228, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm .inlineLabels .readOnly {
+  float: right;
+  width: 66%;
+}
+/* line 235, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm .inlineLabels label em,
+.uniForm .inlineLabels .label em {
+  display: block;
+  float: none;
+  margin: 0;
+  position: absolute;
+  right: 0;
+}
+
+/* ----------------------------------------------------------------------------- */
+/* ########################### Additional Stuff ################################ */
+/* ----------------------------------------------------------------------------- */
+/* line 242, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm {
+  /* Generals */
+  /* .inlineLabel is used for inputs within labels - checkboxes and radio buttons */
+  /* When you don't want to use a label */
+  /* Classes for control of the widths of the fields */
+  /* Large is default and should match the value you set for .textInput, textarea or select */
+  /* Columns */
+}
+/* line 244, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm legend {
+  color: inherit;
+}
+/* line 246, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm .secondaryAction {
+  float: left;
+}
+/* line 253, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm .inlineLabel input,
+.uniForm .inlineLabels .inlineLabel input,
+.uniForm .blockLabels .inlineLabel input,
+.uniForm label input {
+  float: none;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+/* line 257, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm .buttonHolder .inlineLabel,
+.uniForm .buttonHolder label {
+  float: left;
+  margin: .5em 0 0 0;
+  width: auto;
+  max-width: 60%;
+  text-align: left;
+}
+/* line 267, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm .inlineLabels .noLabel ul {
+  margin-left: 34%;
+  /* Match to width of label + gap to field */
+}
+/* line 272, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm .small {
+  width: 30% !important;
+}
+/* line 273, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm .medium {
+  width: 45% !important;
+}
+/* line 275, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm .auto {
+  width: auto !important;
+  height: auto !important;
+}
+/* line 278, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm .small,
+.uniForm .medium,
+.uniForm .auto {
+  margin-right: 4px;
+}
+/* line 281, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm .col {
+  float: left;
+}
+/* line 282, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+.uniForm .col {
+  width: 50%;
+}
+
+/* a 12-column grid */
+/* each column is 4em wide */
+/* 1em gutters between columns */
+/* 1em padding at the edges of the page as well */
+/* line 13, /Users/rschenk/dev/zb/mockups/mockup2/sass/_grid.scss */
+.container {
+  *zoom: 1;
+  margin: auto;
+  width: 73em;
+  max-width: 100%;
+}
+/* line 38, /Users/rschenk/.rvm/gems/ruby-1.9.2-p290@zoobank/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 17, /Users/rschenk/dev/zb/mockups/mockup2/sass/_grid.scss */
+header .introduction {
+  clear: both;
+  margin-left: 1.37%;
+  margin-right: 1.37%;
+}
+
+/* line 21, /Users/rschenk/dev/zb/mockups/mockup2/sass/_grid.scss */
+.cta {
+  margin-left: 1.37%;
+  display: inline;
+  float: left;
+  width: 39.726%;
+  margin-right: 1.37%;
+}
+
+/* line 27, /Users/rschenk/dev/zb/mockups/mockup2/sass/_grid.scss */
+.uniForm .ctrlHolder {
+  clear: both;
+  margin-left: 1.37%;
+  margin-right: 1.37%;
+}
+/* line 31, /Users/rschenk/dev/zb/mockups/mockup2/sass/_grid.scss */
+.uniForm .ctrlHolder ul .formHint {
+  float: none;
+  display: block;
+  width: auto;
+  margin-right: auto;
+  padding-left: 0%;
+}
+/* line 39, /Users/rschenk/dev/zb/mockups/mockup2/sass/_grid.scss */
+.uniForm .msg {
+  clear: both;
+  margin-left: 1.37%;
+  margin-right: 1.37%;
+  padding-left: 16.438%;
+  padding-right: 24.658%;
+}
+/* line 47, /Users/rschenk/dev/zb/mockups/mockup2/sass/_grid.scss */
+.uniForm .inlineLabels label,
+.uniForm .inlineLabels .label,
+.uniForm .inlineLabels .readOnlyLabel {
+  display: inline;
+  float: left;
+  width: 15.493%;
+  margin-right: 1.408%;
+}
+/* line 56, /Users/rschenk/dev/zb/mockups/mockup2/sass/_grid.scss */
+.uniForm .inlineLabels .textInput,
+.uniForm .inlineLabels .fileUpload,
+.uniForm .inlineLabels .selectInput,
+.uniForm .inlineLabels select,
+.uniForm .inlineLabels textarea,
+.uniForm .inlineLabels ul {
+  display: inline;
+  float: left;
+  width: 40.845%;
+  margin-right: 1.408%;
+}
+/* line 65, /Users/rschenk/dev/zb/mockups/mockup2/sass/_grid.scss */
+.uniForm .inlineLabels ul .textInput,
+.uniForm .inlineLabels ul .fileUpload,
+.uniForm .inlineLabels ul .selectInput,
+.uniForm .inlineLabels ul select,
+.uniForm .inlineLabels ul textarea {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+}
+/* line 73, /Users/rschenk/dev/zb/mockups/mockup2/sass/_grid.scss */
+.uniForm .inlineLabels .formHint {
+  display: inline;
+  float: left;
+  width: 83.099%;
+  margin-right: 1.408%;
+  padding-left: 16.901%;
+  margin-left: 0;
+}
+
+/* line 81, /Users/rschenk/dev/zb/mockups/mockup2/sass/_grid.scss */
+#registrationForm .optionalInformation .textInput {
+  display: inline;
+  float: left;
+  width: 15.493%;
+  margin-right: 1.408%;
+}
+
+/* line 3, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+.uniForm fieldset {
+  padding: 1em 0;
+}
+/* line 7, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+.uniForm .ctrlHolder {
+  padding: 0.5em 0;
+}
+/* line 12, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+.uniForm label em,
+.uniForm .label em {
+  float: none;
+  width: auto;
+  margin: auto;
+  color: #ff8d6d;
+  font-style: normal;
+}
+/* line 14, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+.uniForm .formHint {
+  color: #888888;
+}
+/* line 18, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+.uniForm .infoMsg {
+  background: url(../images/icon-info.png) left center no-repeat;
+  padding: 0.7em 0 0.7em 30px;
+  margin-left: -5px;
+  color: #31309c;
+}
+/* line 27, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+.uniForm ul.alternate.dateSelect li {
+  width: auto;
+}
+/* line 29, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+.uniForm ul.alternate .formHint {
+  float: none;
+}
+/* line 35, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+.uniForm .inlineLabels label,
+.uniForm .inlineLabels .label,
+.uniForm .inlineLabels .readOnlyLabel {
+  text-align: right;
+}
+/* line 38, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+.uniForm .inlineLabels label em,
+.uniForm .inlineLabels .label em,
+.uniForm .inlineLabels .readOnlyLabel em {
+  position: static;
+  display: inline;
+}
+/* line 45, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+.uniForm .inlineLabels ul li {
+  display: block;
+  margin-top: 0;
+}
+/* line 49, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+.uniForm .inlineLabels ul.alternate li {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* line 53, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+.uniForm .inlineLabels ul label,
+.uniForm .inlineLabels ul .label,
+.uniForm .inlineLabels ul .readOnlyLabel {
+  text-align: left;
+}
+
+/* line 18, ../sass/screen.scss */
+body {
+  background-color: #f5f5ff;
+  color: #555555;
+}
+
+/* line 23, ../sass/screen.scss */
+#header {
+  padding-top: 3em;
+}
+
+/* line 26, ../sass/screen.scss */
+.logo {
+  display: none;
+}
+
+/* line 27, ../sass/screen.scss */
+.introduction {
+  text-shadow: 0 1px 1px white;
+  margin: 2em 0;
+}
+
+/* line 31, ../sass/screen.scss */
+.tagline {
+  display: block;
+}
+
+/* line 35, ../sass/screen.scss */
+.cta {
+  text-shadow: 0 -1px 1px rgba(132, 78, 0, 0.3);
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  -moz-border-radius-topleft: 0;
+  -webkit-border-top-left-radius: 0;
+  -o-border-top-left-radius: 0;
+  -ms-border-top-left-radius: 0;
+  -khtml-border-top-left-radius: 0;
+  border-top-left-radius: 0;
+  position: relative;
+  top: -3px;
+  background: #ffcb42 url(../images/yellow-corner.gif) bottom right no-repeat;
+  color: #fff8e7;
+  text-align: center;
+  padding: 0.25em 0;
+}
+/* line 46, ../sass/screen.scss */
+.cta:before {
+  position: absolute;
+  top: 0px;
+  left: -3px;
+  width: 3px;
+  height: 3px;
+  font-size: 1px;
+  line-height: 1px;
+  content: url(../images/cta-loop.gif);
+}
+
+/* line 57, ../sass/screen.scss */
+#registrationForm {
+  background-color: #ebebff;
+  border-top: 1px solid #e1e1ff;
+}
+
+/* line 61, ../sass/screen.scss */
+fieldset#publication {
+  background-color: #f0f0ff;
+  border-top: 1px solid #e1e1ff;
+}
+
+/* line 66, ../sass/screen.scss */
+legend {
+  display: none;
+}

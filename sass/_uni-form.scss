@@ -1,0 +1,283 @@
+/* ------------------------------------------------------------------------------
+
+   Copyright (c) 2010, Dragan Babic
+   
+   Permission is hereby granted, free of charge, to any person
+   obtaining a copy of this software and associated documentation
+   files (the "Software"), to deal in the Software without
+   restriction, including without limitation the rights to use,
+   copy, modify, merge, publish, distribute, sublicense, and/or sell
+   copies of the Software, and to permit persons to whom the
+   Software is furnished to do so, subject to the following
+   conditions:
+   
+   The above copyright notice and this permission notice shall be
+   included in all copies or substantial portions of the Software.
+   
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+   EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+   OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+   NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+   HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+   WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+   OTHER DEALINGS IN THE SOFTWARE.
+
+   ------------------------------------------------------------------------------ */
+/* #############################   GENERALS   ################################### */
+/* ------------------------------------------------------------------------------ */
+
+.uniForm{ 
+	margin: 0; padding: 0; position: relative; z-index: 1;  /* reset stuff */
+  
+	/* Some generals and more resets */
+	fieldset{ 
+		border: none;
+		margin: 0;
+		padding: 0;
+    
+		legend{ margin: 0; padding: 0; }
+	}
+    
+    /* This are the main units that contain form elements */
+    .ctrlHolder, .buttonHolder{ margin: 0; padding: 0; clear: both; }
+    
+    /* Clear all floats */ 
+    &:after,
+    .buttonHolder:after, 
+    .ctrlHolder:after, 
+    .ctrlHolder .multiField:after,
+    .inlineLabel:after{ content: "."; display: block; height: 0; line-height: 0; font-size: 0; clear: both; min-height: 0; visibility: hidden; }
+
+	label,
+	button{ cursor: pointer; }
+}
+
+/* ------------------------------------------------------------------------------ */
+/* ##########################   DEFAULT LAYOUT   ################################ */
+/* ------------------------------------------------------------------------------ */
+/*       Styles for form controls where labels are above the input elements       */
+/* ------------------------------------------------------------------------------ */
+
+.uniForm{
+	label,
+	.label{ 
+/*		display: block;
+		float: none;
+		margin: 0 0 .5em 0;
+		padding: 0;
+		line-height: 100%;
+		width: auto; 
+*/	}
+      
+	/* Float the input elements */
+	.textInput,
+	.fileUpload,
+	.selectInput,
+	select,
+	textarea{
+		float: left;
+		width: 53%;
+		margin: 0;
+	}
+      
+	/* Read-Only output */
+	.readOnlyLabel{ 
+		margin: 0;
+		font-size: 1em;
+		font-weight: bold;
+	}
+	.readOnly{
+		font-size: .85em;
+		
+		.choiceLabel{ 
+			color: #777;
+			text-transform: uppercase;
+			font-size: .75em;
+			letter-spacing: .15em;
+		}
+	}
+      
+	/* Postition the hints */
+	.formHint{ 
+		float: right;
+		width: 43%;
+		margin: 0;
+		clear: none;
+	}
+      
+	/* Position the elements inside combo boxes (multiple inputs/selects/checkboxes/radio buttons per unit) */
+	ul { 
+		float: left;
+		width: 53%;
+		margin: 0;
+		padding: 0; 
+	
+		li{
+			margin: 0 0 0.5em 0;
+			list-style: none;
+			
+			label {
+/*				margin: 0;
+				float: none;
+				display: block;
+				overflow: visible;*/
+			}
+		}
+	}
+
+	/* Alternate layout */
+	ul.alternate {
+		li{ 
+			float: left;
+			width: 30%;
+			margin-right: 3%;
+			
+			label{
+				float: none;
+				display: block;
+				width: 98%;
+			}
+		}
+	}
+	
+	ul .textInput,
+	ul .selectInput,
+	ul select,
+	ul.alternate .textInput,
+	ul.alternate .selectInput,
+	ul.alternate select{ 
+		width: 98%;
+		margin-top: .5em;
+		display: block;
+		float: none;
+	}
+            
+	/* Required fields asterisk styling */
+	label em,
+	.label em{ 
+		float: left;
+		width: 1em;
+		margin: 0 0 0 -1em;
+	}
+}
+
+/* ------------------------------------------------------------------------------ */
+/* #########################   ALTERNATE LAYOUT   ############################### */
+/* ------------------------------------------------------------------------------ */
+/*    Styles for form controls where labels are in line with the input elements   */
+/*    Set the class of the parent (preferably to a fieldset) to .inlineLabels     */
+/* ------------------------------------------------------------------------------ */
+.uniForm{
+	.inlineLabels{
+		label,
+		.label,
+		.readOnlyLabel{
+/*			float: left;
+			margin: .3em 2% 0 0;
+			padding: 0;
+			line-height: 1;
+			position: relative;
+			width: 32%;*/ 
+		}
+      
+		.readOnlyLabel{ margin: 0; }
+      
+		/* Float the input elements */
+		.textInput,
+		.fileUpload,
+		.selectInput,
+		select,
+		textarea{ 
+			float: left; 
+			width: 64%;
+		}
+		
+		/* Postition the hints */
+		.formHint{ 
+			clear: both;
+			float: none;
+			width: auto;
+			margin-left: 34%;
+			position: static;
+		}
+    
+		/* Position the elements inside combo boxes (multiple inputs/selects/checkboxes/radio buttons per unit) */
+		ul{ 
+			float: left;
+			width: 66%;
+			li{ 
+				margin: .5em 0;
+				label{ float: none; display: block; width: 100%; }
+			}
+		}
+		
+		/* Alternate layout */
+		ul.alternate li{
+			margin-right: 3%;
+			margin-top: .25em; 
+		}
+		ul li label .textInput,
+		ul li label textarea,
+		ul li label select{ 
+/*			float: none;
+			display: block;
+			width: 98%;*/
+		}
+    
+		.readOnly{
+			float: right;
+			width: 66%; 
+		}
+    
+		/* Required fields asterisk styling */
+		label em,
+		.label em{ display: block; float: none; margin: 0; position: absolute; right: 0; }
+	}
+}
+/* ----------------------------------------------------------------------------- */
+/* ########################### Additional Stuff ################################ */
+/* ----------------------------------------------------------------------------- */
+
+.uniForm{
+	/* Generals */
+	legend{ color: inherit; }
+    
+	.secondaryAction{ float: left; }
+      
+	  
+	/* .inlineLabel is used for inputs within labels - checkboxes and radio buttons */
+	.inlineLabel input,
+	.inlineLabels .inlineLabel input,
+	.blockLabels .inlineLabel input,
+	label input{ float: none; display: inline; margin: 0; padding: 0; border: none; }
+            
+	.buttonHolder{
+		.inlineLabel,
+		label{ 
+			float: left;
+			margin: .5em 0 0 0;
+			width: auto;
+			max-width: 60%;
+			text-align: left;
+		}
+	}
+	
+	/* When you don't want to use a label */
+	.inlineLabels .noLabel ul{ 
+		margin-left: 34%; /* Match to width of label + gap to field */ 
+	}
+      
+	/* Classes for control of the widths of the fields */
+	.small { width: 30% !important; }
+	.medium{ width: 45% !important; }
+	.large {  } /* Large is default and should match the value you set for .textInput, textarea or select */
+	.auto  { width: auto !important; height: auto !important; }
+	.small,
+	.medium,
+	.auto{ margin-right: 4px; }
+
+	/* Columns */
+	.col{ float: left; }
+	.col{ width: 50%; }
+}

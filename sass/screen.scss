@@ -1,0 +1,66 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import "compass/reset";
+@import "compass/css3";
+@import "modular-scale";
+@import "susy";
+
+@import "colors";
+@import "typography";
+@import "uni-form";
+@import "grid";
+@import "uni-form-theme";
+
+
+
+body {
+	background-color: $very-light-blue;
+	color: $text;
+}
+
+#header {
+	padding-top: 3em;
+}
+	.logo { display:none; }
+	.introduction { 
+		@include text-shadow(0 1px 1px #fff);
+		margin: 2em 0;
+	}
+	.tagline {
+		display: block;
+	}
+
+.cta {
+	@include text-shadow(0 -1px 1px transparentize($yellow-shadow, 0.7));
+	@include border-radius(3px);
+	@include border-top-left-radius(0);
+	position: relative;
+	top: -3px;
+	background: $yellow url(../images/yellow-corner.gif) bottom right no-repeat;
+	color: $very-light-yellow;
+	text-align: center;
+	padding: 0.25em 0;
+
+	&:before {
+		position: absolute;
+		top: 0px;
+		left: -3px;
+		width: 3px;
+		height: 3px;
+		font-size: 1px;
+		line-height: 1px;
+		content: url(../images/cta-loop.gif);
+	}
+}
+#registrationForm {
+	background-color: $form-blue;
+	border-top: 1px solid $border-blue;
+}
+	fieldset#publication {
+		background-color: lighten($form-blue, 1);
+		border-top: 1px solid $border-blue;
+	}
+
+legend { display: none; }
