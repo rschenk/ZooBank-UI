@@ -12,6 +12,7 @@
 @import "uni-form";
 @import "grid";
 @import "uni-form-theme";
+@import "autocomplete";
 
 
 
@@ -54,6 +55,7 @@ body {
 		content: url(../images/cta-loop.gif);
 	}
 }
+
 #registrationForm {
 	background-color: $form-blue;
 	border-top: 1px solid $border-blue;

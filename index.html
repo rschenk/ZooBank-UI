@@ -73,7 +73,7 @@
               </select>
             </div>
             <div class="ctrlHolder">
-              <label for="genus">Parent genus</label> <input name="genus" id="genus" placeholder="" size="35" maxlength="50" type="text" class="textInput required">
+              <label for="parent">Parent genus</label> <input name="parent" id="parent" placeholder="" size="35" maxlength="50" type="text" class="textInput required">
             </div>
             <div class="ctrlHolder">
               <label for="species_epithet">Species epithet</label>
@@ -193,10 +193,15 @@
       </form>
     </div>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="../uni-form/js/uni-form-validation.jquery.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="javascripts/jquery.ui.autocomplete.custom.js" type="text/javascript" charset="utf-8"></script>
+    <script src="javascripts/uni-form-validation.jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="javascripts/scripts.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8">
       $(function(){
-        $('form.uniForm').uniform(); 
+        $('form.uniForm').uniform();
+		
+		ZooBank.autocompleteGenus('#parent');
       });
     </script>
 

@@ -73,18 +73,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
  7  9 11 14 18 23 29 37 47 59 75
 
 */
-/* line 26, /Users/rschenk/dev/zb/mockups/mockup2/sass/_typography.scss */
+/* line 26, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_typography.scss */
 abbr {
   font-variant: small-caps;
 }
 
-/* line 30, /Users/rschenk/dev/zb/mockups/mockup2/sass/_typography.scss */
+/* line 30, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_typography.scss */
 body {
   font-family: "Lucida Sans Unicode", "Lucida Grande", Arial, Verdana, sans-serif;
   font-size: 14px;
 }
 
-/* line 36, /Users/rschenk/dev/zb/mockups/mockup2/sass/_typography.scss */
+/* line 36, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_typography.scss */
 #header .introduction {
   font-family: Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Times New Roman", serif;
   font-variant-ligatures: common-ligatures;
@@ -92,18 +92,18 @@ body {
   font-size: 23px;
   line-height: 29.9px;
 }
-/* line 42, /Users/rschenk/dev/zb/mockups/mockup2/sass/_typography.scss */
+/* line 42, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_typography.scss */
 #header .tagline {
   font-size: 37px;
   line-height: 40.7px;
 }
 
-/* line 48, /Users/rschenk/dev/zb/mockups/mockup2/sass/_typography.scss */
+/* line 48, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_typography.scss */
 .cta {
   font-size: 29px;
 }
 
-/* line 53, /Users/rschenk/dev/zb/mockups/mockup2/sass/_typography.scss */
+/* line 53, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_typography.scss */
 .uniForm .formHint {
   font-size: 11px;
   line-height: 14px;
@@ -137,7 +137,7 @@ body {
    ------------------------------------------------------------------------------ */
 /* #############################   GENERALS   ################################### */
 /* ------------------------------------------------------------------------------ */
-/* line 30, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 30, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm {
   margin: 0;
   padding: 0;
@@ -148,24 +148,24 @@ body {
   /* This are the main units that contain form elements */
   /* Clear all floats */
 }
-/* line 34, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 34, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm fieldset {
   border: none;
   margin: 0;
   padding: 0;
 }
-/* line 39, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 39, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm fieldset legend {
   margin: 0;
   padding: 0;
 }
-/* line 43, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 43, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm .ctrlHolder, .uniForm .buttonHolder {
   margin: 0;
   padding: 0;
   clear: both;
 }
-/* line 50, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 50, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm:after,
 .uniForm .buttonHolder:after,
 .uniForm .ctrlHolder:after,
@@ -180,7 +180,7 @@ body {
   min-height: 0;
   visibility: hidden;
 }
-/* line 53, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 53, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm label,
 .uniForm button {
   cursor: pointer;
@@ -191,7 +191,7 @@ body {
 /* ------------------------------------------------------------------------------ */
 /*       Styles for form controls where labels are above the input elements       */
 /* ------------------------------------------------------------------------------ */
-/* line 62, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 62, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm {
   /* Float the input elements */
   /* Read-Only output */
@@ -200,7 +200,7 @@ body {
   /* Alternate layout */
   /* Required fields asterisk styling */
 }
-/* line 64, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 64, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm label,
 .uniForm .label {
   display: block;
@@ -210,7 +210,7 @@ body {
   line-height: 100%;
   width: auto;
 }
-/* line 78, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 78, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm .textInput,
 .uniForm .fileUpload,
 .uniForm .selectInput,
@@ -220,62 +220,62 @@ body {
   width: 53%;
   margin: 0;
 }
-/* line 85, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 85, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm .readOnlyLabel {
   margin: 0;
   font-size: 1em;
   font-weight: bold;
 }
-/* line 90, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 90, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm .readOnly {
   font-size: .85em;
 }
-/* line 93, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 93, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm .readOnly .choiceLabel {
   color: #777;
   text-transform: uppercase;
   font-size: .75em;
   letter-spacing: .15em;
 }
-/* line 102, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 102, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm .formHint {
   float: right;
   width: 43%;
   margin: 0;
   clear: none;
 }
-/* line 110, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 110, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm ul {
   float: left;
   width: 53%;
   margin: 0;
   padding: 0;
 }
-/* line 116, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 116, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm ul li {
   margin: 0 0 0.5em 0;
   list-style: none;
 }
-/* line 120, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 120, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm ul li label {
   margin: 0;
   float: none;
   display: block;
   overflow: visible;
 }
-/* line 131, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 131, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm ul.alternate li {
   float: left;
   width: 30%;
   margin-right: 3%;
 }
-/* line 136, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 136, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm ul.alternate li label {
   float: none;
   display: block;
   width: 98%;
 }
-/* line 149, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 149, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm ul .textInput,
 .uniForm ul .selectInput,
 .uniForm ul select,
@@ -287,7 +287,7 @@ body {
   display: block;
   float: none;
 }
-/* line 158, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 158, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm label em,
 .uniForm .label em {
   float: left;
@@ -301,7 +301,7 @@ body {
 /*    Styles for form controls where labels are in line with the input elements   */
 /*    Set the class of the parent (preferably to a fieldset) to .inlineLabels     */
 /* ------------------------------------------------------------------------------ */
-/* line 172, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 172, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm .inlineLabels {
   /* Float the input elements */
   /* Postition the hints */
@@ -309,7 +309,7 @@ body {
   /* Alternate layout */
   /* Required fields asterisk styling */
 }
-/* line 175, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 175, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm .inlineLabels label,
 .uniForm .inlineLabels .label,
 .uniForm .inlineLabels .readOnlyLabel {
@@ -320,11 +320,11 @@ body {
   position: relative;
   width: 32%;
 }
-/* line 184, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 184, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm .inlineLabels .readOnlyLabel {
   margin: 0;
 }
-/* line 191, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 191, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm .inlineLabels .textInput,
 .uniForm .inlineLabels .fileUpload,
 .uniForm .inlineLabels .selectInput,
@@ -333,7 +333,7 @@ body {
   float: left;
   width: 64%;
 }
-/* line 197, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 197, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm .inlineLabels .formHint {
   clear: both;
   float: none;
@@ -341,27 +341,27 @@ body {
   margin-left: 34%;
   position: static;
 }
-/* line 206, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 206, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm .inlineLabels ul {
   float: left;
   width: 66%;
 }
-/* line 209, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 209, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm .inlineLabels ul li {
   margin: .5em 0;
 }
-/* line 211, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 211, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm .inlineLabels ul li label {
   float: none;
   display: block;
   width: 100%;
 }
-/* line 216, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 216, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm .inlineLabels ul.alternate li {
   margin-right: 3%;
   margin-top: .25em;
 }
-/* line 222, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 222, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm .inlineLabels ul li label .textInput,
 .uniForm .inlineLabels ul li label textarea,
 .uniForm .inlineLabels ul li label select {
@@ -369,12 +369,12 @@ body {
   display: block;
   width: 98%;
 }
-/* line 228, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 228, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm .inlineLabels .readOnly {
   float: right;
   width: 66%;
 }
-/* line 235, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 235, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm .inlineLabels label em,
 .uniForm .inlineLabels .label em {
   display: block;
@@ -387,7 +387,7 @@ body {
 /* ----------------------------------------------------------------------------- */
 /* ########################### Additional Stuff ################################ */
 /* ----------------------------------------------------------------------------- */
-/* line 242, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 242, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm {
   /* Generals */
   /* .inlineLabel is used for inputs within labels - checkboxes and radio buttons */
@@ -396,15 +396,15 @@ body {
   /* Large is default and should match the value you set for .textInput, textarea or select */
   /* Columns */
 }
-/* line 244, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 244, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm legend {
   color: inherit;
 }
-/* line 246, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 246, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm .secondaryAction {
   float: left;
 }
-/* line 253, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 253, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm .inlineLabel input,
 .uniForm .inlineLabels .inlineLabel input,
 .uniForm .blockLabels .inlineLabel input,
@@ -415,7 +415,7 @@ body {
   padding: 0;
   border: none;
 }
-/* line 257, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 257, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm .buttonHolder .inlineLabel,
 .uniForm .buttonHolder label {
   float: left;
@@ -424,35 +424,35 @@ body {
   max-width: 60%;
   text-align: left;
 }
-/* line 267, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 267, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm .inlineLabels .noLabel ul {
   margin-left: 34%;
   /* Match to width of label + gap to field */
 }
-/* line 272, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 272, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm .small {
   width: 30% !important;
 }
-/* line 273, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 273, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm .medium {
   width: 45% !important;
 }
-/* line 275, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 275, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm .auto {
   width: auto !important;
   height: auto !important;
 }
-/* line 278, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 278, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm .small,
 .uniForm .medium,
 .uniForm .auto {
   margin-right: 4px;
 }
-/* line 281, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 281, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm .col {
   float: left;
 }
-/* line 282, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
+/* line 282, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form.scss */
 .uniForm .col {
   width: 50%;
 }
@@ -461,7 +461,7 @@ body {
 /* each column is 4em wide */
 /* 1em gutters between columns */
 /* 1em padding at the edges of the page as well */
-/* line 13, /Users/rschenk/dev/zb/mockups/mockup2/sass/_grid.scss */
+/* line 13, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_grid.scss */
 .container {
   *zoom: 1;
   margin: auto;
@@ -475,14 +475,14 @@ body {
   clear: both;
 }
 
-/* line 17, /Users/rschenk/dev/zb/mockups/mockup2/sass/_grid.scss */
+/* line 17, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_grid.scss */
 header .introduction {
   clear: both;
   margin-left: 1.37%;
   margin-right: 1.37%;
 }
 
-/* line 21, /Users/rschenk/dev/zb/mockups/mockup2/sass/_grid.scss */
+/* line 21, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_grid.scss */
 .cta {
   margin-left: 1.37%;
   display: inline;
@@ -491,91 +491,105 @@ header .introduction {
   margin-right: 1.37%;
 }
 
-/*.uniForm {
-	.ctrlHolder {
-		@include full;
-		
-		ul {
-			.formHint{
-				@include reset-column;
-				@include prefix(0);
-			}
-			
-		}
-	}
-	
-	.infoMsg {
-		@include full;
-		@include pad(2,3);
-	}
-	
-	.inlineLabels {
-		label,
-		.label,
-		.readOnlyLabel {
-			@include columns(2, 12);
-		}
-		
-		.textInput,  
-		.fileUpload,
-		.selectInput,
-		select,
-		textarea,
-		ul {
-			@include columns(5, 12);
-		}
-		
-		.error .errorHint {
-			@include float(left);
-		}
-		
-		ul {
-			.textInput,  
-			.fileUpload,
-			.selectInput,
-			select,
-			textarea {
-				margin-left: 0;
-				margin-right: 0;
-				width: 100%;
-			}
-			
-		}
-		
-		.formHint {
-			@include columns(10, 12);
-			@include prefix(2, 12);
-			margin-left: 0; // This is added by uni-form, don't need with Susy
-		}
-	}
+/* line 27, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_grid.scss */
+form#registration .ctrlHolder {
+  clear: both;
+  margin-left: 1.37%;
+  margin-right: 1.37%;
+}
+/* line 33, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_grid.scss */
+form#registration .ctrlHolder ul li .formHint {
+  float: none;
+  display: block;
+  width: auto;
+  margin-right: auto;
+  padding-left: 0%;
+}
+/* line 38, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_grid.scss */
+form#registration .ctrlHolder ul li label {
+  float: none;
+  display: block;
+  width: auto;
+  margin-right: auto;
+  clear: both;
+  margin-left: 1.37%;
+  margin-right: 1.37%;
+}
+/* line 46, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_grid.scss */
+form#registration .infoMsg {
+  clear: both;
+  margin-left: 1.37%;
+  margin-right: 1.37%;
+  padding-left: 16.438%;
+  padding-right: 24.658%;
+}
+/* line 54, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_grid.scss */
+form#registration .inlineLabels label,
+form#registration .inlineLabels .label,
+form#registration .inlineLabels .readOnlyLabel {
+  display: inline;
+  float: left;
+  width: 15.493%;
+  margin-right: 1.408%;
+}
+/* line 63, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_grid.scss */
+form#registration .inlineLabels .textInput,
+form#registration .inlineLabels .fileUpload,
+form#registration .inlineLabels .selectInput,
+form#registration .inlineLabels select,
+form#registration .inlineLabels textarea,
+form#registration .inlineLabels ul {
+  display: inline;
+  float: left;
+  width: 40.845%;
+  margin-right: 1.408%;
+}
+/* line 67, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_grid.scss */
+form#registration .inlineLabels .error .errorHint {
+  display: inline;
+  float: left;
+}
+/* line 76, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_grid.scss */
+form#registration .inlineLabels ul .textInput,
+form#registration .inlineLabels ul .fileUpload,
+form#registration .inlineLabels ul .selectInput,
+form#registration .inlineLabels ul select,
+form#registration .inlineLabels ul textarea {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+}
+/* line 83, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_grid.scss */
+form#registration .inlineLabels .formHint {
+  display: inline;
+  float: left;
+  width: 83.099%;
+  margin-right: 1.408%;
+  padding-left: 16.901%;
+  margin-left: 0;
 }
 
+/* line 91, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_grid.scss */
 #registrationForm .optionalInformation .textInput {
-	@include columns(2, 12);
-}*/
-/* line 3, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+  display: inline;
+  float: left;
+  width: 15.493%;
+  margin-right: 1.408%;
+}
+
+/* line 3, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form-theme.scss */
 .uniForm fieldset {
   padding: 1em 0;
 }
-/* line 7, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+/* line 7, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form-theme.scss */
 .uniForm .ctrlHolder {
   padding: 0.5em 0;
 }
-/* line 11, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+/* line 11, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form-theme.scss */
 .uniForm .ctrlHolder.focused {
   background-color: #ffe9b1;
 }
-/* line 16, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
-.uniForm .ctrlHolder.error .errorHint {
-  color: #cf390a;
-}
-/* line 17, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
-.uniForm .ctrlHolder.error .errorHint {
-  background: url(../images/icon-error.png) left center no-repeat;
-  padding-left: 20px;
-  line-height: 16px;
-}
-/* line 26, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+/* line 18, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form-theme.scss */
 .uniForm label em,
 .uniForm .label em {
   float: none;
@@ -584,15 +598,19 @@ header .introduction {
   color: #ff8d6d;
   font-style: normal;
 }
-/* line 29, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+/* line 21, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form-theme.scss */
 .uniForm .errorHint {
   display: none;
+  color: #cf390a;
+  background: url(../images/icon-error.png) left center no-repeat;
+  padding-left: 20px;
+  line-height: 16px;
 }
-/* line 33, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+/* line 29, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form-theme.scss */
 .uniForm .formHint {
   color: #888888;
 }
-/* line 37, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+/* line 33, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form-theme.scss */
 .uniForm .message, .uniForm #okMsg, .uniForm #errorMsg {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -605,99 +623,134 @@ header .introduction {
   border-width: 1px;
   margin-bottom: 1em;
 }
-/* line 45, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+/* line 41, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form-theme.scss */
 .uniForm #okMsg {
   background-color: #ddffc6;
   border-color: #b6e05c;
   color: #6d990f;
 }
-/* line 52, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+/* line 48, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form-theme.scss */
 .uniForm #errorMsg {
   border-color: #ff8d6d;
   background-color: #ffbcb6;
   color: #cf390a;
 }
-/* line 58, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+/* line 54, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form-theme.scss */
 .uniForm #errorMsg h3 {
   margin-bottom: 1em;
 }
-/* line 59, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+/* line 55, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form-theme.scss */
 .uniForm #errorMsg ol {
   list-style: disc inside;
 }
-/* line 61, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+/* line 57, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form-theme.scss */
 .uniForm .infoMsg p {
   background: url(../images/icon-info.png) left center no-repeat;
   padding: 0.7em 0 0.7em 30px;
   margin-left: -5px;
   color: #31309c;
 }
-/* line 70, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+/* line 66, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form-theme.scss */
 .uniForm ul.alternate.dateSelect li {
   width: auto;
 }
-/* line 72, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+/* line 68, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form-theme.scss */
 .uniForm ul.alternate .formHint {
   float: none;
 }
-/* line 78, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+/* line 69, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form-theme.scss */
+.uniForm ul.alternate .errorHint {
+  height: 16px;
+  width: 16px;
+  margin-top: 0.5em;
+  padding: 0;
+  text-indent: -9999em;
+  overflow: hidden;
+}
+/* line 75, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form-theme.scss */
 .uniForm .inlineLabels label,
 .uniForm .inlineLabels .label,
 .uniForm .inlineLabels .readOnlyLabel {
   text-align: right;
 }
-/* line 81, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+/* line 78, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form-theme.scss */
 .uniForm .inlineLabels label em,
 .uniForm .inlineLabels .label em,
 .uniForm .inlineLabels .readOnlyLabel em {
   position: static;
   display: inline;
 }
-/* line 88, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+/* line 85, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form-theme.scss */
 .uniForm .inlineLabels ul li {
   display: block;
   margin-top: 0;
 }
-/* line 92, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+/* line 86, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form-theme.scss */
 .uniForm .inlineLabels ul.alternate li {
   margin-top: 0;
   margin-bottom: 0;
 }
-/* line 96, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+/* line 90, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_uni-form-theme.scss */
 .uniForm .inlineLabels ul label,
 .uniForm .inlineLabels ul .label,
 .uniForm .inlineLabels ul .readOnlyLabel {
   text-align: left;
 }
 
-/* line 18, ../sass/screen.scss */
+/* Autocomplete shit */
+/* line 2, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_autocomplete.scss */
+.ui-autocomplete.ui-menu {
+  position: absolute;
+  padding: 0;
+  list-style-type: none;
+  background-color: #fefefe;
+  border: 1px solid #aaa;
+}
+/* line 10, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_autocomplete.scss */
+.ui-autocomplete.ui-menu .ui-menu-item a {
+  display: block;
+  padding: 0.25em 0.5em;
+}
+/* line 15, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_autocomplete.scss */
+.ui-autocomplete.ui-menu .ui-menu-item .ui-state-hover {
+  background-color: #fff8e7;
+}
+
+/* line 21, /Users/rschenk/Projects/Ryan Schenk Consulting/ZooBank/Mockups/mockup2/sass/_autocomplete.scss */
+.textInput.ui-autocomplete-loading {
+  background-image: url(../images/autocomplete-loading.gif);
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+/* line 19, ../sass/screen.scss */
 body {
   background-color: #f5f5ff;
   color: #555555;
 }
 
-/* line 23, ../sass/screen.scss */
+/* line 24, ../sass/screen.scss */
 #header {
   padding-top: 3em;
 }
 
-/* line 26, ../sass/screen.scss */
+/* line 27, ../sass/screen.scss */
 .logo {
   display: none;
 }
 
-/* line 27, ../sass/screen.scss */
+/* line 28, ../sass/screen.scss */
 .introduction {
   text-shadow: 0 1px 1px white;
   margin: 2em 0;
 }
 
-/* line 31, ../sass/screen.scss */
+/* line 32, ../sass/screen.scss */
 .tagline {
   display: block;
 }
 
-/* line 35, ../sass/screen.scss */
+/* line 36, ../sass/screen.scss */
 .cta {
   text-shadow: 0 -1px 1px rgba(132, 78, 0, 0.3);
   -moz-border-radius: 3px;
@@ -719,7 +772,7 @@ body {
   text-align: center;
   padding: 0.25em 0;
 }
-/* line 46, ../sass/screen.scss */
+/* line 47, ../sass/screen.scss */
 .cta:before {
   position: absolute;
   top: 0px;
@@ -731,19 +784,19 @@ body {
   content: url(../images/cta-loop.gif);
 }
 
-/* line 57, ../sass/screen.scss */
+/* line 59, ../sass/screen.scss */
 #registrationForm {
   background-color: #ebebff;
   border-top: 1px solid #e1e1ff;
 }
 
-/* line 61, ../sass/screen.scss */
+/* line 63, ../sass/screen.scss */
 fieldset#publication {
   background-color: #f0f0ff;
   border-top: 1px solid #e1e1ff;
 }
 
-/* line 66, ../sass/screen.scss */
+/* line 68, ../sass/screen.scss */
 legend {
   display: none;
 }

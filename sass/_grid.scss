@@ -23,17 +23,24 @@ header .introduction {
 	@include columns(5);
 }
 
-/*.uniForm {
+form#registration {
 	.ctrlHolder {
 		@include full;
 		
+		// Form controls nested inside lists, like combo and checkboxes
 		ul {
-			.formHint{
-				@include reset-column;
-				@include prefix(0);
+			li {
+				.formHint{
+					@include reset-column;
+					@include prefix(0);
+				}
+				
+				label {
+					@include reset-column;
+					@include full;
+				}
 			}
-			
-		}
+		}		
 	}
 	
 	.infoMsg {
@@ -71,7 +78,6 @@ header .introduction {
 				margin-right: 0;
 				width: 100%;
 			}
-			
 		}
 		
 		.formHint {
@@ -84,4 +90,4 @@ header .introduction {
 
 #registrationForm .optionalInformation .textInput {
 	@include columns(2, 12);
-}*/
+}
