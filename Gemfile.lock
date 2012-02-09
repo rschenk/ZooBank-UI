@@ -12,6 +12,8 @@ GEM
     modular-scale (0.0.4)
       compass (>= 0.11.5)
     sass (3.1.14)
+    sassy-buttons (0.0.9)
+      compass (>= 0.11)
 
 PLATFORMS
   ruby
@@ -20,3 +22,4 @@ DEPENDENCIES
   compass
   compass-susy-plugin
   modular-scale
+  sassy-buttons

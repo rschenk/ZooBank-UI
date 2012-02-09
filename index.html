@@ -147,9 +147,9 @@
             
             <div class="ctrlHolder">
               <p class="label">Authors</p>
-              <ul>
-                <li><input name="author1" id="author1" size="35" maxlength="50" type="text" class="textInput required" placeholder="Wilson, Edward O." /></li>
-                <li><input name="author2" id="author2" size="35" maxlength="50" type="text" class="textInput required" placeholder="add another author..." /></li>
+              <ul id="authorList">
+                <li><input name="author1" id="author1" size="35" maxlength="50" type="text" class="textInput authorInput" placeholder="Wilson, Edward O." /></li>
+                <li><input name="author2" id="author2" size="35" maxlength="50" type="text" class="textInput authorInput" placeholder="add another author..." /></li>
               </ul>
             </div>
 
@@ -185,25 +185,35 @@
             </fieldset>
           </div>
         </fieldset>
-        <fieldset class="inlineLabels">
-          <div class="buttonHolder">
-            <button type="submit" class="primaryAction">Register Names</button>
+        <fieldset class="buttons">
+          <div class="container">
+            <div class="buttonHolder">
+              <button type="submit" class="primaryAction">Register Name</button>
+            </div>
           </div>
         </fieldset>
       </form>
     </div>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="javascripts/jquery.ui.autocomplete.custom.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://raw.github.com/andyet/ICanHaz.js/master/ICanHaz.min.js" type="text/javascript" charset="utf-8"></script>
+	  <script src="javascripts/jquery.ui.autocomplete.custom.js" type="text/javascript" charset="utf-8"></script>
     <script src="javascripts/uni-form-validation.jquery.js" type="text/javascript" charset="utf-8"></script>
-	<script src="javascripts/scripts.js" type="text/javascript" charset="utf-8"></script>
+	  <script src="javascripts/scripts.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8">
       $(function(){
         $('form.uniForm').uniform();
 		
-		ZooBank.autocompleteGenus('#parent');
+        ZooBank.autocompleteGenus('#parent');
+        ZooBank.autocompleteAuthor('.authorInput');
+        ZooBank.initializeAuthorList('#authorList');
       });
     </script>
+	
+    <script id="authorTemplate" type="text/html">
+      <li><input name="author{{n}}" id="author{{n}}" type="text" class="authorInput textInput" placeholder="add another author..." /></li>
+    </script>
+	
 
 
 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>

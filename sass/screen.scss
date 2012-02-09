@@ -6,6 +6,7 @@
 @import "compass/css3";
 @import "modular-scale";
 @import "susy";
+@import "sassy-buttons";
 
 @import "colors";
 @import "typography";
@@ -59,9 +60,17 @@ body {
 #registrationForm {
 	background-color: $form-blue;
 	border-top: 1px solid $border-blue;
+	
+	.primaryAction {
+		@include sassy-button('simple', 3px, ms(2), $yellow, darken($yellow, 10), $very-light-yellow);
+	}
 }
 	fieldset#publication {
 		background-color: lighten($form-blue, 1);
+		border-top: 1px solid $border-blue;
+	}
+	
+	fieldset.buttons {
 		border-top: 1px solid $border-blue;
 	}
 

@@ -43,6 +43,11 @@ form#registration {
 		}		
 	}
 	
+	.buttonHolder {
+		@include full;
+		@include prefix(2);
+	}
+	
 	.infoMsg {
 		@include full;
 		@include pad(2,3);
@@ -51,7 +56,7 @@ form#registration {
 	.inlineLabels {
 		label,
 		.label,
-		.readOnlyLabel {
+		.readORegisternlyLabel {
 			@include columns(2, 12);
 		}
 		
