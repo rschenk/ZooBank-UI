@@ -62,13 +62,13 @@
 .uniForm{
 	label,
 	.label{ 
-/*		display: block;
+		display: block;
 		float: none;
 		margin: 0 0 .5em 0;
 		padding: 0;
 		line-height: 100%;
 		width: auto; 
-*/	}
+	}
       
 	/* Float the input elements */
 	.textInput,
@@ -118,10 +118,10 @@
 			list-style: none;
 			
 			label {
-/*				margin: 0;
+				margin: 0;
 				float: none;
 				display: block;
-				overflow: visible;*/
+				overflow: visible;
 			}
 		}
 	}
@@ -173,12 +173,12 @@
 		label,
 		.label,
 		.readOnlyLabel{
-/*			float: left;
+			float: left;
 			margin: .3em 2% 0 0;
 			padding: 0;
 			line-height: 1;
 			position: relative;
-			width: 32%;*/ 
+			width: 32%; 
 		}
       
 		.readOnlyLabel{ margin: 0; }
@@ -220,9 +220,9 @@
 		ul li label .textInput,
 		ul li label textarea,
 		ul li label select{ 
-/*			float: none;
+			float: none;
 			display: block;
-			width: 98%;*/
+			width: 98%;
 		}
     
 		.readOnly{

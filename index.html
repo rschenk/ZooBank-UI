@@ -19,7 +19,7 @@
       </div>
     </header>
     <section id="registrationForm">
-      <form id="registration" class="uniForm inlineLabels" action="" method="post" accept-charset="utf-8" name="registration">
+      <form id="registration" class="uniForm" action="" method="post" accept-charset="utf-8" name="registration">
         
         <div class="container">
           <h3 class="cta">Register a new name</h3>
@@ -33,16 +33,16 @@
         <fieldset id="nomenclatural_acts" class="inlineLabels">
           <legend>Nomenclatural Acts</legend>
           <div class="container">
-            <div id="errorMsg">
+            <!-- <div id="errorMsg">
               <h3>Ooops! Your error message title</h3>
               <ol>
                 <li>Error number one</li>
                 <li>Error number two</li>
               </ol>
-            </div>
-            <div id="okMsg">
+            </div> -->
+            <!-- <div id="okMsg">
               <p>Looks like everything went OK! Yay!</p>
-            </div>
+            </div> -->
             <div class="infoMsg">
               <p>All fields are required unless marked otherwise</p>
             </div>
@@ -76,7 +76,8 @@
               <label for="genus">Parent genus</label> <input name="genus" id="genus" placeholder="" size="35" maxlength="50" type="text" class="textInput required">
             </div>
             <div class="ctrlHolder">
-              <label for="species_epithet">Species epithet</label> <input name="species_epithet" id="species_epithet" placeholder="" size="35" maxlength="50" type="text" class="textInput required">
+              <label for="species_epithet">Species epithet</label>
+              <input name="species_epithet" id="species_epithet" placeholder="" size="35" maxlength="50" type="text" class="textInput required">
             </div>
           </div>
         </fieldset>
@@ -152,8 +153,8 @@
               </ul>
             </div>
 
-            <div class="ctrlHolder error">
-              <label for="title">Article title</label> <input name="title" id="title" placeholder="e.g. The Tenuis and Selenophora groups of the ant genus Ponera" size="35" maxlength="50" type="text" class="textInput required error">
+            <div class="ctrlHolder">
+              <label for="title">Article title</label> <input name="title" id="title" placeholder="e.g. The Tenuis and Selenophora groups of the ant genus Ponera" size="35" maxlength="50" type="text" class="textInput required">
               <p class="formHint">The title of this particular article</p>
             </div>
             <div class="ctrlHolder">
@@ -184,19 +185,20 @@
             </fieldset>
           </div>
         </fieldset>
-        <fieldset>
+        <fieldset class="inlineLabels">
           <div class="buttonHolder">
             <button type="submit" class="primaryAction">Register Names</button>
           </div>
         </fieldset>
       </form>
-    </div><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" charset="utf-8">
-</script><script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript" charset="utf-8">
-</script><script src="https://raw.github.com/andyet/ICanHaz.js/master/ICanHaz.min.js" type="text/javascript" charset="utf-8">
-</script><script src="jquery.ui.autocomplete.custom.js" type="text/javascript" charset="utf-8">
-</script><script src="../uni-form/js/uni-form.jquery.js" type="text/javascript" charset="utf-8">
-</script><script src="scripts.js" type="text/javascript">
-</script>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../uni-form/js/uni-form-validation.jquery.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+      $(function(){
+        $('form.uniForm').uniform(); 
+      });
+    </script>
 
 
 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>

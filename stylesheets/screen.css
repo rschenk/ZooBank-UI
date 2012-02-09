@@ -203,13 +203,12 @@ body {
 /* line 64, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
 .uniForm label,
 .uniForm .label {
-  /*		display: block;
-  		float: none;
-  		margin: 0 0 .5em 0;
-  		padding: 0;
-  		line-height: 100%;
-  		width: auto; 
-  */
+  display: block;
+  float: none;
+  margin: 0 0 .5em 0;
+  padding: 0;
+  line-height: 100%;
+  width: auto;
 }
 /* line 78, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
 .uniForm .textInput,
@@ -259,10 +258,10 @@ body {
 }
 /* line 120, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
 .uniForm ul li label {
-  /*				margin: 0;
-  				float: none;
-  				display: block;
-  				overflow: visible;*/
+  margin: 0;
+  float: none;
+  display: block;
+  overflow: visible;
 }
 /* line 131, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
 .uniForm ul.alternate li {
@@ -314,12 +313,12 @@ body {
 .uniForm .inlineLabels label,
 .uniForm .inlineLabels .label,
 .uniForm .inlineLabels .readOnlyLabel {
-  /*			float: left;
-  			margin: .3em 2% 0 0;
-  			padding: 0;
-  			line-height: 1;
-  			position: relative;
-  			width: 32%;*/
+  float: left;
+  margin: .3em 2% 0 0;
+  padding: 0;
+  line-height: 1;
+  position: relative;
+  width: 32%;
 }
 /* line 184, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
 .uniForm .inlineLabels .readOnlyLabel {
@@ -366,9 +365,9 @@ body {
 .uniForm .inlineLabels ul li label .textInput,
 .uniForm .inlineLabels ul li label textarea,
 .uniForm .inlineLabels ul li label select {
-  /*			float: none;
-  			display: block;
-  			width: 98%;*/
+  float: none;
+  display: block;
+  width: 98%;
 }
 /* line 228, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form.scss */
 .uniForm .inlineLabels .readOnly {
@@ -492,77 +491,68 @@ header .introduction {
   margin-right: 1.37%;
 }
 
-/* line 27, /Users/rschenk/dev/zb/mockups/mockup2/sass/_grid.scss */
-.uniForm .ctrlHolder {
-  clear: both;
-  margin-left: 1.37%;
-  margin-right: 1.37%;
-}
-/* line 31, /Users/rschenk/dev/zb/mockups/mockup2/sass/_grid.scss */
-.uniForm .ctrlHolder ul .formHint {
-  float: none;
-  display: block;
-  width: auto;
-  margin-right: auto;
-  padding-left: 0%;
-}
-/* line 39, /Users/rschenk/dev/zb/mockups/mockup2/sass/_grid.scss */
-.uniForm .infoMsg {
-  clear: both;
-  margin-left: 1.37%;
-  margin-right: 1.37%;
-  padding-left: 16.438%;
-  padding-right: 24.658%;
-}
-/* line 47, /Users/rschenk/dev/zb/mockups/mockup2/sass/_grid.scss */
-.uniForm .inlineLabels label,
-.uniForm .inlineLabels .label,
-.uniForm .inlineLabels .readOnlyLabel {
-  display: inline;
-  float: left;
-  width: 15.493%;
-  margin-right: 1.408%;
-}
-/* line 56, /Users/rschenk/dev/zb/mockups/mockup2/sass/_grid.scss */
-.uniForm .inlineLabels .textInput,
-.uniForm .inlineLabels .fileUpload,
-.uniForm .inlineLabels .selectInput,
-.uniForm .inlineLabels select,
-.uniForm .inlineLabels textarea,
-.uniForm .inlineLabels ul {
-  display: inline;
-  float: left;
-  width: 40.845%;
-  margin-right: 1.408%;
-}
-/* line 65, /Users/rschenk/dev/zb/mockups/mockup2/sass/_grid.scss */
-.uniForm .inlineLabels ul .textInput,
-.uniForm .inlineLabels ul .fileUpload,
-.uniForm .inlineLabels ul .selectInput,
-.uniForm .inlineLabels ul select,
-.uniForm .inlineLabels ul textarea {
-  margin-left: 0;
-  margin-right: 0;
-  width: 100%;
-}
-/* line 73, /Users/rschenk/dev/zb/mockups/mockup2/sass/_grid.scss */
-.uniForm .inlineLabels .formHint {
-  display: inline;
-  float: left;
-  width: 83.099%;
-  margin-right: 1.408%;
-  padding-left: 16.901%;
-  margin-left: 0;
+/*.uniForm {
+	.ctrlHolder {
+		@include full;
+		
+		ul {
+			.formHint{
+				@include reset-column;
+				@include prefix(0);
+			}
+			
+		}
+	}
+	
+	.infoMsg {
+		@include full;
+		@include pad(2,3);
+	}
+	
+	.inlineLabels {
+		label,
+		.label,
+		.readOnlyLabel {
+			@include columns(2, 12);
+		}
+		
+		.textInput,  
+		.fileUpload,
+		.selectInput,
+		select,
+		textarea,
+		ul {
+			@include columns(5, 12);
+		}
+		
+		.error .errorHint {
+			@include float(left);
+		}
+		
+		ul {
+			.textInput,  
+			.fileUpload,
+			.selectInput,
+			select,
+			textarea {
+				margin-left: 0;
+				margin-right: 0;
+				width: 100%;
+			}
+			
+		}
+		
+		.formHint {
+			@include columns(10, 12);
+			@include prefix(2, 12);
+			margin-left: 0; // This is added by uni-form, don't need with Susy
+		}
+	}
 }
 
-/* line 81, /Users/rschenk/dev/zb/mockups/mockup2/sass/_grid.scss */
 #registrationForm .optionalInformation .textInput {
-  display: inline;
-  float: left;
-  width: 15.493%;
-  margin-right: 1.408%;
-}
-
+	@include columns(2, 12);
+}*/
 /* line 3, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
 .uniForm fieldset {
   padding: 1em 0;
@@ -571,27 +561,21 @@ header .introduction {
 .uniForm .ctrlHolder {
   padding: 0.5em 0;
 }
-/* line 10, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
-.uniForm .ctrlHolder.error {
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -o-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -khtml-border-radius: 3px;
-  border-radius: 3px;
-  border: 1px solid #ff8d6d;
-  background-color: #ffbcb6;
+/* line 11, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+.uniForm .ctrlHolder.focused {
+  background-color: #ffe9b1;
 }
 /* line 16, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
-.uniForm .ctrlHolder.error label,
-.uniForm .ctrlHolder.error .label {
+.uniForm .ctrlHolder.error .errorHint {
   color: #cf390a;
 }
-/* line 18, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
-.uniForm .ctrlHolder.error .formHint {
-  color: #cf390a;
+/* line 17, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+.uniForm .ctrlHolder.error .errorHint {
+  background: url(../images/icon-error.png) left center no-repeat;
+  padding-left: 20px;
+  line-height: 16px;
 }
-/* line 23, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+/* line 26, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
 .uniForm label em,
 .uniForm .label em {
   float: none;
@@ -600,11 +584,15 @@ header .introduction {
   color: #ff8d6d;
   font-style: normal;
 }
-/* line 25, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+/* line 29, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+.uniForm .errorHint {
+  display: none;
+}
+/* line 33, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
 .uniForm .formHint {
   color: #888888;
 }
-/* line 29, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+/* line 37, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
 .uniForm .message, .uniForm #okMsg, .uniForm #errorMsg {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -617,65 +605,65 @@ header .introduction {
   border-width: 1px;
   margin-bottom: 1em;
 }
-/* line 37, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+/* line 45, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
 .uniForm #okMsg {
   background-color: #ddffc6;
   border-color: #b6e05c;
   color: #6d990f;
 }
-/* line 44, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+/* line 52, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
 .uniForm #errorMsg {
   border-color: #ff8d6d;
   background-color: #ffbcb6;
   color: #cf390a;
 }
-/* line 50, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+/* line 58, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
 .uniForm #errorMsg h3 {
   margin-bottom: 1em;
 }
-/* line 51, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+/* line 59, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
 .uniForm #errorMsg ol {
   list-style: disc inside;
 }
-/* line 53, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+/* line 61, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
 .uniForm .infoMsg p {
   background: url(../images/icon-info.png) left center no-repeat;
   padding: 0.7em 0 0.7em 30px;
   margin-left: -5px;
   color: #31309c;
 }
-/* line 62, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+/* line 70, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
 .uniForm ul.alternate.dateSelect li {
   width: auto;
 }
-/* line 64, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+/* line 72, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
 .uniForm ul.alternate .formHint {
   float: none;
 }
-/* line 70, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+/* line 78, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
 .uniForm .inlineLabels label,
 .uniForm .inlineLabels .label,
 .uniForm .inlineLabels .readOnlyLabel {
   text-align: right;
 }
-/* line 73, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+/* line 81, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
 .uniForm .inlineLabels label em,
 .uniForm .inlineLabels .label em,
 .uniForm .inlineLabels .readOnlyLabel em {
   position: static;
   display: inline;
 }
-/* line 80, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+/* line 88, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
 .uniForm .inlineLabels ul li {
   display: block;
   margin-top: 0;
 }
-/* line 84, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+/* line 92, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
 .uniForm .inlineLabels ul.alternate li {
   margin-top: 0;
   margin-bottom: 0;
 }
-/* line 88, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
+/* line 96, /Users/rschenk/dev/zb/mockups/mockup2/sass/_uni-form-theme.scss */
 .uniForm .inlineLabels ul label,
 .uniForm .inlineLabels ul .label,
 .uniForm .inlineLabels ul .readOnlyLabel {

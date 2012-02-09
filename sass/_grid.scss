@@ -23,7 +23,7 @@ header .introduction {
 	@include columns(5);
 }
 
-.uniForm {
+/*.uniForm {
 	.ctrlHolder {
 		@include full;
 		
@@ -57,6 +57,10 @@ header .introduction {
 			@include columns(5, 12);
 		}
 		
+		.error .errorHint {
+			@include float(left);
+		}
+		
 		ul {
 			.textInput,  
 			.fileUpload,
@@ -80,4 +84,4 @@ header .introduction {
 
 #registrationForm .optionalInformation .textInput {
 	@include columns(2, 12);
-}
+}*/

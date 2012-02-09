@@ -7,20 +7,28 @@
 	.ctrlHolder {
 		padding: 0.5em 0;
 		
+		
+		&.focused {
+			background-color: $light-yellow;
+		}
+		
 		&.error {
-			@include border-radius(3px);
-			border: 1px solid $red;
-			background-color: $light-red;
-			
-			label,
-			.label { color: $dark-red; }
-			
-			.formHint { color: $dark-red; }
+			.errorHint { color: $dark-red; }
+			.errorHint {
+				background: url(../images/icon-error.png) left center no-repeat;
+				padding-left: 20px;
+				line-height: 16px;
+			}
 		}
 	}
 	
 	label em,
 	.label em{ float: none; width: auto; margin: auto; color: $red; font-style: normal; }
+	
+
+	.errorHint {
+		display: none;
+	}
 	
 	.formHint {
 		color: lighten($text, 20);
