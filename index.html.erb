@@ -82,9 +82,16 @@
           </div>
         </fieldset>
         
-        <%=render "_publication_form.html.erb" %>
-        <%=render "_doi_form.html.erb" %>
-        <%=render "_recent_publications_form.html.erb" %>
+		<div id="publicationTabs">
+			<ul>
+				<li><a href="#publication_fields">Enter publication details</a></li>
+				<li><a href="#doi_fields">Paste in a <abbr title="Digital Object Identifier">DOI</abbr></a></li>
+				<li><a href="#recent_publications_fields">Choose from your recent publications</a></li>
+			</ul>
+	        <%=render "_publication_form.html.erb" %>
+	        <%=render "_doi_form.html.erb" %>
+	        <%=render "_recent_publications_form.html.erb" %>
+		</div>
 				
 		<fieldset class="buttons">
           <div class="container">
@@ -104,6 +111,8 @@
     <script type="text/javascript" charset="utf-8">
       $(function(){
         $('form.uniForm').uniform();
+		
+		$('#publicationTabs').tabs();
 		
         ZooBank.autocompleteGenus('#parent');
         ZooBank.autocompleteAuthor('.authorInput');
