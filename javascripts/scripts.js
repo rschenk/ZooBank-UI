@@ -52,7 +52,6 @@ var ZooBank = {
 	},
 	
 	initializeAuthorList: function(list_selector){
-		console.log("Jerome Action")
 		var $authorList = $(list_selector);		
 		
 		$authorList.on('keypress', "li:last-child input", function(){

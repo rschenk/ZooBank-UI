@@ -32,17 +32,25 @@ body {
 	font-size: ms(1);
 }
 
-#header {
-	.introduction {
-		@include serif-font;
-		font-size:   ms(3);
-		line-height: ms(3) * 1.3;
-	}
+.logo {
+	font-family: UniversLTStd-Cn;
+	font-size: ms(6);
+	line-height: ms(7);
+}
+
+nav {
+	font-size: ms(1);
+}
+
+.introduction {
+	@include serif-font;
+	font-size:   ms(3);
+	line-height: ms(3) * 1.3;
+}
 	
-	.tagline {
-		font-size:   ms(6);
-		line-height: ms(6) * 1.1;
-	}
+.tagline {
+	font-size:   ms(6);
+	line-height: ms(6) * 1.1;
 }
 
 .cta {
@@ -57,5 +65,12 @@ body {
 	
 	.primaryAction {
 		font-size: ms(2);
+	}
+}
+
+.citationList {
+	.biblio-entry {
+		font-size: ms(0);
+		line-height: ms(2);
 	}
 }

@@ -21,20 +21,43 @@
 body {
 	background-color: $very-light-blue;
 	color: $text;
-	margin-top: 150px;
 }
 
 #header {
-	padding-top: 3em;
+	background-color: $purple;
+	height: ms(6);
 }
-	.logo { display:none; }
-	.introduction { 
-		@include text-shadow(0 1px 1px #fff);
-		margin: 2em 0;
+
+	.logo {
+		float: left;
+		color: $very-light-blue;
 	}
-	.tagline {
-		display: block;
+	nav {
+		padding-top: ms(6) - ms(1) - 3px;
+		float:right;
+		li { 
+			display: inline;
+			a {
+				padding-left: 1em;
+				color: $very-light-blue;
+				text-decoration: none;
+				
+				&:hover {
+					text-decoration: underline;
+					color: $yellow;
+				}
+			}
+		}
 	}
+
+
+.introduction { 
+	@include text-shadow(0 1px 1px #fff);
+	margin: 2em 0;
+}
+.tagline {
+	display: block;
+}
 
 .cta {
 	@include text-shadow(0 -1px 1px transparentize($yellow-shadow, 0.7));
@@ -59,6 +82,12 @@ body {
 	}
 }
 
+.ui-tabs ul {
+	@include clearfix;
+	float: none;
+	width: auto;
+}
+
 #registrationForm {
 	background-color: $form-blue;
 	border-top: 1px solid $border-blue;
@@ -67,13 +96,28 @@ body {
 		@include sassy-button('simple', 3px, ms(2), $yellow, darken($yellow, 10), $very-light-yellow);
 	}
 }
-	fieldset#publication_fields {
-		background-color: lighten($form-blue, 1);
-		border-top: 1px solid $border-blue;
+#publicationTabs {
+	padding-top: 1em;
+	background-color: lighten($form-blue, 1);
+	border-top: 1px solid $border-blue;
+		
+	.ui-tabs-nav {
+		margin-top: 1em;
 	}
+		
+	.ui-tabs-panel {
+		padding: 1em 0;
+	}
+}
 	
-	fieldset.buttons {
-		border-top: 1px solid $border-blue;
+fieldset.buttons {
+	border-top: 1px solid $border-blue;
+}
+
+.citationList {
+	li{
+		margin-bottom: ms(2) !important;
 	}
+}
 
 legend { display: none; }

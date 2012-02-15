@@ -43,6 +43,11 @@ form#registration {
 		}		
 	}
 	
+	.ui-tabs-nav {
+		@include full;
+		@include prefix(2);
+	}
+	
 	.buttonHolder {
 		@include full;
 		@include prefix(2);
@@ -50,7 +55,7 @@ form#registration {
 	
 	.infoMsg {
 		@include full;
-		@include pad(2,3);
+		@include prefix(2);
 	}
 	
 	.inlineLabels {
@@ -68,6 +73,12 @@ form#registration {
 		ul {
 			@include columns(5, 12);
 		}
+		
+		ul.citationList {
+			@include columns(8, 12);
+		}
+		
+		
 		
 		.error .errorHint {
 			@include float(left);
