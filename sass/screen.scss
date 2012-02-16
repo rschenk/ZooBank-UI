@@ -26,6 +26,7 @@ body {
 #header {
 	background-color: $purple;
 	height: ms(6);
+	margin-bottom: ms(1);
 }
 
 	.logo {
@@ -91,10 +92,6 @@ body {
 #registrationForm {
 	background-color: $form-blue;
 	border-top: 1px solid $border-blue;
-	
-	.primaryAction {
-		@include sassy-button('simple', 3px, ms(2), $yellow, darken($yellow, 10), $very-light-yellow);
-	}
 }
 #publicationTabs {
 	padding-top: 1em;

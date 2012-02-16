@@ -32,6 +32,16 @@ body {
 	font-size: ms(1);
 }
 
+h2 {
+	@include serif-font;
+	font-size: ms(4);
+	line-height: ms(5);
+}
+
+
+em {
+	font-style: italic;
+}
 .logo {
 	font-family: UniversLTStd-Cn;
 	font-size: ms(6);
