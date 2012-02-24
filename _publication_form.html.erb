@@ -66,7 +66,8 @@
     </div>
 
     <div class="ctrlHolder">
-      <label for="title">Article title</label> <input name="title" id="title" placeholder="e.g. The Tenuis and Selenophora groups of the ant genus Ponera" size="35" maxlength="50" type="text" class="textInput required">
+      <label for="title">Article title</label> 
+	  <textarea name="title" id="title" rows="2" cols="25"></textarea>
       <p class="formHint">The title of this particular article</p>
     </div>
     <div class="ctrlHolder">
@@ -79,6 +80,9 @@
       <legend>Optional Citation Information</legend>
       <div class="infoMsg">
         <p>The following fields are optional, but are appreciated.</p>
+      </div>
+      <div class="ctrlHolder">
+        <label for="issn">ISSN</label> <input name="issn" id="issn" placeholder="" size="35" maxlength="50" type="text" class="textInput">
       </div>
       <div class="ctrlGroup" id="volume_issue">
         <div class="ctrlHolder">

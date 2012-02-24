@@ -12,6 +12,33 @@
 			background-color: $light-yellow;
 		}
 		
+		ul {
+			li.subInput {
+				@include clearfix;
+			
+				.label,
+				label {
+					display: inline;
+					float: left !important;
+					margin-top: 0;
+				}
+			
+				input {
+					margin-top: 0;
+				
+					&.textInput { width: 60%; }
+				}
+			}
+		}
+	
+		ul.alternate {
+			&.dateSelect {
+				li{ width: auto;}
+			}
+			.formHint{ float: none; }
+			.errorHint{ height: 16px; width: 16px; margin-top: 0.5em; padding: 0; text-indent: -9999em; overflow: hidden; }
+		}
+		
 	}
 	
 	label em,
@@ -27,15 +54,7 @@
 	}
 	
 	.formHint {
-		color: lighten($text, 20);
-	}
-		
-	ul.alternate {
-		&.dateSelect {
-			li{ width: auto;}
-		}
-		.formHint{ float: none; }
-		.errorHint{ height: 16px; width: 16px; margin-top: 0.5em; padding: 0; text-indent: -9999em; overflow: hidden; }
+		color: $light-text;
 	}
 	
 	.inlineLabels {
@@ -95,8 +114,19 @@
 	&:first-child { background: url(../images/icon-info.png) left center no-repeat; }
 }
 
+.uniForm .primaryAction,
 .primaryAction {
 	@include sassy-button('simple', 3px, ms(2), $yellow, darken($yellow, 10), $very-light-yellow);
 	text-decoration: none;
 }
-
+.uniForm .secondaryAction,
+.secondaryAction {
+	float: none;
+	background: transparent;
+	border: none;
+	color: $light-text;
+	margin: 0 0 0 1em;
+	padding: 0;
+	text-decoration: underline;
+	
+}

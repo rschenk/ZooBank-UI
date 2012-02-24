@@ -9,8 +9,10 @@ $ratio: $golden;
 
 
 $serif-stack: Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Times New Roman", serif;;
-$sans-stack: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
-$sans-stack: "Lucida Sans Unicode", "Lucida Grande", Arial, Verdana, sans-serif;
+$sans-stack: "Open Sans", Arial, Verdana, sans-serif;
+$mono-stack: Pragmata, Menlo, 'DejaVu LGC Sans Mono', 'DejaVu LGC Sans Mono', 'DejaVu Sans Mono', Consolas, 'Everson Mono', 'Lucida Console', 'Andale Mono', 'Nimbus Mono L', 'Liberation Mono', FreeMono, 'Lucida Sans Typewriter', 'Lucida Typewriter', 'Osaka Monospaced', "Bitstream Vera Sans Mono", Courier, 'New Courier', monospace;
+
+
 
 @mixin serif-font {
 	font-family: $serif-stack;
@@ -18,10 +20,8 @@ $sans-stack: "Lucida Sans Unicode", "Lucida Grande", Arial, Verdana, sans-serif;
 	text-rendering: optimizeLegibility;
 	
 }
-
-@mixin sans-font {
-	font-family: $sans-stack;
-}
+@mixin sans-font { font-family: $sans-stack; }
+@mixin mono-font { font-family: $mono-stack; }
 
 abbr {
 	font-variant: small-caps;
@@ -74,13 +74,26 @@ nav {
 	}	
 	
 	.primaryAction {
+		@include sans-font;
 		font-size: ms(2);
+	}
+	
+	.secondaryAction {
+		@include sans-font;
+		font-size: ms(1);
+		font-weight: normal;
 	}
 }
 
-.citationList {
-	.biblio-entry {
-		font-size: ms(0);
-		line-height: ms(2);
-	}
+.biblio-entry {
+	font-size: ms(0);
+	line-height: ms(2);
+}
+
+.actSummary { 
+	.biblio-entry { line-height: ms(1); }
+}
+
+.lsid {
+	@include mono-font;
 }

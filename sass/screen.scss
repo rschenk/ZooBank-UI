@@ -4,6 +4,7 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 @import "compass/reset";
 @import "compass/css3";
+@import "compass/utilities";
 @import "modular-scale";
 @import "susy";
 @import "sassy-buttons";
@@ -16,7 +17,7 @@
 @import "autocomplete";
 @import "tabs";
 
-
+.check { color: $dark-green; }
 
 body {
 	background-color: $very-light-blue;
@@ -31,7 +32,7 @@ body {
 
 	.logo {
 		float: left;
-		color: $very-light-blue;
+		a{ color: $very-light-blue; text-decoration: none;}
 	}
 	nav {
 		padding-top: ms(6) - ms(1) - 3px;
@@ -51,6 +52,16 @@ body {
 		}
 	}
 
+
+table {
+	@include table-scaffolding;
+		
+	th, td {
+		vertical-align: top;
+		text-align: left;
+		font-weight: normal;
+	}
+}
 
 .introduction { 
 	@include text-shadow(0 1px 1px #fff);
@@ -95,8 +106,8 @@ body {
 }
 #publicationTabs {
 	padding-top: 1em;
-	background-color: lighten($form-blue, 1);
-	border-top: 1px solid $border-blue;
+	border-bottom: 1px solid $border-blue;
+	
 		
 	.ui-tabs-nav {
 		margin-top: 1em;
@@ -118,3 +129,102 @@ fieldset.buttons {
 }
 
 legend { display: none; }
+
+
+.actSummary {
+	margin-bottom: 2em;
+		
+	.biblio-entry {
+		display: block;
+		width: 60%;
+	}
+}
+
+.nextAction {
+	padding: 2em 0;
+	background-color: $form-blue;
+	border-top: 1px solid $border-blue;
+	border-bottom: 1px solid $border-blue;
+}
+
+.registerAnother {
+	color: $purple;
+	
+	a {
+		padding: 0.25em 0.5em;
+	}
+}
+
+.lsidWrapper {
+	@include clearfix;
+	margin-bottom: 1em;
+	
+	.lsidLogo, .lsid { 
+		@include float(left);
+		line-height: ms(2);
+		padding: 2px 4px;
+	}
+	.lsidLogo {
+		@include border-top-left-radius(3px);
+		@include border-bottom-left-radius(3px);
+		color: #fff;
+		background-color: $lsid-orange;
+		border: 1px solid $lsid-orange;
+	}
+	input.lsid {
+		width: 40em;
+		margin: 0;
+	    border: 1px solid $border-blue;
+		border-left: 0;
+	    background: lighten($very-light-blue, 2);
+	    -webkit-appearance: none;
+		outline: none
+	}
+	#clippy {
+		@include float(left);
+		margin-top: 4px;
+		margin-left: 4px;
+	}
+}
+
+.authorDisambiguation {
+	padding-top: 1em;
+	margin-top: 1em;
+	background-color: $form-blue;
+	border-top: 1px solid $border-blue;
+
+	.specialties,
+	.sparkline { 
+		padding-left: 3em;
+	}
+	
+	td.specialties {
+		color: $light-text; 
+	}
+	
+	
+	td,th {
+	}
+	thead th {
+		font-weight: bold;
+		padding-bottom: 1em;
+	}
+}
+
+ul.newAuthor {
+	width: 100% !important;
+	li {
+		width: auto !important;
+	}
+	.formHint {
+		width: 100%;
+	}
+}
+
+#nomenclaturalActs {
+	.inlineLabel input,
+	.inlineLabels .inlineLabel input,
+	.blockLabels .inlineLabel input,
+	label input{ float: none; display: inline; margin: 0; padding: 0; border: none; }
+	
+}

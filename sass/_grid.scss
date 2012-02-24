@@ -19,7 +19,6 @@ header .introduction {
 }
 
 .cta {
-	@include alpha;
 	@include columns(5);
 }
 
@@ -94,6 +93,19 @@ form#registration {
 				margin-right: 0;
 				width: 100%;
 			}
+			
+			.subInput {
+				.textInput,  
+				.fileUpload,
+				.selectInput,
+				select,
+				textarea {
+					margin-left: 0;
+					margin-right: 0;
+					width: 70%;
+				}
+				
+			}
 		}
 		
 		.formHint {
@@ -104,6 +116,22 @@ form#registration {
 	}
 }
 
+.okMsg {
+	@include full;
+}
+
+.registerAnother {
+	@include full;
+	
+	p {
+		@include full(12);
+	}
+}
+
 #registrationForm .optionalInformation .textInput {
 	@include columns(2, 12);
+}
+
+.actSummary {
+	@include full;
 }

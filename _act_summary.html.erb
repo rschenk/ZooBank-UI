@@ -1,0 +1,30 @@
+<% lsid = 'urn:lsid:zoobank.org:act:8BDC0735-FEA4-4298-83FA-D04F67C3FBEC' %>
+<div class="actSummary">
+	<h2 class="actName">Doorstopius woodii</h2>
+	<div class="lsidWrapper">
+		<span class="lsidLogo">LSID</span>
+		<input type="text" class="selectAll lsid" value="<%= lsid %>"/>
+		<%= clippy lsid, '#f5f5ff' %>
+		<!-- TODO Refactor this to some sort of unobtrusive thing -->
+		<script type="text/javascript" charset="utf-8">
+			$('.selectAll').click(function(){ this.select(); });
+		</script>
+		
+	</div>
+	<table>
+		<tr>
+			<th scope="row">Rank</th>
+			<td>Species</td>
+		</tr>
+		<tr>
+			<th scope="row">Parent</th>
+			<td>Doorstopius</td>
+		</tr>
+		<tr>
+			<th scope="row">Description</th>
+			<td><span class="biblio-entry"><span class="biblio-authors">Bond, J. E., &amp; Stocman A. K.</span> (2008).&nbsp;&nbsp;<span class="biblio-title">An Integrative Method for Delimiting Cohesion Species: Finding the Population-Species Interface in a Group of California Trapdoor Spiders with Extreme Genetic Divergence and Geographic Structuring.</span> <u>Systematic Biology. 57,</u></span></td>
+		</tr>
+		
+	</table>
+</div>
+

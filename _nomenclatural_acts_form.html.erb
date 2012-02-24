@@ -1,0 +1,86 @@
+				
+<!--
+	Nomenclatural Acts
+-->
+
+<fieldset id="nomenclaturalActs" class="inlineLabels">
+	<legend>Nomenclatural Acts</legend>
+	<div class="container">
+	    <div class="infoMsg">
+		  <p>If you are registering multiple taxa in this publication, your life might be easier if you start with higher-order taxa first.</p>
+	    </div>
+		
+		<div class="ctrlHolder">
+			<label for="rank_id">Taxonomic rank</label> <select id="rank_id" name="rank_id">
+				<option value="50">Family</option>
+				<option value="53" class="subCategory">&nbsp;&nbsp;&nbsp;Subfamily</option>
+				<option value="54" class="subCategory">&nbsp;&nbsp;&nbsp;Supertribe</option>
+				<option value="55" class="subCategory">&nbsp;&nbsp;&nbsp;Tribe</option>
+				<option value="56" class="subCategory">&nbsp;&nbsp;&nbsp;Subtribe</option>
+				<option value="60">Genus</option>
+				<option value="61" class="subCategory">&nbsp;&nbsp;&nbsp;Series</option>
+				<option value="62" class="subCategory">&nbsp;&nbsp;&nbsp;Subseries</option>
+				<option value="63" class="subCategory">&nbsp;&nbsp;&nbsp;Subgenus</option>
+				<option value="64" class="subCategory">&nbsp;&nbsp;&nbsp;Division</option>
+				<option value="65" class="subCategory">&nbsp;&nbsp;&nbsp;Section</option>
+				<option value="66" class="subCategory">&nbsp;&nbsp;&nbsp;Subsection</option>
+				<option value="67" class="subCategory">&nbsp;&nbsp;&nbsp;Group</option>
+				<option value="70" selected="selected">Species</option>
+				<option value="72" class="subCategory">&nbsp;&nbsp;&nbsp;Microspecies</option>
+				<option value="73" class="subCategory">&nbsp;&nbsp;&nbsp;Subspecies</option>
+				<option value="74" class="subCategory">&nbsp;&nbsp;&nbsp;Variety</option>
+				<option value="75" class="subCategory">&nbsp;&nbsp;&nbsp;Subvariety</option>
+				<option value="76" class="subCategory">&nbsp;&nbsp;&nbsp;Form</option>
+				<option value="77" class="subCategory">&nbsp;&nbsp;&nbsp;Subform</option>
+				<option value="78" class="subCategory">&nbsp;&nbsp;&nbsp;Infraspecies</option>
+				<option value="79" class="subCategory">&nbsp;&nbsp;&nbsp;altera</option>
+			</select>
+		</div>
+		
+		<div class="ctrlHolder">
+			<label for="species_epithet">Species epithet</label>
+			<input name="species_epithet" id="species_epithet" placeholder="" size="35" maxlength="50" type="text" class="textInput required">
+		</div>
+		
+		<% if (parent_genus rescue false) %>
+		    <div class="ctrlHolder">
+		      <p class="label">Parent genus</p>
+		      <ul class="">
+		        <li>
+		          <label for="g1"><input type="radio" id="g1" name="parent"/> <%= parent_genus %></label>
+		        </li>
+			
+		        <li class="subInput">
+		          <label for="parentName"><input type="radio" id="g4" name="parent"/>
+	 Other</label> <input type="text" id="parentName" name="parentName" class="textInput"/>
+		        </li>
+		      </ul>
+		    </div>
+			<!-- TODO this should be UJS -->
+			<script type="text/javascript" charset="utf-8">
+				$(function(){
+					var $radio = $('#g4');
+					$('#parentName').on('focus', function(){ $radio.attr('checked', 'checked'); });
+				});
+			</script>
+		<% else %>		
+			<div class="ctrlHolder">
+				<label for="parentName">Parent genus</label> <input name="parentName" id="parentName" placeholder="" size="35" maxlength="50" type="text" class="textInput required">
+			</div>
+			
+			<div id="parentDisambiguation">
+			    <div class="errorMsg">
+				  <p>ZooBank is unfamiliar with the genus you've entered.</p>
+				  <p>Is it described in this same publication as woodii?</p>
+			    </div>
+	   		    <div class="ctrlHolder">
+				  <p class="label"></p>
+	   		      <ul class="">
+	   		        <li><label for="genus_yes"><input type="radio" id="genus_yes" name="genus_defined"/> Yes, Doorstoppius is described in this publication</label></li>
+					<li><label for="genus_no"><input type="radio" id="genus_no" name="genus_defined"/> No, it is described in a different publication</label></li>
+	   		      </ul>
+	   		    </div>
+			</div>						
+		<% end %>
+	</div>
+</fieldset>

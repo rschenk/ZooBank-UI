@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="okMsg">
-		<p>You have successfully registered the {species} {Doorstoppius woodus}.</p>
+		<p>You are about to register the species Doorstoppius woodii.</p>
 	</div>
 	
 	<h2><em>but we would appreciate a little extra information</em></h2>
@@ -8,45 +8,146 @@
 		<p>ZooBank is unfamiliar with some of the authors you have entered.</p>
 		<p>We've made our best guess at identifying the ambiguous authors and would appreciate it if you would confirm them.</p>
 	</div>
-	
-	
-	<ul class="authorDisambiguation">
-		<li><span class="author ok">Pyle, Richard Lawrence (Dr.)</span></li>
-		<li>
-			<span class="author ambiguous">Rob Whitton</span>
-			<table>
-				<tr>
-					<td><input type="radio" name="radio2"/></td>
-					<td>Whitton, Robert Kennedy</td>
-					<td>Myliobatiformes</td>
-				</tr>
-			</table>
-			
-		</li>
-		<li>
-			<span class="author ambiguous">Schenk, R</span>
-			<table>
-				<tr>
-					<td><input type="radio" name="radio1"/></td>
-					<td>Schenk, Ryan</td>
-					<td>Chamaeleonidae, Iguanidae</td>
-				</tr>
-				<tr>
-					<td><input type="radio" name="radio1"/></td>
-					<td>Schenk, Rutherford</td>
-					<td>Caviidae</td>
-				</tr>
-				<tr>
-					<td><input type="radio" name="radio1"/></td>
-					<td>Schenk, Roger</td>
-					<td>Apoidea</td>
-				</tr>
-			</table>
-		</li>
-		<li>
-			<span class="author notFound">Clinton, George</span>
-
-		</li>
-		
-	</ul>
 </div>
+
+<div class="authorDisambiguation">
+	<div class="container">
+	<form action="success.html" method="get" accept-charset="utf-8" class="uniForm">
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th> </th>
+					<th>Possible Match</th>
+					<th class="sparkline">Publication History</th>
+					<th class="specialties">Research Area</th>
+				</tr>
+			</thead>
+			<tr>
+				<th>Pyle, Richard Lawrence (Dr.) <span class="check">&#10003;</span></td>
+				<td colspan="3"></td>
+			</tr>
+		
+			<tr><td colspan="4">&nbsp;<!--Evil nonsemantic row for padding--></td></tr>
+		
+			<tr>
+				<th class="author ambiguous" rowspan="2">Rob Whitton</th>
+				<td><input id="field1" type="radio" name="radio2"/></td>
+				<td><label for="field1">Whitton, Robert Kennedy</label></td>
+				<td class="sparkline"><label for="field1"><img src="images/spark1.gif"/></label></td>
+				<td class="specialties"><label for="field1">Myliobatiformes</label></td>
+			</tr>
+			<tr>
+				<td><input id="field2" type="radio" name="radio2"/></td>
+				<td colspan="2">
+					<label for="field2">A new author:</label>
+			        <ul class="alternate newAuthor">
+			          <li>
+			            <input name="family_name" id="family_name" type="text" class="textInput  auto" value="Whitton">
+						<p class="formHint">e.g. Wilson</p>
+			          </li>
+			          <li>
+			            <input name="given_name" id="given_name" type="text" class="textInput auto" value="Rob">
+			            <p class="formHint">e.g. Edward O.</p>
+			          </li>
+			        </ul>
+				
+				</td>
+			</tr>
+		
+			<tr><td colspan="4">&nbsp;<!--Evil nonsemantic row for padding--></td></tr>
+		
+			<tr>
+				<th rowspan="4" class="author ambiguous">Schenk, R</span>
+				<td><input id="field3" type="radio" name="radio1"/></td>
+				<td><label for="field3">Schenk, Ryan</label></td>
+				<td class="sparkline"><label for="field3"><img src="images/spark2.gif"/></label></td>
+				<td class="specialties"><label for="field3">Caviidae</label></td>
+			</tr>
+			<tr>
+				<td><input id="field4" type="radio" name="radio1"/></td>
+				<td><label for="field4">Schenk, Rutherford</label></td>
+				<td class="sparkline"><label for="field4"><img src="images/spark3.gif"/></label></td>
+				<td class="specialties"><label for="field4">Chamaeleonidae, Iguanidae</label></td>
+			</tr>
+			<tr>
+				<td><input id="field5" type="radio" name="radio1"/></td>
+				<td><label for="field5">Schenk, Roger</label></td>
+				<td class="sparkline"><label for="field5"><img src="images/spark4.gif"/></label></td>
+				<td class="specialties"><label for="field5">Apoidea</label></td>
+			</tr>
+			<tr>
+				<td><input id="field6" type="radio" name="radio1"/></td>
+				<td colspan="2">
+					<label for="field6">A new author:</label>
+			        <ul class="alternate newAuthor">
+			          <li>
+			            <input name="family_name" id="family_name" type="text" class="textInput  auto" value="Schenk">
+						<p class="formHint">e.g. Wilson</p>
+			          </li>
+			          <li>
+			            <input name="given_name" id="given_name" type="text" class="textInput auto" value="R">
+			            <p class="formHint">e.g. Edward O.</p>
+			          </li>
+			        </ul>
+				
+				</td>
+			</tr>		
+		</table>
+	</fieldset>
+	
+	<fieldset class="buttons">
+		<div class="container">
+			<div class="buttonHolder">
+				<button type="submit" class="primaryAction">Update Authorships</button>
+				<button type="submit" class="secondaryAction">No thanks, just register my name</button>
+			</div>
+		</div>
+	</fieldset>
+	</form>
+	</div>
+</div>
+
+		<!--<fieldset id="nomenclatural_acts" class="inlineLabels">
+			<legend>Nomenclatural Acts</legend>
+			<div class="container">
+				
+				<div class="ctrlHolder">
+					<p class="label authorOk">Pyle, Richard Lawrence (Dr.)</p>
+				</div>
+				
+				
+				<div class="ctrlHolder">
+					<p class="label authorVerbatim">Rob Whitton</p>
+					<ul>
+						<li><label for="field36"><input id="field36" name="auth1" value="1" type="radio" checked="checked"> <span class="authorName">Whitton, Robert Kennedy</span><span class="studiedTaxa">Pomacentridae</span></label></li>
+					</ul>
+				</div>
+				
+				<div class="ctrlHolder">
+					<p class="label authorVerbatim">Schenk, R</p>
+					<ul>
+						<li><label for="field39"><input id="field39" name="auth2" value="1" type="radio" checked="checked"> <span class="authorName">Schenk, Ryan</span><span class="studiedTaxa">Caviidae</span></label></li>
+						<li><label for="field40"><input id="field40" name="auth2" value="2" type="radio"> <span class="authorName">Schenk, Robert</span><span class="studiedTaxa">Chamaeleonidae, Iguanidae</span></label></li>
+						<li><label for="field41"><input id="field41" name="auth2" value="2" type="radio"> <span class="authorName">Schenk, Roger</span><span class="studiedTaxa">Apoidea</span></label></li>
+						<li class="newAuthor">
+							<label for="field42"><input id="field42" name="auth2" value="2" type="radio"> A new author: </label>
+						        <ul class="alternate">
+						          <li>
+						            <input name="family_name" id="family_name" type="text" class="textInput  auto" value="Schenk">
+									<p class="formHint">Wilson</p>
+						          </li>
+						          <li>
+						            <input name="given_name" id="given_name" type="text" class="textInput auto" value="R">
+						            <p class="formHint">Edward O.</p>
+						          </li>
+						        </ul>
+								 
+						</li>
+					</ul>
+				</div>
+				
+				
+			</div>
+		</fieldset> -->
+

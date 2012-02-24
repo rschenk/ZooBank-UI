@@ -10,7 +10,7 @@
 .ui-tabs .ui-tabs-hide { display: none !important; }
 
 
-$selected-background: lighten($very-light-blue, 1);
+$selected-background: $very-light-blue;
 .ui-tabs {
 	
 	.ui-tabs-nav {
