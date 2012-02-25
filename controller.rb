@@ -1,6 +1,8 @@
 ignore /\/_.*/
 ignore /sass/
+ignore /comps/
 ignore /config\.rb/
+
 
 root = Dir.pwd
 
