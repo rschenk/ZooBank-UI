@@ -65,40 +65,7 @@
       </ul>
     </div>
 
-    <div class="ctrlHolder">
-      <label for="title">Article title</label> 
-	  <textarea name="title" id="title" rows="2" cols="25"></textarea>
-      <p class="formHint">The title of this particular article</p>
-    </div>
-    <div class="ctrlHolder">
-      <label for="journal_name">Journal name</label> <input name="journal_name" id="journal_name" placeholder="e.g. Bulletin of the Museum of Comparative Zoology" size="35" maxlength="50" type="text" class="textInput required">
-      <p class="formHint">
-        The name of the journal that published this article
-      </p>
-    </div>
-    <fieldset class="optionalInformation">
-      <legend>Optional Citation Information</legend>
-      <div class="infoMsg">
-        <p>The following fields are optional, but are appreciated.</p>
-      </div>
-      <div class="ctrlHolder">
-        <label for="issn">ISSN</label> <input name="issn" id="issn" placeholder="" size="35" maxlength="50" type="text" class="textInput">
-      </div>
-      <div class="ctrlGroup" id="volume_issue">
-        <div class="ctrlHolder">
-          <label for="volume">Volume</label> <input name="volume" id="volume" placeholder="" size="35" maxlength="50" type="text" class="textInput">
-        </div>
-        <div class="ctrlHolder">
-          <label for="issue">Issue</label> <input name="issue" id="issue" placeholder="" size="35" maxlength="50" type="text" class="textInput">
-        </div>
-      </div>
-      <div class="ctrlHolder">
-        <label for="pages">Pages</label> <input name="pages" id="pages" placeholder="" size="35" maxlength="50" type="text" class="textInput">
-      </div>
-      <div class="ctrlHolder">
-        <label for="language">Language</label> <input name="language" id="language" placeholder="" size="35" maxlength="50" type="text" class="textInput">
-      </div>
-    </fieldset>
+    <%= render '_publication_article_fields.html.erb' %>
   </div>
 </fieldset>
         
