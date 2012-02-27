@@ -1,4 +1,6 @@
-ignore /\/_.*/
+ignore /\/_.*/     # ignore files with an underscore at the beginning
+ignore /\/\..*/    # ignore dotfiles
+ignore /Gemfile*/
 ignore /sass/
 ignore /comps/
 ignore /config\.rb/
