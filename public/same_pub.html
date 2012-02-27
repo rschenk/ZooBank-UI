@@ -1,0 +1,342 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>
+			ZooBank Mockup 2
+		</title>
+		<link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+		<link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />		
+		<!--[if IE]>
+				<link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+		<![endif]-->
+	
+	<!-- These should be minified, concatenated, and go at the bottom of the finished design -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+			<script>window.jQuery || document.write("<script src='javascripts/jquery.min.js'><\/script>")</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+			<script>window.jQuery.ui || document.write('<script src="javascripts/jquery-ui.min.js"><\/script>')</script>
+		<script src="javascripts/ICanHaz.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="javascripts/jquery.ui.autocomplete.custom.js" type="text/javascript" charset="utf-8"></script>
+		<script src="javascripts/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="javascripts/uni-form-validation.jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="javascripts/scripts.js" type="text/javascript" charset="utf-8"></script>
+	
+	</head>
+	<body>
+		<header id="header">
+			<div class="container">
+				<h1 class="logo"><a href="index.html">ZooBank</a></h1>
+				<nav>
+					<ul>
+						<li><a href="about.html">about</a></li>
+						<li><a href="contact.html">contact</a></li>
+					</ul>
+				</nav>
+		</header>
+
+	<div class="container">
+	<p class="introduction"><span class="tagline">The official registry of zoological nomenclature.</span> ZooBank provides a means for authors and publishers to electronically register new nomenclatural acts, and assigns unique Life Science Identifiers (<abbr title="Life Science Identifier">lsid</abbr>s) to those names. </p>
+</div>
+
+
+<section id="registrationForm">
+	<form id="registration" class="uniForm" action="success.html" method="post" accept-charset="utf-8" name="registration">
+
+		<div class="container">
+			<h3 class="cta">Register a new name</h3>
+		</div>
+		
+		<!-- <div id="errorMsg">
+			<h3>Ooops! Your error message title</h3>
+			<ol>
+				<li>Error number one</li>
+				<li>Error number two</li>
+			</ol>
+		</div> -->
+		<!-- <div id="okMsg">
+			<p>Looks like everything went OK! Yay!</p>
+		</div> -->
+
+		<div id="publicationTabs">
+			<div class="container">
+				<div class="infoMsg">
+					<p>All names exist within the context of a publication. To register a name, we therefore need to know where it was (or will be) published.</p>
+					<p>You may fill out the form below; save yourself time by pasting in a <abbr title="Digital Object Identifier">doi</abbr> or choosing one of your recently-entered publications.</p>
+				</div>						
+				<ul>
+					<li><a href="#publication_fields">Enter publication details</a></li>
+					<li><a href="#doi_fields">Paste in a <abbr title="Digital Object Identifier">DOI</abbr></a></li>
+					<li><a href="#recent_publications_fields">Choose from your recent publications</a></li>
+				</ul>
+						
+			</div>
+			<!--
+  Publication/Citation Information
+-->
+        
+<fieldset id="publication_fields" class="inlineLabels">
+  <legend>Publication</legend>
+  <div class="container">
+    <div class="ctrlHolder">
+      <p class="label">Publication type</p>
+      <ul class="blockLabels">
+        <li>
+          <label for="pubtype_1"><input type="radio" id="pubtype_1" name="pubtype" checked="checked"> Article in a journal, magazine, or other periodical</label>
+        </li>
+        <li>
+          <label for="pubtype_2"><input type="radio" id="pubtype_2" name="pubtype"> Book or monograph</label>
+        </li>
+      </ul>
+    </div>
+    <div class="ctrlHolder">
+      <p class="label">Publication status</p>
+      <ul class="blockLabels">
+        <li>
+          <label for="published_no"><input type="radio" id="published_no" name="published" checked="checked"> This work has not yet been published</label>
+        </li>
+        <li>
+          <label for="published_yes"><input type="radio" id="published_yes" name="published"> This work was published on:</label>
+        </li>
+      </ul>
+    </div>
+    <div class="ctrlHolder">
+      <p class="label">Date of publication</p>
+      <ul class="alternate dateSelect">
+        <li>
+          <label for="year">Year</label> <input name="year" id="year" placeholder="e.g. 1957" size="8" maxlength="4" type="text" class="textInput required auto">
+        </li>
+        <li>
+          <label for="month">Month</label> <select name="month" id="month" class="selectInput auto">
+            <option value='1'>January</option>
+            <option value='2'>February</option>
+            <option value='3'>March</option>
+            <option value='4'>April</option>
+            <option value='5'>May</option>
+            <option value='6'>June</option>
+            <option value='7'>July</option>
+            <option value='8'>August</option>
+            <option value='9'>September</option>
+            <option value='10'>October</option>
+            <option value='11'>November</option>
+            <option value='12'>December</option>
+          </select>
+          <p class="formHint">Optional</p>
+        </li>
+        <li>
+          <label for="day">Day</label> <input name="day" id="day" size="2" maxlength="2" type="text" class="textInput auto">
+          <p class="formHint">Optional</p>
+        </li>
+      </ul>
+    </div>
+            
+    <div class="ctrlHolder">
+      <p class="label">Authors</p>
+      <ul id="authorList">
+        <li><input name="author1" id="author1" size="35" maxlength="50" type="text" class="textInput authorInput" placeholder="Wilson, Edward O." /></li>
+        <li><input name="author2" id="author2" size="35" maxlength="50" type="text" class="textInput authorInput" placeholder="add another author..." /></li>
+      </ul>
+    </div>
+
+    <div class="ctrlHolder">
+  <label for="title">Article title</label> 
+  <textarea name="title" id="title" rows="2" cols="25"></textarea>
+  <p class="formHint">The title of this particular article</p>
+</div>
+<div class="ctrlHolder">
+  <label for="journal_name">Journal name</label> <input name="journal_name" id="journal_name" placeholder="e.g. Bulletin of the Museum of Comparative Zoology" size="35" maxlength="50" type="text" class="textInput required">
+  <p class="formHint">
+    The name of the journal that published this article
+  </p>
+</div>
+<fieldset class="optionalInformation">
+  <legend>Optional Citation Information</legend>
+  <div class="infoMsg">
+    <p>The following fields are optional, but are appreciated.</p>
+  </div>
+  <div class="ctrlHolder">
+    <label for="issn">ISSN</label> <input name="issn" id="issn" placeholder="" size="35" maxlength="50" type="text" class="textInput">
+  </div>
+  <div class="ctrlGroup" id="volume_issue">
+    <div class="ctrlHolder">
+      <label for="volume">Volume</label> <input name="volume" id="volume" placeholder="" size="35" maxlength="50" type="text" class="textInput">
+    </div>
+    <div class="ctrlHolder">
+      <label for="issue">Issue</label> <input name="issue" id="issue" placeholder="" size="35" maxlength="50" type="text" class="textInput">
+    </div>
+  </div>
+  <div class="ctrlHolder">
+    <label for="pages">Pages</label> <input name="pages" id="pages" placeholder="" size="35" maxlength="50" type="text" class="textInput">
+  </div>
+  <div class="ctrlHolder">
+    <label for="language">Language</label> <input name="language" id="language" placeholder="" size="35" maxlength="50" type="text" class="textInput">
+  </div>
+</fieldset>
+
+  </div>
+</fieldset>
+        
+
+			<!--
+  DOI
+-->
+        
+<fieldset id="doi_fields" class="inlineLabels">
+  <legend>Digital Object Identifier</legend>
+  <div class="container">
+    <div class="ctrlHolder">
+      <label for="doi"><abbr title="Digital Object Identifier">DOI</abbr></label>
+      <input name="doi" id="doi" placeholder="10.1000/182" size="35" maxlength="50" type="text" class="textInput required">
+    </div>
+  </div>
+</fieldset>
+			
+<!-- Recent publications -->
+ 
+<fieldset id="recent_publications_fields" class="inlineLabels">
+  <legend>Recent Publications</legend>
+  <div class="container">
+    <div class="ctrlHolder">
+      <p class="label">Recent Publications</p>
+      <ul class="blockLabels citationList">
+        <li>
+          <label for="pub1"><input type="radio" id="pub1" name="recent_pubs"> <span class="biblio-entry"><span class="biblio-authors">Bond, J. E., &amp; Stocman A. K.</span> (2008).&nbsp;&nbsp;<span class="biblio-title">An Integrative Method for Delimiting Cohesion Species: Finding the Population-Species Interface in a Group of California Trapdoor Spiders with Extreme Genetic Divergence and Geographic Structuring.</span> <u>Systematic Biology. 57,</u></span></label>
+        </li>
+        
+        <li>
+          <label for="pub2"><input type="radio" id="pub2" name="recent_pubs"> <span class="biblio-entry"><span class="biblio-authors">Avil&eacute;s, L., &amp; Bukowski T. C.</span> (2006).&nbsp;&nbsp;<span class="biblio-title">Natal dispersal and breeding dispersal of a subsocial spitting spider (Scytodes pallida) (Araneae: Scytodidae) from Singapore.</span> <u>Journal of Zoology, London. 268,</u> 121-126.</span></label>
+        </li>
+        
+        <li>
+          <label for="pub3"><input type="radio" id="pub3" name="recent_pubs"> <span class="biblio-entry"><span class="biblio-authors">Li, D., &amp; Kuan J. Y. X.</span> (2006).&nbsp;&nbsp;<span class="biblio-title">Group living and inbreeding depression in a subsocial spider.</span> <u>Proceedings of the Royal Society of London, B. 273,</u> 157-163.</span></label>
+        </li>
+        
+        <li>
+          <label for="pub4"><input type="radio" id="pub4" name="recent_pubs"> <span class="biblio-entry"><span class="biblio-authors">Agnarsson, I., Avilés L., Coddington J. A., &amp; Maddison W. P.</span> (2006).&nbsp;&nbsp;<span class="biblio-title">Social theridiid spiders - repeated origins of an evolutionary dead-end.</span> <u>Evolution. 60,</u> 157-163.</span></label>
+        </li>
+        
+        <li>
+          <label for="pub5"><input type="radio" id="pub5" name="recent_pubs"> <span class="biblio-entry"><span class="biblio-authors">Miller, J. A.</span> (2006).&nbsp;&nbsp;<span class="biblio-title"> Web-sharing sociality and cooperative prey capture in a Malagasy spitting spider (Araneae: Scytodidae).</span> <u>Proceedings of the California Academy of Sciences. 57,</u> 735-750.</span></label>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</fieldset>
+
+
+		</div>
+		
+						
+<!--
+	Nomenclatural Acts
+-->
+
+<fieldset id="nomenclaturalActs" class="inlineLabels">
+	<legend>Nomenclatural Acts</legend>
+	<div class="container">
+	    <div class="infoMsg">
+		  <p>If you are registering multiple taxa in this publication, your life might be easier if you start with higher-order taxa first.</p>
+	    </div>
+		
+		<div class="ctrlHolder">
+			<label for="rank_id">Taxonomic rank</label> <select id="rank_id" name="rank_id">
+				<option value="50">Family</option>
+				<option value="53" class="subCategory">&nbsp;&nbsp;&nbsp;Subfamily</option>
+				<option value="54" class="subCategory">&nbsp;&nbsp;&nbsp;Supertribe</option>
+				<option value="55" class="subCategory">&nbsp;&nbsp;&nbsp;Tribe</option>
+				<option value="56" class="subCategory">&nbsp;&nbsp;&nbsp;Subtribe</option>
+				<option value="60">Genus</option>
+				<option value="61" class="subCategory">&nbsp;&nbsp;&nbsp;Series</option>
+				<option value="62" class="subCategory">&nbsp;&nbsp;&nbsp;Subseries</option>
+				<option value="63" class="subCategory">&nbsp;&nbsp;&nbsp;Subgenus</option>
+				<option value="64" class="subCategory">&nbsp;&nbsp;&nbsp;Division</option>
+				<option value="65" class="subCategory">&nbsp;&nbsp;&nbsp;Section</option>
+				<option value="66" class="subCategory">&nbsp;&nbsp;&nbsp;Subsection</option>
+				<option value="67" class="subCategory">&nbsp;&nbsp;&nbsp;Group</option>
+				<option value="70" selected="selected">Species</option>
+				<option value="72" class="subCategory">&nbsp;&nbsp;&nbsp;Microspecies</option>
+				<option value="73" class="subCategory">&nbsp;&nbsp;&nbsp;Subspecies</option>
+				<option value="74" class="subCategory">&nbsp;&nbsp;&nbsp;Variety</option>
+				<option value="75" class="subCategory">&nbsp;&nbsp;&nbsp;Subvariety</option>
+				<option value="76" class="subCategory">&nbsp;&nbsp;&nbsp;Form</option>
+				<option value="77" class="subCategory">&nbsp;&nbsp;&nbsp;Subform</option>
+				<option value="78" class="subCategory">&nbsp;&nbsp;&nbsp;Infraspecies</option>
+				<option value="79" class="subCategory">&nbsp;&nbsp;&nbsp;altera</option>
+			</select>
+		</div>
+		
+		<div class="ctrlHolder">
+			<label for="species_epithet">Species epithet</label>
+			<input name="species_epithet" id="species_epithet" placeholder="" size="35" maxlength="50" type="text" class="textInput required">
+		</div>
+		
+		
+		    <div class="ctrlHolder">
+		      <p class="label">Parent genus</p>
+		      <ul class="">
+		        <li>
+		          <label for="g1"><input type="radio" id="g1" name="parent"/> Doorstoppius</label>
+		        </li>
+			
+		        <li class="subInput">
+		          <label for="parentName"><input type="radio" id="g4" name="parent"/>
+	 Other</label> <input type="text" id="parentName" name="parentName" class="textInput"/>
+		        </li>
+		      </ul>
+		    </div>
+			<!-- TODO this should be UJS -->
+			<script type="text/javascript" charset="utf-8">
+				$(function(){
+					var $radio = $('#g4');
+					$('#parentName').on('focus', function(){ $radio.attr('checked', 'checked'); });
+				});
+			</script>
+		
+	</div>
+</fieldset>
+
+
+		<fieldset class="buttons">
+			<div class="container">
+				<div class="buttonHolder">
+					<button type="submit" class="primaryAction">Register Name</button>
+				</div>
+				<p><a href="step_2.html">[author disambiguation]</a> <a href="#" id="enableParentDisambiguation">[parent disambiguation]</a></p>
+			</div>
+		</fieldset>
+	</form>
+</section>
+
+<script type="text/javascript" charset="utf-8">
+	$(function(){
+		$('form.uniForm').uniform();
+
+		$('#publicationTabs').tabs({ 
+			selected: 2,
+			fx: { height: 'toggle' }
+		});
+
+		ZooBank.autocompleteGenus('#parentName');
+		ZooBank.autocompleteAuthor('.authorInput');
+		ZooBank.initializeAuthorList('#authorList');
+		
+		$('#parentDisambiguation').hide();
+		$('#enableParentDisambiguation').click(function(){ $('#parentDisambiguation').show(); return false; });
+	});
+</script>
+
+<script id="authorTemplate" type="text/html">
+	<li><input name="author{{n}}" id="author{{n}}" type="text" class="authorInput textInput" placeholder="add another author..." /></li>
+</script>
+
+
+<script type="text/javascript" charset="utf-8">
+$(function(){
+	$('#pub1').click();
+})
+</script>
+
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+	</body>
+</html>

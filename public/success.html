@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>
+			ZooBank Mockup 2
+		</title>
+		<link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+		<link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />		
+		<!--[if IE]>
+				<link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+		<![endif]-->
+	
+	<!-- These should be minified, concatenated, and go at the bottom of the finished design -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+			<script>window.jQuery || document.write("<script src='javascripts/jquery.min.js'><\/script>")</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+			<script>window.jQuery.ui || document.write('<script src="javascripts/jquery-ui.min.js"><\/script>')</script>
+		<script src="javascripts/ICanHaz.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="javascripts/jquery.ui.autocomplete.custom.js" type="text/javascript" charset="utf-8"></script>
+		<script src="javascripts/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="javascripts/uni-form-validation.jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="javascripts/scripts.js" type="text/javascript" charset="utf-8"></script>
+	
+	</head>
+	<body>
+		<header id="header">
+			<div class="container">
+				<h1 class="logo"><a href="index.html">ZooBank</a></h1>
+				<nav>
+					<ul>
+						<li><a href="about.html">about</a></li>
+						<li><a href="contact.html">contact</a></li>
+					</ul>
+				</nav>
+		</header>
+
+	<div class="container">
+	<div class="okMsg">
+		<p>You have successfully registered the species Doorstoppius woodii.</p>
+	</div>
+	
+	<div class="actSummary">
+	<h2 class="actName">Doorstopius woodii</h2>
+	<div class="lsidWrapper">
+		<span class="lsidLogo">LSID</span>
+		<input type="text" class="selectAll lsid" value="urn:lsid:zoobank.org:act:8BDC0735-FEA4-4298-83FA-D04F67C3FBEC"/>
+		      <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
+              width="110"
+              height="14"
+              id="clippy" >
+      <param name="movie" value="flash/clippy.swf"/>
+      <param name="allowScriptAccess" value="always" />
+      <param name="quality" value="high" />
+      <param name="scale" value="noscale" />
+      <param NAME="FlashVars" value="text=urn:lsid:zoobank.org:act:8BDC0735-FEA4-4298-83FA-D04F67C3FBEC">
+      <param name="bgcolor" value="#f5f5ff">
+      <embed src="flash/clippy.swf"
+             width="110"
+             height="14"
+             name="clippy"
+             quality="high"
+             allowScriptAccess="always"
+             type="application/x-shockwave-flash"
+             pluginspage="http://www.macromedia.com/go/getflashplayer"
+             FlashVars="text=urn:lsid:zoobank.org:act:8BDC0735-FEA4-4298-83FA-D04F67C3FBEC"
+             bgcolor="#f5f5ff"
+      />
+      </object>
+
+		<!-- TODO Refactor this to some sort of unobtrusive thing -->
+		<script type="text/javascript" charset="utf-8">
+			$('.selectAll').click(function(){ this.select(); });
+		</script>
+		
+	</div>
+	<table>
+		<tr>
+			<th scope="row">Rank</th>
+			<td>Species</td>
+		</tr>
+		<tr>
+			<th scope="row">Parent</th>
+			<td>Doorstopius</td>
+		</tr>
+		<tr>
+			<th scope="row">Description</th>
+			<td><span class="biblio-entry"><span class="biblio-authors">Bond, J. E., &amp; Stocman A. K.</span> (2008).&nbsp;&nbsp;<span class="biblio-title">An Integrative Method for Delimiting Cohesion Species: Finding the Population-Species Interface in a Group of California Trapdoor Spiders with Extreme Genetic Divergence and Geographic Structuring.</span> <u>Systematic Biology. 57,</u></span></td>
+		</tr>
+		
+	</table>
+</div>
+
+	
+</div>
+
+<div class="nextAction">
+	<div class="container">
+		<div class="registerAnother">
+			<p>Register another name from the <a href="same_pub.html#nomenclaturalActs" class="primaryAction">same publication</a> or a <a href="index.html" class="primaryAction">different publication</a></p>
+		</div>
+	</div>
+</div>
+
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+	</body>
+</html>
