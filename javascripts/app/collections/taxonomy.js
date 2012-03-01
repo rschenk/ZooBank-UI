@@ -64,6 +64,7 @@ var Taxonomy = Ranks.extend({
 		var validParents = [],
 		    rankIndex;
 		
+	    // If the caller passes in an ID instead of a Rank object, fetch the Rank object
 		if( _.isNumber(rank) ) {
 			rank = this.get(rank);
 		}
@@ -72,9 +73,9 @@ var Taxonomy = Ranks.extend({
 		
 		// Traverse backwards through the array until we hit a fullRank
 		for( var i = rankIndex - 1; i >= 0; i-- ) {
-			var m = this.at(i);
-			validParents.push( m );
-			if( m.get('fullRank') ) break;
+			var ancestor = this.at(i);
+			validParents.push( ancestor );
+			if( ancestor.get('fullRank') ) break;
 		}
 		
 		return validParents;
