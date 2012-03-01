@@ -271,7 +271,7 @@
 		<div class="ctrlHolder">
 			<label for="rank_id">Taxonomic rank</label>
 			<select id="rank_id" name="rank_id">
-			<% ranks.each(function(rank){ %>
+				<% taxonomy.each(function(rank){ %>
 				<option value="<%= rank.get('id') %>" <%= (rank === model.get('rank')) ? 'selected="selected"' : '' %>><%= (rank.get('fullRank') ? '' : '&nbsp;&nbsp;' )%><%= rank.get('label') %></option>
 			<% }) %>
 			</select>

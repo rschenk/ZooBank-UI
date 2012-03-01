@@ -83,9 +83,9 @@ $(function(){
 	ZooBank.nomenclaturalAct = new NomenclaturalAct({ rank:  ZooBank.taxonomy.species() });
 
 	var nomenView = new NomenclaturalActView({
-		el:    $('#nomenclaturalAct')[0],
+		el: $('#nomenclaturalAct')[0],
 		model: ZooBank.nomenclaturalAct,
-		ranks:  ZooBank.taxonomy
+		taxonomy:  ZooBank.taxonomy
 	}).render();
 
 });
