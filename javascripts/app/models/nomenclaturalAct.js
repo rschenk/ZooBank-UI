@@ -10,12 +10,13 @@ var NomenclaturalAct = Backbone.Model.extend({
 	
 	initialize: function(spec){
 		_.bindAll(this, 'changeRank');
-		// When we change the rank, we want to automatically load its validParents, 
-		// and pre-select the first fullRank in the validParents list
+
 		this.on('change:rank', this.changeRank);
 		if( spec.rank ) this.trigger('change:rank');
 	},
-	
+
+	// When we change the rank, we want to automatically load its validParents, 
+	// and pre-select the first fullRank in the validParents list	
 	changeRank: function(rank){
 		var parentRanks = this.get('rank').validParents(),
 		    parentRank = _.find(parentRanks, function(r){ return r.get('fullRank'); });

@@ -69,8 +69,8 @@ var ZooBank = {
 
 $(function(){
 	// Boilerplate
-	ZooBank.ranks = new Ranks();
-	ZooBank.ranks.reset([
+	 ZooBank.taxonomy = new Taxonomy();
+	 ZooBank.taxonomy.reset([
 		{ id: 50, label: "Family", fullRank: true },
 		{ id: 53, label: "Subfamily" },
 		{ id: 55, label: "Tribe" },
@@ -80,12 +80,12 @@ $(function(){
 		{ id: 73, label: "Subspecies" } 
 	]);
 
-	ZooBank.nomenclaturalAct = new NomenclaturalAct({ rank: ZooBank.ranks.species() });
+	ZooBank.nomenclaturalAct = new NomenclaturalAct({ rank:  ZooBank.taxonomy.species() });
 
 	var nomenView = new NomenclaturalActView({
 		el:    $('#nomenclaturalAct')[0],
 		model: ZooBank.nomenclaturalAct,
-		ranks: ZooBank.ranks
+		ranks:  ZooBank.taxonomy
 	}).render();
 
 });
