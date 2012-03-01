@@ -1,7 +1,6 @@
 var NomenclaturalAct = Backbone.Model.extend({
 	// These aren't so much defaults, as a way to document what attributes this model has.
 	defaults: {
-		test: "Nebulae",
 		rank: null, // Rank object
 		name: '',
 		validParentRanks: [],		
