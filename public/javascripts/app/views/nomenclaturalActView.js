@@ -2,7 +2,9 @@ var NomenclaturalActView = Backbone.View.extend({
 	template: _.template($('#nomenclaturalActTemplate').html()),
 	events: {
 		'change #rank_id' : 'changeRankId',
-		'click input[name="parent_rank_id"]' : 'changeParentId'
+		'click input[name="parent_rank_id"]' : 'changeParentId',
+		'change #name': 'changeName',
+		'change #parent_name': 'changeParentName'
 	},
 	
 	initialize: function(options) {
@@ -36,5 +38,14 @@ var NomenclaturalActView = Backbone.View.extend({
 		    parentRank = this.ranks.get(parentId);
 				
 		this.model.set({ parentRank: parentRank });
+	},
+	
+	changeName: function(event){ 
+		this.model.set({ name: $(event.target).val() });
+	},
+	
+	changeParentName: function(event){ 
+		this.model.set({ parentName: $(event.target).val() });
 	}
+	
 });
