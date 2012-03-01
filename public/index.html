@@ -11,16 +11,17 @@
 				<link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
 		<![endif]-->
 	
-	<!-- These should be minified, concatenated, and go at the bottom of the finished design -->
+		<!-- These should be minified, concatenated, and go at the bottom of the finished design -->
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 			<script>window.jQuery || document.write("<script src='javascripts/jquery.min.js'><\/script>")</script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
 			<script>window.jQuery.ui || document.write('<script src="javascripts/jquery-ui.min.js"><\/script>')</script>
-		<script src="javascripts/ICanHaz.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="javascripts/underscore-min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="javascripts/backbone-min.js" type="text/javascript" charset="utf-8"></script>	
 		<script src="javascripts/jquery.ui.autocomplete.custom.js" type="text/javascript" charset="utf-8"></script>
 		<script src="javascripts/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
 		<script src="javascripts/uni-form-validation.jquery.js" type="text/javascript" charset="utf-8"></script>
-		<script src="javascripts/scripts.js" type="text/javascript" charset="utf-8"></script>
+		
 	
 	</head>
 	<body>
@@ -227,72 +228,7 @@
 
 		</div>
 		
-						
-<!--
-	Nomenclatural Acts
--->
-
-<fieldset id="nomenclaturalActs" class="inlineLabels">
-	<legend>Nomenclatural Acts</legend>
-	<div class="container">
-	    <div class="infoMsg">
-		  <p>If you are registering multiple taxa in this publication, your life might be easier if you start with higher-order taxa first.</p>
-	    </div>
-		
-		<div class="ctrlHolder">
-			<label for="rank_id">Taxonomic rank</label> <select id="rank_id" name="rank_id">
-				<option value="50">Family</option>
-				<option value="53" class="subCategory">&nbsp;&nbsp;&nbsp;Subfamily</option>
-				<option value="54" class="subCategory">&nbsp;&nbsp;&nbsp;Supertribe</option>
-				<option value="55" class="subCategory">&nbsp;&nbsp;&nbsp;Tribe</option>
-				<option value="56" class="subCategory">&nbsp;&nbsp;&nbsp;Subtribe</option>
-				<option value="60">Genus</option>
-				<option value="61" class="subCategory">&nbsp;&nbsp;&nbsp;Series</option>
-				<option value="62" class="subCategory">&nbsp;&nbsp;&nbsp;Subseries</option>
-				<option value="63" class="subCategory">&nbsp;&nbsp;&nbsp;Subgenus</option>
-				<option value="64" class="subCategory">&nbsp;&nbsp;&nbsp;Division</option>
-				<option value="65" class="subCategory">&nbsp;&nbsp;&nbsp;Section</option>
-				<option value="66" class="subCategory">&nbsp;&nbsp;&nbsp;Subsection</option>
-				<option value="67" class="subCategory">&nbsp;&nbsp;&nbsp;Group</option>
-				<option value="70" selected="selected">Species</option>
-				<option value="72" class="subCategory">&nbsp;&nbsp;&nbsp;Microspecies</option>
-				<option value="73" class="subCategory">&nbsp;&nbsp;&nbsp;Subspecies</option>
-				<option value="74" class="subCategory">&nbsp;&nbsp;&nbsp;Variety</option>
-				<option value="75" class="subCategory">&nbsp;&nbsp;&nbsp;Subvariety</option>
-				<option value="76" class="subCategory">&nbsp;&nbsp;&nbsp;Form</option>
-				<option value="77" class="subCategory">&nbsp;&nbsp;&nbsp;Subform</option>
-				<option value="78" class="subCategory">&nbsp;&nbsp;&nbsp;Infraspecies</option>
-				<option value="79" class="subCategory">&nbsp;&nbsp;&nbsp;altera</option>
-			</select>
-		</div>
-		
-		<div class="ctrlHolder">
-			<label for="species_epithet">Species epithet</label>
-			<input name="species_epithet" id="species_epithet" placeholder="" size="35" maxlength="50" type="text" class="textInput required">
-		</div>
-		
-				
-			<div class="ctrlHolder">
-				<label for="parentName">Parent genus</label> <input name="parentName" id="parentName" placeholder="" size="35" maxlength="50" type="text" class="textInput required">
-			</div>
-			
-			<div id="parentDisambiguation">
-			    <div class="errorMsg">
-				  <p>ZooBank is unfamiliar with the genus you've entered.</p>
-				  <p>Is it described in this same publication as woodii?</p>
-			    </div>
-	   		    <div class="ctrlHolder">
-				  <p class="label"></p>
-	   		      <ul class="">
-	   		        <li><label for="genus_yes"><input type="radio" id="genus_yes" name="genus_defined"/> Yes, Doorstoppius is described in this publication</label></li>
-					<li><label for="genus_no"><input type="radio" id="genus_no" name="genus_defined"/> No, it is described in a different publication</label></li>
-	   		      </ul>
-	   		    </div>
-			</div>						
-		
-	</div>
-</fieldset>
-
+		<div id="nomenclaturalAct"></div>
 
 		<fieldset class="buttons">
 			<div class="container">
@@ -318,18 +254,66 @@
 		ZooBank.autocompleteAuthor('.authorInput');
 		ZooBank.initializeAuthorList('#authorList');
 		
-		$('#parentDisambiguation').hide();
-		$('#enableParentDisambiguation').click(function(){ $('#parentDisambiguation').show(); return false; });
+		
+
 	});
 </script>
 
-<script id="authorTemplate" type="text/html">
-	<li><input name="author{{n}}" id="author{{n}}" type="text" class="authorInput textInput" placeholder="add another author..." /></li>
+<!-- Templates -->
+<script type='text/template' id='authorTemplate'><li><input name="author<%= n %>" id="author<%= n %>" type="text" class="authorInput textInput" placeholder="add another author..." /></li></script>
+<script type='text/template' id='nomenclaturalActTemplate'><fieldset id="nomenclaturalActs" class="inlineLabels">
+	<legend>Nomenclatural Acts</legend>
+	<div class="container">
+	    <div class="infoMsg">
+		  <p>If you are registering multiple taxa in this publication, your life might be easier if you start with higher-order taxa first.</p>
+	    </div>
+		
+		<div class="ctrlHolder">
+			<label for="rank_id">Taxonomic rank</label>
+			<select id="rank_id" name="rank_id">
+			<% ranks.each(function(rank){ %>
+				<option value="<%= rank.get('id') %>" <%= (rank === model.get('rank')) ? 'selected="selected"' : '' %>><%= (rank.get('fullRank') ? '' : '&nbsp;&nbsp;' )%><%= rank.get('label') %></option>
+			<% }) %>
+			</select>
+		</div>
+		
+		<div class="ctrlHolder">
+			<label for="name"><%= model.nameLabel() %></label>
+			<input name="name" id="name" placeholder="" size="35" maxlength="50" type="text" class="textInput required">
+		</div>
+		
+		<% if( model.get('validParentRanks').length > 0) { %>
+			<% if( model.get('validParentRanks').length > 1 ) { %>
+				<div class="ctrlHolder">
+					<p class="label">Parent rank</p>
+					<ul>
+					<% _.each( model.get('validParentRanks').reverse(), function(parentRank){ %>
+						<li><label for="parent_<%= parentRank.get('id') %>"><input type="radio" value="<%= parentRank.get('id') %>" id="parent_<%= parentRank.get('id') %>" name="parent_rank_id" <%= (parentRank === model.get('parentRank')) ? 'checked="checked"' : '' %>/> <%= parentRank.get('label') %></label></li>	
+					<% }) %>
+					</ul>
+				</div>
+			<% } /* end if(validParentRanks.length > 1) */ %>
+		
+		<div class="ctrlHolder">
+			<label for="parent_name">Parent <%= model.get('parentRank').get('label').toLowerCase() %></label>
+			<input name="parent_name" id="parent_name" placeholder="" size="35" maxlength="50" type="text" class="textInput required">
+		</div>
+		
+		<% } /* end if(validParentRanks.length > 0) */ %>
+	</div>
+</fieldset>
 </script>
 
 
 
 
+	<script src="javascripts/app/rank.js" type="text/javascript" charset="utf-8"></script>
+	<script src="javascripts/app/ranks.js" type="text/javascript" charset="utf-8"></script>
+	<script src="javascripts/app/nomenclaturalAct.js" type="text/javascript" charset="utf-8"></script>
+	<script src="javascripts/app/nomenclaturalActView.js" type="text/javascript" charset="utf-8"></script>
+		
+	<script src="javascripts/scripts.js" type="text/javascript" charset="utf-8"></script>
+	
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 	</body>
 </html>

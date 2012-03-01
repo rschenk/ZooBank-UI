@@ -1,0 +1,41 @@
+<fieldset id="nomenclaturalActs" class="inlineLabels">
+	<legend>Nomenclatural Acts</legend>
+	<div class="container">
+	    <div class="infoMsg">
+		  <p>If you are registering multiple taxa in this publication, your life might be easier if you start with higher-order taxa first.</p>
+	    </div>
+		
+		<div class="ctrlHolder">
+			<label for="rank_id">Taxonomic rank</label>
+			<select id="rank_id" name="rank_id">
+			<% ranks.each(function(rank){ %>
+				<option value="<%= rank.get('id') %>" <%= (rank === model.get('rank')) ? 'selected="selected"' : '' %>><%= (rank.get('fullRank') ? '' : '&nbsp;&nbsp;' )%><%= rank.get('label') %></option>
+			<% }) %>
+			</select>
+		</div>
+		
+		<div class="ctrlHolder">
+			<label for="name"><%= model.nameLabel() %></label>
+			<input name="name" id="name" placeholder="" size="35" maxlength="50" type="text" class="textInput required">
+		</div>
+		
+		<% if( model.get('validParentRanks').length > 0) { %>
+			<% if( model.get('validParentRanks').length > 1 ) { %>
+				<div class="ctrlHolder">
+					<p class="label">Parent rank</p>
+					<ul>
+					<% _.each( model.get('validParentRanks').reverse(), function(parentRank){ %>
+						<li><label for="parent_<%= parentRank.get('id') %>"><input type="radio" value="<%= parentRank.get('id') %>" id="parent_<%= parentRank.get('id') %>" name="parent_rank_id" <%= (parentRank === model.get('parentRank')) ? 'checked="checked"' : '' %>/> <%= parentRank.get('label') %></label></li>	
+					<% }) %>
+					</ul>
+				</div>
+			<% } /* end if(validParentRanks.length > 1) */ %>
+		
+		<div class="ctrlHolder">
+			<label for="parent_name">Parent <%= model.get('parentRank').get('label').toLowerCase() %></label>
+			<input name="parent_name" id="parent_name" placeholder="" size="35" maxlength="50" type="text" class="textInput required">
+		</div>
+		
+		<% } /* end if(validParentRanks.length > 0) */ %>
+	</div>
+</fieldset>

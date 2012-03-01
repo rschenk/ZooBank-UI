@@ -3,6 +3,7 @@ ignore /\/\..*/    # ignore dotfiles
 ignore /Gemfile*/
 ignore /sass/
 ignore /comps/
+ignore /templates/
 ignore /config\.rb/
 
 
@@ -17,6 +18,12 @@ end
 
 
 helpers do
+  def template(name) 
+    html = "<script type='text/template' id='#{name}Template'>" +
+           File.read("templates/_#{name}.html.erb") +
+           '</script>'
+  end
+  
   def clippy(text, bgcolor='#FFFFFF')
     html = <<-EOF
       <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"

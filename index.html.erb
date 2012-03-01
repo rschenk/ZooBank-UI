@@ -39,7 +39,7 @@
 			<%=render "_recent_publications_form.html.erb" %>
 		</div>
 		
-		<%= render "_nomenclatural_acts_form.html.erb", locals: { parent_genus: (parent_genus rescue nil) } %>
+		<div id="nomenclaturalAct"></div>
 
 		<fieldset class="buttons">
 			<div class="container">
@@ -65,13 +65,14 @@
 		ZooBank.autocompleteAuthor('.authorInput');
 		ZooBank.initializeAuthorList('#authorList');
 		
-		$('#parentDisambiguation').hide();
-		$('#enableParentDisambiguation').click(function(){ $('#parentDisambiguation').show(); return false; });
+		
+
 	});
 </script>
 
-<script id="authorTemplate" type="text/html">
-	<li><input name="author{{n}}" id="author{{n}}" type="text" class="authorInput textInput" placeholder="add another author..." /></li>
-</script>
+<!-- Templates -->
+<%= template('author') %>
+
+<%= template('nomenclaturalAct') %>
 
 
