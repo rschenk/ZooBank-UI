@@ -3,7 +3,7 @@ ignore /\/\..*/    # ignore dotfiles
 ignore /Gemfile*/
 ignore /sass/
 ignore /comps/
-ignore /templates/
+ignore /javascripts\/app\/templates/
 ignore /config\.rb/
 
 
@@ -20,7 +20,7 @@ end
 helpers do
   def template(name) 
     html = "<script type='text/template' id='#{name}Template'>" +
-           File.read("templates/_#{name}.html.erb") +
+           File.read("javascripts/app/templates/_#{name}.html.erb") +
            '</script>'
   end
   
