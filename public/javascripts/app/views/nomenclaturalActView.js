@@ -8,7 +8,11 @@ var NomenclaturalActView = Backbone.View.extend({
 	},
 	
 	initialize: function(options) {
+		// The following events are fired by  the autocompleter, but I can't get them to work properly on the events object above
+		_.bindAll(this, 'selectParentName', 'noresultsParentName');
+		 
 		this.taxonomy = options.taxonomy;
+		this.parent   = this.model.get('parent');
 		this.model.bind('change:rank', this.render, this);
 		this.model.bind('change:parentRank', this.updateParentLabel, this);
 	},
@@ -24,7 +28,9 @@ var NomenclaturalActView = Backbone.View.extend({
 	},
 	
 	initializeAutocompleter: function($el){
-		var model = this.model; // Store in closure so we can get to it in source()
+		// Store in closure so we can get to it in source()
+		var view  = this,
+		    model = this.model; 
 		
 		$el.customautocomplete({
 			source: function(request, response) {
@@ -49,9 +55,11 @@ var NomenclaturalActView = Backbone.View.extend({
 					}
 				})
 			},
-			minLength: 3,
-			open: function(){},
-			noresults: function(event,searchTerm){}
+			minLength: 4,
+			autoFocus: true,
+			open: null,
+			select: view.selectParentName,
+			noresults: view.noresultsParentName
 		});	
 	},
 	
@@ -78,8 +86,18 @@ var NomenclaturalActView = Backbone.View.extend({
 		this.model.set({ name: $(event.target).val() });
 	},
 	
-	changeParentName: function(event){ 
-		this.model.set({ parentName: $(event.target).val() });
+	changeParentName: function(event){
+		this.parent.clear();
+		this.parent.set({ value: $(event.target).val()  });
+	},
+	
+	selectParentName: function(event, ui) {
+		this.parent.set( ui.item );
+	},
+	
+	noresultsParentName: function(event, searchTerm){
+		this.parent.clear();
+		this.parent.set({ value: searchTerm  });		
 	}
 	
 });

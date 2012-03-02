@@ -5,7 +5,7 @@ var NomenclaturalAct = Backbone.Model.extend({
 		name: '',
 		validParentRanks: [],		
 		parentRank: null, // Rank object
-		parentName: ''
+		parent: new Taxon()
 	},
 	
 	initialize: function(spec){
