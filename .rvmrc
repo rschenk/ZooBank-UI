@@ -1,1 +1,1 @@
-rvm --create use 1.9.2@zoobank
+rvm --create use 1.9.3@zoobank
