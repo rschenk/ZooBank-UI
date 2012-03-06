@@ -1,0 +1,1 @@
+var Authors = Backbone.Collection.extend({ model: Author });
