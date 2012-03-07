@@ -17,7 +17,9 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
 			<script>window.jQuery.ui || document.write('<script src="javascripts/jquery-ui.min.js"><\/script>')</script>
 		<script src="javascripts/underscore-min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="javascripts/backbone-min.js" type="text/javascript" charset="utf-8"></script>	
+		<script src="javascripts/underscore.string.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="javascripts/backbone-min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="javascripts/backbone.modelbinding.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="javascripts/jquery.ui.autocomplete.custom.js" type="text/javascript" charset="utf-8"></script>
 		<script src="javascripts/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
 		<script src="javascripts/uni-form-validation.jquery.js" type="text/javascript" charset="utf-8"></script>
@@ -66,118 +68,13 @@
 					<p>You may fill out the form below; save yourself time by pasting in a <abbr title="Digital Object Identifier">doi</abbr> or choosing one of your recently-entered publications.</p>
 				</div>						
 				<ul>
-					<li><a href="#publication_fields">Enter publication details</a></li>
+					<li><a href="#new_publication">Enter publication details</a></li>
 					<li><a href="#doi_fields">Paste in a <abbr title="Digital Object Identifier">DOI</abbr></a></li>
 					<li><a href="#recent_publications_fields">Choose from your recent publications</a></li>
 				</ul>
 						
 			</div>
-			<!--
-  Publication/Citation Information
--->
-        
-<fieldset id="publication_fields" class="inlineLabels">
-  <legend>Publication</legend>
-  <div class="container">
-    <div class="ctrlHolder">
-      <p class="label">Publication type</p>
-      <ul class="blockLabels">
-        <li>
-          <label for="pubtype_1"><input type="radio" id="pubtype_1" name="pubtype" checked="checked"> Article in a journal, magazine, or other periodical</label>
-        </li>
-        <li>
-          <label for="pubtype_2"><input type="radio" id="pubtype_2" name="pubtype"> Book or monograph</label>
-        </li>
-      </ul>
-    </div>
-    <div class="ctrlHolder">
-      <p class="label">Publication status</p>
-      <ul class="blockLabels">
-        <li>
-          <label for="published_no"><input type="radio" id="published_no" name="published" checked="checked"> This work has not yet been published</label>
-        </li>
-        <li>
-          <label for="published_yes"><input type="radio" id="published_yes" name="published"> This work was published on:</label>
-        </li>
-      </ul>
-    </div>
-    <div class="ctrlHolder">
-      <p class="label">Date of publication</p>
-      <ul class="alternate dateSelect">
-        <li>
-          <label for="year">Year</label> <input name="year" id="year" placeholder="e.g. 1957" size="8" maxlength="4" type="text" class="textInput required auto">
-        </li>
-        <li>
-          <label for="month">Month</label> <select name="month" id="month" class="selectInput auto">
-            <option value='1'>January</option>
-            <option value='2'>February</option>
-            <option value='3'>March</option>
-            <option value='4'>April</option>
-            <option value='5'>May</option>
-            <option value='6'>June</option>
-            <option value='7'>July</option>
-            <option value='8'>August</option>
-            <option value='9'>September</option>
-            <option value='10'>October</option>
-            <option value='11'>November</option>
-            <option value='12'>December</option>
-          </select>
-          <p class="formHint">Optional</p>
-        </li>
-        <li>
-          <label for="day">Day</label> <input name="day" id="day" size="2" maxlength="2" type="text" class="textInput auto">
-          <p class="formHint">Optional</p>
-        </li>
-      </ul>
-    </div>
-            
-    <div class="ctrlHolder">
-      <p class="label">Authors</p>
-      <ul id="authorList">
-        <li><input name="author1" id="author1" size="35" maxlength="50" type="text" class="textInput authorInput" placeholder="Wilson, Edward O." /></li>
-        <li><input name="author2" id="author2" size="35" maxlength="50" type="text" class="textInput authorInput" placeholder="add another author..." /></li>
-      </ul>
-    </div>
-
-    <div class="ctrlHolder">
-  <label for="title">Article title</label> 
-  <textarea name="title" id="title" rows="2" cols="25"></textarea>
-  <p class="formHint">The title of this particular article</p>
-</div>
-<div class="ctrlHolder">
-  <label for="journal_name">Journal name</label> <input name="journal_name" id="journal_name" placeholder="e.g. Bulletin of the Museum of Comparative Zoology" size="35" maxlength="50" type="text" class="textInput required">
-  <p class="formHint">
-    The name of the journal that published this article
-  </p>
-</div>
-<fieldset class="optionalInformation">
-  <legend>Optional Citation Information</legend>
-  <div class="infoMsg">
-    <p>The following fields are optional, but are appreciated.</p>
-  </div>
-  <div class="ctrlHolder">
-    <label for="issn">ISSN</label> <input name="issn" id="issn" placeholder="" size="35" maxlength="50" type="text" class="textInput">
-  </div>
-  <div class="ctrlGroup" id="volume_issue">
-    <div class="ctrlHolder">
-      <label for="volume">Volume</label> <input name="volume" id="volume" placeholder="" size="35" maxlength="50" type="text" class="textInput">
-    </div>
-    <div class="ctrlHolder">
-      <label for="issue">Issue</label> <input name="issue" id="issue" placeholder="" size="35" maxlength="50" type="text" class="textInput">
-    </div>
-  </div>
-  <div class="ctrlHolder">
-    <label for="pages">Pages</label> <input name="pages" id="pages" placeholder="" size="35" maxlength="50" type="text" class="textInput">
-  </div>
-  <div class="ctrlHolder">
-    <label for="language">Language</label> <input name="language" id="language" placeholder="" size="35" maxlength="50" type="text" class="textInput">
-  </div>
-</fieldset>
-
-  </div>
-</fieldset>
-        
-
+			<div id="new_publication"></div>
 			<!--
   DOI
 -->
@@ -259,8 +156,7 @@
 </script>
 
 <!-- Templates -->
-<script type='text/template' id='authorTemplate'><li><input name="author<%= n %>" id="author<%= n %>" type="text" class="authorInput textInput" placeholder="add another author..." /></li></script>
-<script type='text/template' id='nomenclaturalActTemplate'><fieldset id="nomenclaturalActs" class="inlineLabels">
+<script type='text/template' id='authorTemplate'><li><input name="author<%= n %>" id="author<%= n %>" type="text" class="authorInput textInput" placeholder="add another author..." /></li></script><script type='text/template' id='nomenclaturalActTemplate'><fieldset id="nomenclaturalActs" class="inlineLabels">
 	<legend>Nomenclatural Acts</legend>
 	<div class="container">
 	    <div class="infoMsg">
@@ -301,6 +197,143 @@
 		<% } /* end if(validParentRanks.length > 0) */ %>
 	</div>
 </fieldset>
+</script><script type='text/template' id='publicationTemplate'><!--
+  Publication/Citation Information
+-->
+        
+<fieldset id="publication_fields" class="inlineLabels">
+  <legend>Publication</legend>
+  <div class="container">
+    <div class="ctrlHolder">
+      <p class="label">Publication type</p>
+      <ul class="blockLabels">
+      <% _.each(model.constructor.publicationTypes, function(type, i){ %>
+        <% var label = view.publicationTypeLabels[i], checked = (model.get('type') === type) %>
+        <li>
+          <label><input type="radio" name="type" value="<%= type %>"> <%= label %></label>
+        </li>
+      <% }) %>
+      </ul>
+    </div>
+    <div class="ctrlHolder">
+      <p class="label">Publication status</p>
+      <ul class="blockLabels">
+        <li>
+          <label for="published_no"><input type="radio" id="published_no" name="published" value="false"> This work has not yet been published</label>
+        </li>
+        <li>
+          <label for="published_yes"><input type="radio" id="published_yes" name="published" value="true"> This work was published on:</label>
+        </li>
+      </ul>
+    </div>
+    <div class="ctrlHolder">
+      <p class="label">Date of publication</p>
+      <ul class="alternate dateSelect">
+        <li>
+          <label for="year">Year</label> <input name="year" id="year" placeholder="e.g. 1957" size="8" maxlength="4" type="text" class="textInput required auto">
+        </li>
+        <li>
+          <label for="month">Month</label> <select name="month" id="month" class="selectInput auto">
+			<option value=''> </option>
+            <option value='1'>January</option>
+            <option value='2'>February</option>
+            <option value='3'>March</option>
+            <option value='4'>April</option>
+            <option value='5'>May</option>
+            <option value='6'>June</option>
+            <option value='7'>July</option>
+            <option value='8'>August</option>
+            <option value='9'>September</option>
+            <option value='10'>October</option>
+            <option value='11'>November</option>
+            <option value='12'>December</option>
+          </select>
+          <p class="formHint">Optional</p>
+        </li>
+        <li>
+          <label for="day">Day</label> <input name="day" id="day" size="2" maxlength="2" type="text" class="textInput auto">
+          <p class="formHint">Optional</p>
+        </li>
+      </ul>
+    </div>
+            
+    <div class="ctrlHolder">
+      <p class="label">Authors</p>
+      <ul id="authorList">
+        <li><input name="author1" id="author1" size="35" maxlength="50" type="text" class="textInput authorInput" placeholder="Wilson, Edward O." /></li>
+        <li><input name="author2" id="author2" size="35" maxlength="50" type="text" class="textInput authorInput" placeholder="add another author..." /></li>
+      </ul>
+    </div>
+
+	<!-- Render the type-specific fields here -->
+	<div id="typeSpecificPublicationFields"></div>
+  </div>
+</fieldset>
+        
+</script><script type='text/template' id='publicationArticleTemplate'><div class="ctrlHolder">
+  <label for="title">Article title</label> 
+  <textarea name="title" id="title" rows="2" cols="25"></textarea>
+  <p class="formHint">The title of this particular article</p>
+</div>
+<div class="ctrlHolder">
+  <label for="journal_name">Journal name</label> <input name="journalName" id="journalName" placeholder="e.g. Bulletin of the Museum of Comparative Zoology" size="35" maxlength="50" type="text" class="textInput required">
+  <p class="formHint">
+    The name of the journal that published this article
+  </p>
+</div>
+<fieldset class="optionalInformation">
+  <legend>Optional Citation Information</legend>
+  <div class="infoMsg">
+    <p>The following fields are optional, but are appreciated.</p>
+  </div>
+  <div class="ctrlHolder">
+    <label for="issn">ISSN</label> <input name="issn" id="issn" placeholder="" size="35" maxlength="50" type="text" class="textInput">
+  </div>
+  <div class="ctrlGroup" id="volume_issue">
+    <div class="ctrlHolder">
+      <label for="volume">Volume</label> <input name="volume" id="volume" placeholder="" size="35" maxlength="50" type="text" class="textInput">
+    </div>
+    <div class="ctrlHolder">
+      <label for="issue">Issue</label> <input name="issue" id="issue" placeholder="" size="35" maxlength="50" type="text" class="textInput">
+    </div>
+  </div>
+  <div class="ctrlHolder">
+    <label for="pages">Pages</label> <input name="pages" id="pages" placeholder="" size="35" maxlength="50" type="text" class="textInput">
+  </div>
+  <div class="ctrlHolder">
+    <label for="language">Language</label> <input name="language" id="language" placeholder="" size="35" maxlength="50" type="text" class="textInput">
+  </div>
+</fieldset>
+</script><script type='text/template' id='publicationMonographTemplate'><div class="ctrlHolder">
+  <label for="title">Book title</label> 
+  <textarea name="title" id="title" rows="2" cols="25"></textarea>
+</div>
+<fieldset class="optionalInformation">
+  <legend>Optional Citation Information</legend>
+  <div class="infoMsg">
+    <p>The following fields are optional, but are appreciated.</p>
+  </div>
+  <div class="ctrlHolder">
+    <label for="isbn">ISBN</label> <input name="isbn" id="isbn" placeholder="" size="35" maxlength="50" type="text" class="textInput">
+  </div>
+  <div class="ctrlHolder">
+    <label for="publisher">Publisher</label> <input name="publisher" id="publisher" size="35" maxlength="50" type="text" class="textInput">
+  </div>
+  <div class="ctrlGroup" id="volume_issue">
+    <div class="ctrlHolder">
+      <label for="city">City</label> <input name="city" id="city" placeholder="" size="35" maxlength="50" type="text" class="textInput">
+    </div>
+    <div class="ctrlHolder">
+      <label for="edition">Edition</label> <input name="edition" id="edition" placeholder="" size="35" maxlength="50" type="text" class="textInput">
+    </div>
+  </div>
+  <div class="ctrlHolder">
+    <label for="pages">Pages</label> <input name="pages" id="pages" placeholder="" size="35" maxlength="50" type="text" class="textInput">
+  </div>
+  <div class="ctrlHolder">
+    <label for="language">Language</label> <input name="language" id="language" placeholder="" size="35" maxlength="50" type="text" class="textInput">
+  </div>
+</fieldset>
 </script>
 
 <script type="text/javascript" charset="utf-8">
@@ -321,6 +354,7 @@ $(function(){
 	<script src="javascripts/app/collections/taxonomy.js" type="text/javascript" charset="utf-8"></script>
 	
 	<script src="javascripts/app/views/nomenclaturalActView.js" type="text/javascript" charset="utf-8"></script>
+	<script src="javascripts/app/views/publicationFormView.js" type="text/javascript" charset="utf-8"></script>
 		
 	<script src="javascripts/scripts.js" type="text/javascript" charset="utf-8"></script>
 	

@@ -28,13 +28,13 @@
 					<p>You may fill out the form below; save yourself time by pasting in a <abbr title="Digital Object Identifier">doi</abbr> or choosing one of your recently-entered publications.</p>
 				</div>						
 				<ul>
-					<li><a href="#publication_fields">Enter publication details</a></li>
+					<li><a href="#new_publication">Enter publication details</a></li>
 					<li><a href="#doi_fields">Paste in a <abbr title="Digital Object Identifier">DOI</abbr></a></li>
 					<li><a href="#recent_publications_fields">Choose from your recent publications</a></li>
 				</ul>
 						
 			</div>
-			<%=render "_publication_form.html.erb" %>
+			<div id="new_publication"></div>
 			<%=render "_doi_form.html.erb" %>
 			<%=render "_recent_publications_form.html.erb" %>
 		</div>
@@ -71,7 +71,9 @@
 
 <!-- Templates -->
 <%= template('author') %>
-
 <%= template('nomenclaturalAct') %>
+<%= template('publication') %>
+<%= template('publicationArticle') %>
+<%= template('publicationMonograph') %>
 
 

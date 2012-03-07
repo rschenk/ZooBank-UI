@@ -55,11 +55,17 @@ $(function(){
 	]);
 
 	ZooBank.nomenclaturalAct = new NomenclaturalAct({ rank:  ZooBank.taxonomy.species() });
+	ZooBank.newPublication = new Publication({ type: 'monograph' });
 
 	var nomenView = new NomenclaturalActView({
 		el: $('#nomenclaturalAct')[0],
 		model: ZooBank.nomenclaturalAct,
 		taxonomy:  ZooBank.taxonomy
+	}).render();
+	
+	var newPublicationView = new PublicationFormView({
+		el: $('#new_publication')[0],
+		model: ZooBank.newPublication
 	}).render();
 
 });
