@@ -53,19 +53,26 @@ $(function(){
 		{ id: 70, label: "Species", fullRank: true },
 		{ id: 73, label: "Subspecies" } 
 	]);
+	
+	ZooBank.registration = new Registration({
+		nomenclaturalAct: new NomenclaturalAct({ rank:  ZooBank.taxonomy.species() }),
+		newPublication: new Publication()
+	});
 
-	ZooBank.nomenclaturalAct = new NomenclaturalAct({ rank:  ZooBank.taxonomy.species() });
-	ZooBank.newPublication = new Publication({ type: 'monograph' });
+	var registrationFormView = new RegistrationFormView({
+		el: $('form#registration')[0],
+		model: ZooBank.registration
+	})
 
-	var nomenView = new NomenclaturalActView({
+	var nomenclaturalActView = new NomenclaturalActView({
 		el: $('#nomenclaturalAct')[0],
-		model: ZooBank.nomenclaturalAct,
+		model: ZooBank.registration.nomenclaturalAct,
 		taxonomy:  ZooBank.taxonomy
 	}).render();
 	
 	var newPublicationView = new PublicationFormView({
 		el: $('#new_publication')[0],
-		model: ZooBank.newPublication
+		model: ZooBank.registration.newPublication
 	}).render();
 
 });

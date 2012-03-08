@@ -56,11 +56,6 @@
 	$(function(){
 		$('form.uniForm').uniform();
 
-		$('#publicationTabs').tabs({ 
-			selected: <%= selected_tab rescue 0 %>,
-			fx: { height: 'toggle' }
-		});
-
 		ZooBank.autocompleteAuthor('.authorInput');
 		ZooBank.initializeAuthorList('#authorList');
 		
