@@ -1,44 +1,5 @@
 var ZooBank = {
 	config: { endpoint: 'http://test.zoobank.org/editor/services.cfc' },
-	
-	autocompleteAuthor: function(selector) {
-		$(selector).customautocomplete({
-	        source: function(request, response) {
-				$.ajax({
-					url: ZooBank.config.endpoint + "?method=find_author",
-					type: 'post',
-					dataType: 'json',
-					data: {term: request.term},
-					success: function(data) {
-						if( data[0].id === 0 ) {
-							response(null);
-						} else {
-							response($.map(data, function(d, i){ 
-								d.value = d.label; // The value has HTML in it, which never works anyways
-								return d;
-							}));
-						}
-					}
-				})
-	        },
-	        minLength: 3,
-			open: function(){},
-			noresults: function(event,searchTerm){}
-	      });		
-	},
-	
-	initializeAuthorList: function(list_selector){
-		var $authorList = $(list_selector),
-			authorTemplate = _.template($('#authorTemplate').html());		
-		
-		$authorList.on('keypress', "li:last-child input", function(){
-			var $author = $( authorTemplate({n: $authorList.children().length + 1}) );
-			ZooBank.autocompleteAuthor($author.find('input.authorInput'));
-			
-			$author.appendTo($authorList).hide().slideDown();
-		});
-
-	}
 };
 
 $(function(){
@@ -58,12 +19,13 @@ $(function(){
 		nomenclaturalAct: new NomenclaturalAct({ rank:  ZooBank.taxonomy.species() }),
 		newPublication: new Publication()
 	});
-
+	
 	var registrationFormView = new RegistrationFormView({
 		el: $('form#registration')[0],
 		model: ZooBank.registration
 	})
-
+	
+	// Todo: move all these views into a reigstration form view
 	var nomenclaturalActView = new NomenclaturalActView({
 		el: $('#nomenclaturalAct')[0],
 		model: ZooBank.registration.nomenclaturalAct,

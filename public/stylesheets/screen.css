@@ -1295,3 +1295,10 @@ ul.newAuthor .formHint {
   padding: 0;
   border: none;
 }
+
+/* line 232, ../../sass/screen.scss */
+input.hasLSID {
+  background-image: url(../images/lsid-token.gif);
+  background-repeat: no-repeat;
+  background-position: center right;
+}

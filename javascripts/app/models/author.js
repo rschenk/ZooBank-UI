@@ -7,5 +7,9 @@ var Author = Backbone.Model.extend({
 		label: '',
 		validagentid: '',
 		value: ''
+	},
+	
+	hasLSID: function(){
+		return !_.str.isBlank(this.get('ZBLSID'));
 	}
 });

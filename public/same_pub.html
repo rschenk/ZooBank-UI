@@ -16,7 +16,7 @@
 			<script>window.jQuery || document.write("<script src='javascripts/jquery.min.js'><\/script>")</script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
 			<script>window.jQuery.ui || document.write('<script src="javascripts/jquery-ui.min.js"><\/script>')</script>
-		<script src="javascripts/underscore-min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="javascripts/underscore.js" type="text/javascript" charset="utf-8"></script>
 		<script src="javascripts/underscore.string.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="javascripts/backbone-min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="javascripts/backbone.modelbinding.min.js" type="text/javascript" charset="utf-8"></script>
@@ -134,16 +134,18 @@
 	$(function(){
 		$('form.uniForm').uniform();
 
-		ZooBank.autocompleteAuthor('.authorInput');
-		ZooBank.initializeAuthorList('#authorList');
+		// ZooBank.autocompleteAuthor('.authorInput');
+		// ZooBank.initializeAuthorList('#authorList');
 		
 		
 
 	});
+	
+	
 </script>
 
 <!-- Templates -->
-<script type='text/template' id='authorTemplate'><li><input name="author<%= n %>" id="author<%= n %>" type="text" class="authorInput textInput" placeholder="add another author..." /></li></script><script type='text/template' id='nomenclaturalActTemplate'><fieldset id="nomenclaturalActs" class="inlineLabels">
+<script type='text/template' id='authorInputTemplate'><input name="author-<%= model.cid %>" id="author-<%= model.cid %>" type="text" class="authorInput textInput" placeholder="e.g Wilson, Edward O" value="<%= model.get('value') %>"/></script><script type='text/template' id='nomenclaturalActTemplate'><fieldset id="nomenclaturalActs" class="inlineLabels">
 	<legend>Nomenclatural Acts</legend>
 	<div class="container">
 	    <div class="infoMsg">
@@ -247,8 +249,6 @@
     <div class="ctrlHolder">
       <p class="label">Authors</p>
       <ul id="authorList">
-        <li><input name="author1" id="author1" size="35" maxlength="50" type="text" class="textInput authorInput" placeholder="Wilson, Edward O." /></li>
-        <li><input name="author2" id="author2" size="35" maxlength="50" type="text" class="textInput authorInput" placeholder="add another author..." /></li>
       </ul>
     </div>
 
@@ -319,29 +319,33 @@
 </fieldset>
 </script>
 
+
+<!-- Backbone app -->
+<script src="javascripts/app/models/author.js" type="text/javascript" charset="utf-8"></script>
+<script src="javascripts/app/collections/authors.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="javascripts/app/models/publication.js" type="text/javascript" charset="utf-8"></script>
+<script src="javascripts/app/models/rank.js" type="text/javascript" charset="utf-8"></script>
+<script src="javascripts/app/models/taxon.js" type="text/javascript" charset="utf-8"></script>
+<script src="javascripts/app/models/nomenclaturalAct.js" type="text/javascript" charset="utf-8"></script>
+<script src="javascripts/app/models/registration.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="javascripts/app/collections/ranks.js" type="text/javascript" charset="utf-8"></script>
+<script src="javascripts/app/collections/taxonomy.js" type="text/javascript" charset="utf-8"></script>
+	
+<script src="javascripts/app/views/registrationFormView.js" type="text/javascript" charset="utf-8"></script>
+<script src="javascripts/app/views/nomenclaturalActView.js" type="text/javascript" charset="utf-8"></script>
+<script src="javascripts/app/views/publicationFormView.js" type="text/javascript" charset="utf-8"></script>
+<script src="javascripts/app/views/authorInputView.js" type="text/javascript" charset="utf-8"></script>
+<script src="javascripts/app/views/authorListInputView.js" type="text/javascript" charset="utf-8"></script>
+	
+<script src="javascripts/scripts.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
 $(function(){
 	$('#pub1').click();
 })
 </script>
-	
-	<script src="javascripts/app/models/author.js" type="text/javascript" charset="utf-8"></script>
-	<script src="javascripts/app/collections/authors.js" type="text/javascript" charset="utf-8"></script>
 
-	<script src="javascripts/app/models/publication.js" type="text/javascript" charset="utf-8"></script>
-	<script src="javascripts/app/models/rank.js" type="text/javascript" charset="utf-8"></script>
-	<script src="javascripts/app/models/taxon.js" type="text/javascript" charset="utf-8"></script>
-	<script src="javascripts/app/models/nomenclaturalAct.js" type="text/javascript" charset="utf-8"></script>
-	<script src="javascripts/app/models/registration.js" type="text/javascript" charset="utf-8"></script>
-
-	<script src="javascripts/app/collections/ranks.js" type="text/javascript" charset="utf-8"></script>
-	<script src="javascripts/app/collections/taxonomy.js" type="text/javascript" charset="utf-8"></script>
-	
-	<script src="javascripts/app/views/registrationFormView.js" type="text/javascript" charset="utf-8"></script>
-	<script src="javascripts/app/views/nomenclaturalActView.js" type="text/javascript" charset="utf-8"></script>
-	<script src="javascripts/app/views/publicationFormView.js" type="text/javascript" charset="utf-8"></script>
-		
-	<script src="javascripts/scripts.js" type="text/javascript" charset="utf-8"></script>
 	
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 	</body>

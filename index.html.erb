@@ -56,19 +56,42 @@
 	$(function(){
 		$('form.uniForm').uniform();
 
-		ZooBank.autocompleteAuthor('.authorInput');
-		ZooBank.initializeAuthorList('#authorList');
+		// ZooBank.autocompleteAuthor('.authorInput');
+		// ZooBank.initializeAuthorList('#authorList');
 		
 		
 
 	});
+	
+	
 </script>
 
 <!-- Templates -->
-<%= template('author') %>
+<%= template('authorInput') %>
 <%= template('nomenclaturalAct') %>
 <%= template('publication') %>
 <%= template('publicationArticle') %>
 <%= template('publicationMonograph') %>
 
 
+
+<!-- Backbone app -->
+<script src="javascripts/app/models/author.js" type="text/javascript" charset="utf-8"></script>
+<script src="javascripts/app/collections/authors.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="javascripts/app/models/publication.js" type="text/javascript" charset="utf-8"></script>
+<script src="javascripts/app/models/rank.js" type="text/javascript" charset="utf-8"></script>
+<script src="javascripts/app/models/taxon.js" type="text/javascript" charset="utf-8"></script>
+<script src="javascripts/app/models/nomenclaturalAct.js" type="text/javascript" charset="utf-8"></script>
+<script src="javascripts/app/models/registration.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="javascripts/app/collections/ranks.js" type="text/javascript" charset="utf-8"></script>
+<script src="javascripts/app/collections/taxonomy.js" type="text/javascript" charset="utf-8"></script>
+	
+<script src="javascripts/app/views/registrationFormView.js" type="text/javascript" charset="utf-8"></script>
+<script src="javascripts/app/views/nomenclaturalActView.js" type="text/javascript" charset="utf-8"></script>
+<script src="javascripts/app/views/publicationFormView.js" type="text/javascript" charset="utf-8"></script>
+<script src="javascripts/app/views/authorInputView.js" type="text/javascript" charset="utf-8"></script>
+<script src="javascripts/app/views/authorListInputView.js" type="text/javascript" charset="utf-8"></script>
+	
+<script src="javascripts/scripts.js" type="text/javascript" charset="utf-8"></script>

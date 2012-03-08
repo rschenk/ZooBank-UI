@@ -9,6 +9,11 @@ var PublicationFormView = Backbone.View.extend({
 	],
 	
 	initialize: function(){
+		this.authorInputListView = new AuthorListInputView({
+			collection: this.model.get('authors')
+		});
+		this.authorInputListView.addEmptyModel();
+		
 		this.initializeSubTemplates();
 		this.model.bind('change:type', this.render, this);
 	},
@@ -21,6 +26,10 @@ var PublicationFormView = Backbone.View.extend({
 		
 		// Render the specific fields for article or monograph typed publications
 		this.$('#typeSpecificPublicationFields').html( subTemplate({ view: this, model: this.model }) );
+		
+		// Render the author List
+		this.authorInputListView.setElement( this.$('#authorList')[0]);
+		this.authorInputListView.render();
 		
 		Backbone.ModelBinding.bind(this);
 		

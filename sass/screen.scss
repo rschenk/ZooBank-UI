@@ -228,3 +228,9 @@ ul.newAuthor {
 	label input{ float: none; display: inline; margin: 0; padding: 0; border: none; }
 	
 }
+
+input.hasLSID{
+	background-image: url(../images/lsid-token.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+}
