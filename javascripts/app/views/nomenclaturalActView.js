@@ -9,12 +9,14 @@ var NomenclaturalActView = Backbone.View.extend({
 	
 	initialize: function(options) {
 		// The following events are fired by  the autocompleter, but I can't get them to work properly on the events object above
-		_.bindAll(this, 'selectParentName', 'noresultsParentName');
+		_.bindAll(this, 'selectParentName', 'noresultsParentName', 'updateParentLSID');
 		 
 		this.taxonomy = options.taxonomy;
 		this.parent   = this.model.get('parent');
 		this.model.bind('change:rank', this.render, this);
 		this.model.bind('change:parentRank', this.updateParentLabel, this);
+		
+		this.parent.bind('change', this.updateParentLSID);
 	},
 	
 	render: function() {
@@ -98,6 +100,10 @@ var NomenclaturalActView = Backbone.View.extend({
 	noresultsParentName: function(event, searchTerm){
 		this.parent.clear();
 		this.parent.set({ value: searchTerm  });		
+	},
+	
+	updateParentLSID: function(){
+		this.$parentName.toggleClass('hasLSID', this.parent.hasLSID() );
 	}
 	
 });

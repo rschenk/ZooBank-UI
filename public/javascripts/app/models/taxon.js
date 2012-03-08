@@ -5,5 +5,9 @@ var Taxon = Backbone.Model.extend({
 		label: '',
 		namestring: '',
 		value: ''
+	},
+	
+	hasLSID: function(){
+		return !_.str.isBlank(this.get('id'));
 	}
 });
