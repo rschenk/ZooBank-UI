@@ -95,10 +95,17 @@ var PublicationFormView = Backbone.View.extend({
 	},
 	
 	changeJournalNameInput: function(event, ui){
-		this.model.set({ 
-			journalName: ui.item.value,
-			journalId: ui.item.id
-		});
+		var attributes;
+		if( ui.item ) {
+			// If user has selected something in the autocomplete list
+			attributes = { journalName: ui.item.value,
+				           journalId: ui.item.id };
+		} else {
+			attributes = { journalName: $(event.target).val(),
+				           journalId: null };
+			
+		}
+		this.model.set(attributes);
 	},
 	
 	changeJournalId: function() {
