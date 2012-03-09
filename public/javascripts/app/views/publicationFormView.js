@@ -9,13 +9,16 @@ var PublicationFormView = Backbone.View.extend({
 	],
 	
 	initialize: function(){
+		_(this).bindAll('render', 'changeJournalNameInput', 'changeJournalId');
+		
 		this.authorInputListView = new AuthorListInputView({
 			collection: this.model.get('authors')
 		});
 		this.authorInputListView.addEmptyModel();
 		
 		this.initializeSubTemplates();
-		this.model.bind('change:type', this.render, this);
+		this.model.bind('change:type', this.render);
+		this.model.bind('change:journalId', this.changeJournalId);
 	},
 	
 	render: function() {
@@ -30,6 +33,8 @@ var PublicationFormView = Backbone.View.extend({
 		// Render the author List
 		this.authorInputListView.setElement( this.$('#authorList')[0]);
 		this.authorInputListView.render();
+		
+		this.initializeAutocompleter( this.$('#journalName') );
 		
 		Backbone.ModelBinding.bind(this);
 		
@@ -54,5 +59,50 @@ var PublicationFormView = Backbone.View.extend({
 			var templateName = '#publication' + _.str.capitalize(type) + 'Template'; // like #publicationArticleTemplate
 			this.subTemplates[type] = _.template($(templateName).html());
 		}, this);
+	},
+	
+	initializeAutocompleter: function($el){
+		// Store in closure so we can get to it in source()
+		var view  = this,
+		    model = this.model; 
+		
+		$el.customautocomplete({
+	        source: function(request, response) {
+				$.ajax({
+					url: ZooBank.config.endpoint + "?method=find_journal",
+					type: 'post',
+					dataType: 'json',
+					data: { journals_only: 1,
+						    term: request.term},
+					success: function(data) {
+						if( data[0].id === 0 ) {
+							response(null);
+						} else {
+							response($.map(data, function(d, i){ 
+								d.value = d.label; // The value has HTML in it, which never works anyways
+								return d;
+							}));
+						}
+					}
+				})
+	        },
+			minLength: 4,
+			autoFocus: true,
+			open: null,
+			change: view.changeJournalNameInput,
+			select: view.changeJournalNameInput
+		});	
+	},
+	
+	changeJournalNameInput: function(event, ui){
+		this.model.set({ 
+			journalName: ui.item.value,
+			journalId: ui.item.id
+		});
+	},
+	
+	changeJournalId: function() {
+		this.$('#journalName').toggleClass('hasLSID', this.model.get('journalId') != null);
 	}
+	
 });
