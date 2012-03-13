@@ -9,7 +9,7 @@ var ReferenceFormView = Backbone.View.extend({
 	],
 	
 	initialize: function(){
-		_(this).bindAll('render', 'changeJournalNameInput', 'changeJournalId');
+		_(this).bindAll('render', 'changeParentReferenceNameInput', 'changeParentReferenceId');
 		
 		this.authorInputListView = new AuthorListInputView({
 			collection: this.model.get('authors')
@@ -18,11 +18,11 @@ var ReferenceFormView = Backbone.View.extend({
 		
 		this.initializeSubTemplates();
 		this.model.bind('change:type', this.render);
-		this.model.bind('change:journalId', this.changeJournalId);
+		this.model.bind('change:parentReferenceId', this.changeParentReferenceId);
 	},
 	
 	render: function() {
-		var type = this.model.get('type'),
+		var type = this.model.get('referenceTypeId'),
 		    subTemplate = this.subTemplates[type];
 			
 		this.$el.html( this.template({view: this, model: this.model}) );
@@ -34,7 +34,7 @@ var ReferenceFormView = Backbone.View.extend({
 		this.authorInputListView.setElement( this.$('#authorList')[0]);
 		this.authorInputListView.render();
 		
-		this.initializeAutocompleter( this.$('#journalName') );
+		this.initializeAutocompleter( this.$('#parentReferenceName') );
 		
 		Backbone.ModelBinding.bind(this);
 		
@@ -89,27 +89,27 @@ var ReferenceFormView = Backbone.View.extend({
 			minLength: 4,
 			autoFocus: true,
 			open: null,
-			change: view.changeJournalNameInput,
-			select: view.changeJournalNameInput
+			change: view.changeParentReferenceNameInput,
+			select: view.changeParentReferenceNameInput
 		});	
 	},
 	
-	changeJournalNameInput: function(event, ui){
+	changeParentReferenceNameInput: function(event, ui){
 		var attributes;
 		if( ui.item ) {
 			// If user has selected something in the autocomplete list
-			attributes = { journalName: ui.item.value,
-				           journalId: ui.item.id };
+			attributes = { parentReferenceName: ui.item.value,
+				           parentReferenceId: ui.item.id };
 		} else {
-			attributes = { journalName: $(event.target).val(),
-				           journalId: null };
+			attributes = { parentReferenceName: $(event.target).val(),
+				           parentReferenceId: null };
 			
 		}
 		this.model.set(attributes);
 	},
 	
-	changeJournalId: function() {
-		this.$('#journalName').toggleClass('hasLSID', this.model.get('journalId') != null);
+	changeParentReferenceId: function() {
+		this.$('#parentReferenceName').toggleClass('hasLSID', this.model.get('parentReferenceId') != null);
 	}
 	
 });

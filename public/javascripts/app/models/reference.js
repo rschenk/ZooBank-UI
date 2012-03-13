@@ -1,22 +1,27 @@
 var Reference = Backbone.Model.extend({
+	/* The weird case here is because I am matching the db field names */
 	defaults: {
 		id: null,
-		lsid: '',
-		type: null, // is defaulted to JOURNAL_ARTICLE in initialize()
-		published: false,
+		/* These are all directly from the API */
+		parentReferenceId: null,
+		referenceTypeId: null, // is defaulted to JOURNAL_ARTICLE in initialize()
+		languageID: '',
 		year: null,
+		title: '',
+		volume: '',
+		number: '',
+		pages: '', 
+		figures: '',
+		authors: new Authors(),
+		
+		/* These are not in the API, but are used */
+		lsid: '',
+		published: false,
 		month: null,
 		day: null,
-		authors: new Authors(),
-		title: '',
-		journalName: '',
-		journalId: '',
+		parentReferenceName: '',
 		issn: '',
 		isbn: '',
-		volume: '',
-		issue: '',
-		pages: '', 
-		language: '',
 		publisher: '', 
 		city: '',
 		edition: ''
@@ -24,7 +29,7 @@ var Reference = Backbone.Model.extend({
 	
 	initialize: function(){
 		// Default the 'type' attribute to 'article' unless it's set already
-		this.set({type: this.get('type') || this.constructor.JOURNAL_ARTICLE });
+		this.set({referenceTypeId: this.get('referenceTypeId') || this.constructor.JOURNAL_ARTICLE });
 	}
 },{
 	// Class Properties
