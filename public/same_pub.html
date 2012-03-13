@@ -117,7 +117,7 @@
 
 		</div>
 		
-		<div id="nomenclaturalAct"></div>
+		<div id="taxonName"></div>
 
 		<fieldset class="buttons">
 			<div class="container">
@@ -132,7 +132,7 @@
 
 
 <!-- Templates -->
-<script type='text/template' id='authorInputTemplate'><input name="author-<%= model.cid %>" id="author-<%= model.cid %>" type="text" class="authorInput textInput" placeholder="e.g Wilson, Edward O" value="<%= model.get('value') %>"/></script><script type='text/template' id='nomenclaturalActTemplate'><fieldset id="nomenclaturalActs" class="inlineLabels">
+<script type='text/template' id='authorInputTemplate'><input name="author-<%= model.cid %>" id="author-<%= model.cid %>" type="text" class="authorInput textInput" placeholder="e.g Wilson, Edward O" value="<%= model.get('value') %>"/></script><script type='text/template' id='taxonNameTemplate'><fieldset id="nomenclaturalActs" class="inlineLabels">
 	<legend>Nomenclatural Acts</legend>
 	<div class="container">
 	    <div class="infoMsg">
@@ -317,14 +317,14 @@
 <script src="javascripts/app/models/rank.js" type="text/javascript" charset="utf-8"></script>
 <script src="javascripts/app/models/taxon.js" type="text/javascript" charset="utf-8"></script>
 <script src="javascripts/app/models/reference.js" type="text/javascript" charset="utf-8"></script>
-<script src="javascripts/app/models/nomenclaturalAct.js" type="text/javascript" charset="utf-8"></script>
+<script src="javascripts/app/models/taxonName.js" type="text/javascript" charset="utf-8"></script>
 <script src="javascripts/app/models/registration.js" type="text/javascript" charset="utf-8"></script>
 
 <script src="javascripts/app/collections/ranks.js" type="text/javascript" charset="utf-8"></script>
 <script src="javascripts/app/collections/taxonomy.js" type="text/javascript" charset="utf-8"></script>
 	
 <script src="javascripts/app/views/registrationFormView.js" type="text/javascript" charset="utf-8"></script>
-<script src="javascripts/app/views/nomenclaturalActView.js" type="text/javascript" charset="utf-8"></script>
+<script src="javascripts/app/views/taxonNameView.js" type="text/javascript" charset="utf-8"></script>
 <script src="javascripts/app/views/referenceFormView.js" type="text/javascript" charset="utf-8"></script>
 <script src="javascripts/app/views/authorInputView.js" type="text/javascript" charset="utf-8"></script>
 <script src="javascripts/app/views/authorListInputView.js" type="text/javascript" charset="utf-8"></script>

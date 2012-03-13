@@ -7,12 +7,12 @@ var Registration = Backbone.Model.extend({
 		newReference: null,
 		doi: '',
 		recentPublicationId: '',
-		nomenclaturalAct: null
+		taxonName: null
 	},
 	
 	initialize: function(spec) {
 		this.newReference = spec.newReference
-		this.nomenclaturalAct = spec.nomenclaturalAct;
+		this.taxonName = spec.taxonName;
 		
 		this.updateReferenceType();
 		this.bind('change:selectedTab', this.updateReferenceType, this);

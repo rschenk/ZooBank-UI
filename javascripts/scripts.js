@@ -18,7 +18,7 @@ $(function(){
 	]);
 	
 	ZooBank.registration = new Registration({
-		nomenclaturalAct: new NomenclaturalAct({ rank:  ZooBank.taxonomy.species() }),
+		taxonName: new TaxonName({ rank:  ZooBank.taxonomy.species() }),
 		newReference: new Reference()
 	});
 	
@@ -28,9 +28,9 @@ $(function(){
 	})
 	
 	// Todo: move all these views into a reigstration form view
-	var nomenclaturalActView = new NomenclaturalActView({
-		el: $('#nomenclaturalAct')[0],
-		model: ZooBank.registration.nomenclaturalAct,
+	var taxonNameView = new TaxonNameView({
+		el: $('#taxonName')[0],
+		model: ZooBank.registration.taxonName,
 		taxonomy:  ZooBank.taxonomy
 	}).render();
 	

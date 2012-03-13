@@ -1,5 +1,5 @@
-var NomenclaturalActView = Backbone.View.extend({
-	template: _.template($('#nomenclaturalActTemplate').html()),
+var TaxonNameView = Backbone.View.extend({
+	template: _.template($('#taxonNameTemplate').html()),
 	events: {
 		'change #rank_id' : 'changeRankId',
 		'click input[name="parent_rank_id"]' : 'changeParentId',

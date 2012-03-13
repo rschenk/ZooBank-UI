@@ -1,4 +1,4 @@
-var NomenclaturalAct = Backbone.Model.extend({
+var TaxonName = Backbone.Model.extend({
 	// These aren't so much defaults, as a way to document what attributes this model has.
 	defaults: {
 		rank: null, // Rank object
