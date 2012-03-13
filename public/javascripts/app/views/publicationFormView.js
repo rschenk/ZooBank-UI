@@ -3,9 +3,9 @@ var PublicationFormView = Backbone.View.extend({
 	subTemplates: [], // See comment in initializeSubTemplates() for how this is used
 
 	// These are used as labels for the Publication.publicationTypes
-	publicationTypeLabels: [ 
-		'Article in a journal, magazine, or other periodical',
-		'Book or monograph'
+	publicationTypes: [
+		{ id: Publication.JOURNAL_ARTICLE, label: 'Article in a journal, magazine, or other periodical' },
+		{ id: Publication.BOOK, label: 'Book or Monograph'}
 	],
 	
 	initialize: function(){
@@ -55,9 +55,9 @@ var PublicationFormView = Backbone.View.extend({
 	   in the render() function, all we have to do is use model.get('type') to look up the appropriate template.
 	*/
 	initializeSubTemplates: function(){
-		_.each(this.model.constructor.publicationTypes, function(type){
-			var templateName = '#publication' + _.str.capitalize(type) + 'Template'; // like #publicationArticleTemplate
-			this.subTemplates[type] = _.template($(templateName).html());
+		_.each(this.publicationTypes, function(type){
+			var templateName = '#publication_' +type.id + 'Template'; // like #publication_1Template
+			this.subTemplates[type.id] = _.template($(templateName).html());
 		}, this);
 	},
 	

@@ -3,6 +3,8 @@ var ZooBank = {
 };
 
 $(function(){
+	$('form.uniForm').uniform({default_value_color: '#555'});
+	
 	// Boilerplate
 	 ZooBank.taxonomy = new Taxonomy();
 	 ZooBank.taxonomy.reset([

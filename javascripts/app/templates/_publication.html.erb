@@ -8,10 +8,9 @@
     <div class="ctrlHolder">
       <p class="label">Publication type</p>
       <ul class="blockLabels">
-      <% _.each(model.constructor.publicationTypes, function(type, i){ %>
-        <% var label = view.publicationTypeLabels[i], checked = (model.get('type') === type) %>
+	  <% _.each(view.publicationTypes, function(type, i){ %>
         <li>
-          <label><input type="radio" name="type" value="<%= type %>"> <%= label %></label>
+          <label><input type="radio" name="type" value="<%= type.id %>"> <%= type.label %></label>
         </li>
       <% }) %>
       </ul>

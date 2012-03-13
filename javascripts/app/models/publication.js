@@ -2,7 +2,7 @@ var Publication = Backbone.Model.extend({
 	defaults: {
 		id: null,
 		lsid: '',
-		type: null, // is defaulted to 'article' in initialize()
+		type: null, // is defaulted to Publication.JOURNAL_ARTICLE in initialize()
 		published: false,
 		year: null,
 		month: null,
@@ -24,9 +24,13 @@ var Publication = Backbone.Model.extend({
 	
 	initialize: function(){
 		// Default the 'type' attribute to 'article' unless it's set already
-		this.set({type: this.get('type') || this.constructor.publicationTypes[0] });
+		this.set({type: this.get('type') || this.constructor.JOURNAL_ARTICLE });
 	}
 },{
 	// Class Properties
-	publicationTypes: ['article', 'monograph'],
+	
+	/* Constants for ReferenceTypeID.
+	   This may need a refactor to its own model/collection at some point */
+	JOURNAL_ARTICLE: '1',
+	BOOK: '2',
 });
