@@ -1,8 +1,8 @@
-var Publication = Backbone.Model.extend({
+var Reference = Backbone.Model.extend({
 	defaults: {
 		id: null,
 		lsid: '',
-		type: null, // is defaulted to Publication.JOURNAL_ARTICLE in initialize()
+		type: null, // is defaulted to JOURNAL_ARTICLE in initialize()
 		published: false,
 		year: null,
 		month: null,

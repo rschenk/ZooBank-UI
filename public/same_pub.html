@@ -173,17 +173,17 @@
 		<% } /* end if(validParentRanks.length > 0) */ %>
 	</div>
 </fieldset>
-</script><script type='text/template' id='publicationTemplate'><!--
+</script><script type='text/template' id='referenceTemplate'><!--
   Publication/Citation Information
 -->
         
-<fieldset id="publication_fields" class="inlineLabels">
+<fieldset id="reference_fields" class="inlineLabels">
   <legend>Publication</legend>
   <div class="container">
     <div class="ctrlHolder">
       <p class="label">Publication type</p>
       <ul class="blockLabels">
-	  <% _.each(view.publicationTypes, function(type, i){ %>
+		  <% _.each(view.referenceTypes, function(type, i){ %>
         <li>
           <label><input type="radio" name="type" value="<%= type.id %>"> <%= type.label %></label>
         </li>
@@ -239,11 +239,11 @@
     </div>
 
 	<!-- Render the type-specific fields here -->
-	<div id="typeSpecificPublicationFields"></div>
+	<div id="typeSpecificReferenceFields"></div>
   </div>
 </fieldset>
         
-</script><script type='text/template' id='publication_1Template'><%/* This form is for Article (ReferenceTypeID 1) publications () */%>
+</script><script type='text/template' id='referenceType1Template'><%/* This form is for Article (ReferenceTypeID 1) references */%>
 <div class="ctrlHolder">
   <label for="title">Article title</label> 
   <textarea name="title" id="title" rows="2" cols="25"></textarea>
@@ -276,7 +276,7 @@
     <label for="language">Language</label> <input name="language" id="language" placeholder="" size="35" maxlength="50" type="text" class="textInput">
   </div>
 </fieldset>
-</script><script type='text/template' id='publication_2Template'><%/* This form is for Book (ReferenceTypeID 2) publications () */%>
+</script><script type='text/template' id='referenceType2Template'><%/* This form is for Book (ReferenceTypeID 2) references */%>
 <div class="ctrlHolder">
   <label for="title">Book title</label> 
   <textarea name="title" id="title" rows="2" cols="25"></textarea>
@@ -316,7 +316,7 @@
 
 <script src="javascripts/app/models/rank.js" type="text/javascript" charset="utf-8"></script>
 <script src="javascripts/app/models/taxon.js" type="text/javascript" charset="utf-8"></script>
-<script src="javascripts/app/models/publication.js" type="text/javascript" charset="utf-8"></script>
+<script src="javascripts/app/models/reference.js" type="text/javascript" charset="utf-8"></script>
 <script src="javascripts/app/models/nomenclaturalAct.js" type="text/javascript" charset="utf-8"></script>
 <script src="javascripts/app/models/registration.js" type="text/javascript" charset="utf-8"></script>
 
@@ -325,7 +325,7 @@
 	
 <script src="javascripts/app/views/registrationFormView.js" type="text/javascript" charset="utf-8"></script>
 <script src="javascripts/app/views/nomenclaturalActView.js" type="text/javascript" charset="utf-8"></script>
-<script src="javascripts/app/views/publicationFormView.js" type="text/javascript" charset="utf-8"></script>
+<script src="javascripts/app/views/referenceFormView.js" type="text/javascript" charset="utf-8"></script>
 <script src="javascripts/app/views/authorInputView.js" type="text/javascript" charset="utf-8"></script>
 <script src="javascripts/app/views/authorListInputView.js" type="text/javascript" charset="utf-8"></script>
 	

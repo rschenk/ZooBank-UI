@@ -19,7 +19,7 @@ $(function(){
 	
 	ZooBank.registration = new Registration({
 		nomenclaturalAct: new NomenclaturalAct({ rank:  ZooBank.taxonomy.species() }),
-		newPublication: new Publication()
+		newReference: new Reference()
 	});
 	
 	var registrationFormView = new RegistrationFormView({
@@ -34,9 +34,9 @@ $(function(){
 		taxonomy:  ZooBank.taxonomy
 	}).render();
 	
-	var newPublicationView = new PublicationFormView({
+	var newReferenceView = new ReferenceFormView({
 		el: $('#new_publication')[0],
-		model: ZooBank.registration.newPublication
+		model: ZooBank.registration.newReference
 	}).render();
 
 });

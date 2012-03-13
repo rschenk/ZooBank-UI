@@ -1,11 +1,11 @@
-var PublicationFormView = Backbone.View.extend({
-	template: _.template($('#publicationTemplate').html()),
+var ReferenceFormView = Backbone.View.extend({
+	template: _.template($('#referenceTemplate').html()),
 	subTemplates: [], // See comment in initializeSubTemplates() for how this is used
 
-	// These are used as labels for the Publication.publicationTypes
-	publicationTypes: [
-		{ id: Publication.JOURNAL_ARTICLE, label: 'Article in a journal, magazine, or other periodical' },
-		{ id: Publication.BOOK, label: 'Book or Monograph'}
+	// These are used as labels for the various Reference types
+	referenceTypes: [
+		{ id: Reference.JOURNAL_ARTICLE, label: 'Article in a journal, magazine, or other periodical' },
+		{ id: Reference.BOOK, label: 'Book or Monograph'}
 	],
 	
 	initialize: function(){
@@ -27,8 +27,8 @@ var PublicationFormView = Backbone.View.extend({
 			
 		this.$el.html( this.template({view: this, model: this.model}) );
 		
-		// Render the specific fields for article or monograph typed publications
-		this.$('#typeSpecificPublicationFields').html( subTemplate({ view: this, model: this.model }) );
+		// Render the specific fields for article or monograph typed references
+		this.$('#typeSpecificReferenceFields').html( subTemplate({ view: this, model: this.model }) );
 		
 		// Render the author List
 		this.authorInputListView.setElement( this.$('#authorList')[0]);
@@ -44,19 +44,19 @@ var PublicationFormView = Backbone.View.extend({
 	
 	
 	/* 
-	   There are a few different types of publications, defined in the array Publication.publicationTypes
+	   There are a few different types of references, defined in the array 
 	   Each one of them has its own fields, and thus its own form that needs to be rendered. I decided to use
 	   a convention here: 
-	    * I expect to find the template for a publicationType of 'article' to be in #publicationArticleTemplate
-		* I expect to find the template for a publicationType of 'monograph' to be in #publicationMonographTemplate
+	    * I expect to find the template for a referenceType of '1' (article) to be in #referenceType1Template
+		* I expect to find the template for a publicationType of '2' (book) to be in #referenceType2Template
 		* etc. 
 			
 	   I store the compiled templates in the subTemplates hash, with the key being the article type. That way,
 	   in the render() function, all we have to do is use model.get('type') to look up the appropriate template.
 	*/
 	initializeSubTemplates: function(){
-		_.each(this.publicationTypes, function(type){
-			var templateName = '#publication_' +type.id + 'Template'; // like #publication_1Template
+		_.each(this.referenceTypes, function(type){
+			var templateName = '#referenceType' +type.id + 'Template'; // like #referenceType1Template
 			this.subTemplates[type.id] = _.template($(templateName).html());
 		}, this);
 	},

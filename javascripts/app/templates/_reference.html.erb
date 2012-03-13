@@ -2,13 +2,13 @@
   Publication/Citation Information
 -->
         
-<fieldset id="publication_fields" class="inlineLabels">
+<fieldset id="reference_fields" class="inlineLabels">
   <legend>Publication</legend>
   <div class="container">
     <div class="ctrlHolder">
       <p class="label">Publication type</p>
       <ul class="blockLabels">
-	  <% _.each(view.publicationTypes, function(type, i){ %>
+		  <% _.each(view.referenceTypes, function(type, i){ %>
         <li>
           <label><input type="radio" name="type" value="<%= type.id %>"> <%= type.label %></label>
         </li>
@@ -64,7 +64,7 @@
     </div>
 
 	<!-- Render the type-specific fields here -->
-	<div id="typeSpecificPublicationFields"></div>
+	<div id="typeSpecificReferenceFields"></div>
   </div>
 </fieldset>
         
