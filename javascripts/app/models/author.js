@@ -13,6 +13,10 @@ var Author = Backbone.Model.extend({
 		return !_.str.isBlank(this.get('ZBLSID'));
 	},
 	
+	isBlank: function() {
+		return _.isEqual(this.attributes, this.defaults);
+	},
+	
 	/* Return a copy of the model's attributes for JSON stringification. 
 	 * This is used to prepare the object for persisting to the web service.
 	 * It doesn't actually return a JSON string — but that's the way the JavaScript API for JSON.stringify works.
