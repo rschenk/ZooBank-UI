@@ -3,7 +3,6 @@ var Reference = Backbone.Model.extend({
 		return ZooBank.config.endpoint + "?method=insert_reference";
 	},
 	
-	/* The weird case here is because I am matching the db field names */
 	defaults: {
 		id: null,
 		/* These are all directly from the API */
@@ -32,7 +31,7 @@ var Reference = Backbone.Model.extend({
 	},
 	
 	initialize: function(){
-		// Default the 'type' attribute to 'article' unless it's set already
+		// Default the 'referenceTypeId' attribute to JOURNAL_ARTICLE unless it's set already
 		this.set({referenceTypeId: this.get('referenceTypeId') || this.constructor.JOURNAL_ARTICLE });
 	},
 	
