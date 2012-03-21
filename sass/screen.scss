@@ -5,6 +5,7 @@
 @import "compass/reset";
 @import "compass/css3";
 @import "compass/utilities";
+@import "compass/layout";
 @import "modular-scale";
 @import "susy";
 @import "sassy-buttons";
@@ -17,12 +18,16 @@
 @import "autocomplete";
 @import "tabs";
 
+
+
 .check { color: $dark-green; }
 
 body {
 	background-color: $very-light-blue;
 	color: $text;
 }
+
+
 
 #header {
 	background-color: $purple;
@@ -52,6 +57,10 @@ body {
 		}
 	}
 
+#footer {
+	margin-top: 3em;
+	text-align: center;
+}
 
 table {
 	@include table-scaffolding;
@@ -66,10 +75,31 @@ table {
 .introduction { 
 	@include text-shadow(0 1px 1px #fff);
 	margin: 2em 0;
+	text-align: center;
 }
 .tagline {
 	display: block;
 }
+
+
+.searchBar {
+	background-color: $form-blue;
+	border-top: 1px solid $border-blue;
+	border-bottom: 1px solid $border-blue;
+	padding: 1em 0;
+	margin-bottom: 1em;
+	
+	.container {
+		text-align: center;
+	}
+	
+	.search_input_field {
+		font-size: ms(1);
+		padding-top: 0.3em;
+		padding-bottom: 0.3em;
+	}
+}
+
 
 .cta {
 	@include text-shadow(0 -1px 1px transparentize($yellow-shadow, 0.7));

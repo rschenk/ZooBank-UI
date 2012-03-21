@@ -73,18 +73,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
  7  9 11 14 18 23 29 37 47 59 75
 
 */
-/* line 26, ../../sass/_typography.scss */
+/* line 29, ../../sass/_typography.scss */
 abbr {
   font-variant: small-caps;
 }
 
-/* line 30, ../../sass/_typography.scss */
+/* line 33, ../../sass/_typography.scss */
 body {
   font-family: "Open Sans", Arial, Verdana, sans-serif;
+  font-weight: 400;
   font-size: 14px;
 }
 
-/* line 35, ../../sass/_typography.scss */
+/* line 38, ../../sass/_typography.scss */
 h2 {
   font-family: Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Times New Roman", serif;
   font-variant-ligatures: common-ligatures;
@@ -93,24 +94,24 @@ h2 {
   line-height: 37px;
 }
 
-/* line 42, ../../sass/_typography.scss */
+/* line 45, ../../sass/_typography.scss */
 em {
   font-style: italic;
 }
 
-/* line 45, ../../sass/_typography.scss */
+/* line 48, ../../sass/_typography.scss */
 .logo {
   font-family: UniversLTStd-Cn;
   font-size: 47px;
   line-height: 59px;
 }
 
-/* line 51, ../../sass/_typography.scss */
+/* line 54, ../../sass/_typography.scss */
 nav {
   font-size: 14px;
 }
 
-/* line 55, ../../sass/_typography.scss */
+/* line 58, ../../sass/_typography.scss */
 .introduction {
   font-family: Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Times New Roman", serif;
   font-variant-ligatures: common-ligatures;
@@ -119,53 +120,55 @@ nav {
   line-height: 29.9px;
 }
 
-/* line 61, ../../sass/_typography.scss */
+/* line 64, ../../sass/_typography.scss */
 .tagline {
   font-size: 47px;
   line-height: 51.7px;
 }
 
-/* line 66, ../../sass/_typography.scss */
+/* line 69, ../../sass/_typography.scss */
 .cta {
   font-size: 29px;
 }
 
-/* line 71, ../../sass/_typography.scss */
+/* line 74, ../../sass/_typography.scss */
 .uniForm .formHint {
   font-size: 11px;
   line-height: 14px;
 }
 
-/* line 76, ../../sass/_typography.scss */
+/* line 79, ../../sass/_typography.scss */
 .primaryAction {
   font-family: "Open Sans", Arial, Verdana, sans-serif;
+  font-weight: 400;
   font-size: 18px;
 }
 
-/* line 81, ../../sass/_typography.scss */
+/* line 84, ../../sass/_typography.scss */
 .secondaryAction {
   font-family: "Open Sans", Arial, Verdana, sans-serif;
+  font-weight: 400;
   font-size: 14px;
   font-weight: normal;
 }
 
-/* line 88, ../../sass/_typography.scss */
+/* line 91, ../../sass/_typography.scss */
 .biblio-entry {
   font-size: 11px;
   line-height: 18px;
 }
 
-/* line 94, ../../sass/_typography.scss */
+/* line 97, ../../sass/_typography.scss */
 .actSummary .biblio-entry {
   line-height: 14px;
 }
 
-/* line 97, ../../sass/_typography.scss */
+/* line 100, ../../sass/_typography.scss */
 .lsid {
   font-family: Pragmata, Menlo, "DejaVu LGC Sans Mono", "DejaVu LGC Sans Mono", "DejaVu Sans Mono", Consolas, "Everson Mono", "Lucida Console", "Andale Mono", "Nimbus Mono L", "Liberation Mono", FreeMono, "Lucida Sans Typewriter", "Lucida Typewriter", "Osaka Monospaced", "Bitstream Vera Sans Mono", Courier, "New Courier", monospace;
 }
 
-/* line 102, ../../sass/_typography.scss */
+/* line 105, ../../sass/_typography.scss */
 .searchResults .actName {
   line-height: 23px;
 }
@@ -1076,53 +1079,59 @@ form#registration .inlineLabels .formHint {
   background-color: #f5f5ff;
 }
 
-/* line 20, ../../sass/screen.scss */
+/* line 23, ../../sass/screen.scss */
 .check {
   color: #6d990f;
 }
 
-/* line 22, ../../sass/screen.scss */
+/* line 25, ../../sass/screen.scss */
 body {
   background-color: #f5f5ff;
   color: #555555;
 }
 
-/* line 27, ../../sass/screen.scss */
+/* line 32, ../../sass/screen.scss */
 #header {
   background-color: #31309c;
   height: 47px;
   margin-bottom: 14px;
 }
 
-/* line 33, ../../sass/screen.scss */
+/* line 38, ../../sass/screen.scss */
 .logo {
   float: left;
 }
-/* line 35, ../../sass/screen.scss */
+/* line 40, ../../sass/screen.scss */
 .logo a {
   color: #f5f5ff;
   text-decoration: none;
 }
 
-/* line 37, ../../sass/screen.scss */
+/* line 42, ../../sass/screen.scss */
 nav {
   padding-top: 30px;
   float: right;
 }
-/* line 40, ../../sass/screen.scss */
+/* line 45, ../../sass/screen.scss */
 nav li {
   display: inline;
 }
-/* line 42, ../../sass/screen.scss */
+/* line 47, ../../sass/screen.scss */
 nav li a {
   padding-left: 1em;
   color: #f5f5ff;
   text-decoration: none;
 }
-/* line 47, ../../sass/screen.scss */
+/* line 52, ../../sass/screen.scss */
 nav li a:hover {
   text-decoration: underline;
   color: #ffcb42;
+}
+
+/* line 60, ../../sass/screen.scss */
+#footer {
+  margin-top: 3em;
+  text-align: center;
 }
 
 /* line 2, ../../../../../.rvm/gems/ruby-1.9.3-p125@zoobank/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/utilities/tables/_scaffolding.scss */
@@ -1140,25 +1149,45 @@ table td.numeric,
 table th.numeric {
   text-align: right;
 }
-/* line 59, ../../sass/screen.scss */
+/* line 68, ../../sass/screen.scss */
 table th, table td {
   vertical-align: top;
   text-align: left;
   font-weight: normal;
 }
 
-/* line 66, ../../sass/screen.scss */
+/* line 75, ../../sass/screen.scss */
 .introduction {
   text-shadow: 0 1px 1px white;
   margin: 2em 0;
+  text-align: center;
 }
 
-/* line 70, ../../sass/screen.scss */
+/* line 80, ../../sass/screen.scss */
 .tagline {
   display: block;
 }
 
-/* line 74, ../../sass/screen.scss */
+/* line 85, ../../sass/screen.scss */
+.searchBar {
+  background-color: #ebebff;
+  border-top: 1px solid #e1e1ff;
+  border-bottom: 1px solid #e1e1ff;
+  padding: 1em 0;
+  margin-bottom: 1em;
+}
+/* line 92, ../../sass/screen.scss */
+.searchBar .container {
+  text-align: center;
+}
+/* line 96, ../../sass/screen.scss */
+.searchBar .search_input_field {
+  font-size: 14px;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+}
+
+/* line 104, ../../sass/screen.scss */
 .cta {
   text-shadow: 0 -1px 1px rgba(132, 78, 0, 0.3);
   -moz-border-radius: 3px;
@@ -1180,7 +1209,7 @@ table th, table td {
   text-align: center;
   padding: 0.25em 0;
 }
-/* line 85, ../../sass/screen.scss */
+/* line 115, ../../sass/screen.scss */
 .cta:before {
   position: absolute;
   top: 0px;
@@ -1192,7 +1221,7 @@ table th, table td {
   content: url(../images/cta-loop.gif);
 }
 
-/* line 97, ../../sass/screen.scss */
+/* line 127, ../../sass/screen.scss */
 .ui-tabs ul {
   overflow: hidden;
   *zoom: 1;
@@ -1200,52 +1229,52 @@ table th, table td {
   width: auto;
 }
 
-/* line 103, ../../sass/screen.scss */
+/* line 133, ../../sass/screen.scss */
 #registrationForm {
   background-color: #ebebff;
   border-top: 1px solid #e1e1ff;
 }
 
-/* line 107, ../../sass/screen.scss */
+/* line 137, ../../sass/screen.scss */
 #publicationTabs {
   padding-top: 1em;
   border-bottom: 1px solid #e1e1ff;
 }
-/* line 112, ../../sass/screen.scss */
+/* line 142, ../../sass/screen.scss */
 #publicationTabs .ui-tabs-nav {
   margin-top: 1em;
 }
-/* line 116, ../../sass/screen.scss */
+/* line 146, ../../sass/screen.scss */
 #publicationTabs .ui-tabs-panel {
   padding: 1em 0;
 }
 
-/* line 121, ../../sass/screen.scss */
+/* line 151, ../../sass/screen.scss */
 fieldset.buttons {
   border-top: 1px solid #e1e1ff;
 }
 
-/* line 126, ../../sass/screen.scss */
+/* line 156, ../../sass/screen.scss */
 .citationList li {
   margin-bottom: 18px !important;
 }
 
-/* line 131, ../../sass/screen.scss */
+/* line 161, ../../sass/screen.scss */
 legend {
   display: none;
 }
 
-/* line 134, ../../sass/screen.scss */
+/* line 164, ../../sass/screen.scss */
 .actSummary {
   margin-bottom: 2em;
 }
-/* line 137, ../../sass/screen.scss */
+/* line 167, ../../sass/screen.scss */
 .actSummary .biblio-entry {
   display: block;
   width: 60%;
 }
 
-/* line 143, ../../sass/screen.scss */
+/* line 173, ../../sass/screen.scss */
 .nextAction {
   padding: 2em 0;
   background-color: #ebebff;
@@ -1253,29 +1282,29 @@ legend {
   border-bottom: 1px solid #e1e1ff;
 }
 
-/* line 150, ../../sass/screen.scss */
+/* line 180, ../../sass/screen.scss */
 .registerAnother {
   color: #31309c;
 }
-/* line 153, ../../sass/screen.scss */
+/* line 183, ../../sass/screen.scss */
 .registerAnother a {
   padding: 0.25em 0.5em;
 }
 
-/* line 158, ../../sass/screen.scss */
+/* line 188, ../../sass/screen.scss */
 .lsidWrapper {
   overflow: hidden;
   *zoom: 1;
   margin-bottom: 1em;
 }
-/* line 162, ../../sass/screen.scss */
+/* line 192, ../../sass/screen.scss */
 .lsidWrapper .lsidLogo, .lsidWrapper .lsid {
   display: inline;
   float: left;
   line-height: 18px;
   padding: 2px 4px;
 }
-/* line 167, ../../sass/screen.scss */
+/* line 197, ../../sass/screen.scss */
 .lsidWrapper .lsidLogo {
   -moz-border-radius-topleft: 3px;
   -webkit-border-top-left-radius: 3px;
@@ -1293,7 +1322,7 @@ legend {
   background-color: #ff733d;
   border: 1px solid #ff733d;
 }
-/* line 174, ../../sass/screen.scss */
+/* line 204, ../../sass/screen.scss */
 .lsidWrapper input.lsid {
   width: 40em;
   margin: 0;
@@ -1303,7 +1332,7 @@ legend {
   -webkit-appearance: none;
   outline: none;
 }
-/* line 183, ../../sass/screen.scss */
+/* line 213, ../../sass/screen.scss */
 .lsidWrapper #clippy {
   display: inline;
   float: left;
@@ -1311,42 +1340,42 @@ legend {
   margin-left: 4px;
 }
 
-/* line 190, ../../sass/screen.scss */
+/* line 220, ../../sass/screen.scss */
 .authorDisambiguation {
   padding-top: 1em;
   margin-top: 1em;
   background-color: #ebebff;
   border-top: 1px solid #e1e1ff;
 }
-/* line 197, ../../sass/screen.scss */
+/* line 227, ../../sass/screen.scss */
 .authorDisambiguation .specialties,
 .authorDisambiguation .sparkline {
   padding-left: 3em;
 }
-/* line 201, ../../sass/screen.scss */
+/* line 231, ../../sass/screen.scss */
 .authorDisambiguation td.specialties {
   color: #888888;
 }
-/* line 208, ../../sass/screen.scss */
+/* line 238, ../../sass/screen.scss */
 .authorDisambiguation thead th {
   font-weight: bold;
   padding-bottom: 1em;
 }
 
-/* line 214, ../../sass/screen.scss */
+/* line 244, ../../sass/screen.scss */
 ul.newAuthor {
   width: 100% !important;
 }
-/* line 216, ../../sass/screen.scss */
+/* line 246, ../../sass/screen.scss */
 ul.newAuthor li {
   width: auto !important;
 }
-/* line 219, ../../sass/screen.scss */
+/* line 249, ../../sass/screen.scss */
 ul.newAuthor .formHint {
   width: 100%;
 }
 
-/* line 228, ../../sass/screen.scss */
+/* line 258, ../../sass/screen.scss */
 #nomenclaturalActs .inlineLabel input,
 #nomenclaturalActs .inlineLabels .inlineLabel input,
 #nomenclaturalActs .blockLabels .inlineLabel input,
@@ -1358,7 +1387,7 @@ ul.newAuthor .formHint {
   border: none;
 }
 
-/* line 232, ../../sass/screen.scss */
+/* line 262, ../../sass/screen.scss */
 input.hasLSID {
   background-image: url(../images/lsid-token.gif);
   background-repeat: no-repeat;
@@ -1366,16 +1395,16 @@ input.hasLSID {
 }
 
 /* Search results */
-/* line 241, ../../sass/screen.scss */
+/* line 271, ../../sass/screen.scss */
 .searchResults {
   text-align: left;
 }
-/* line 244, ../../sass/screen.scss */
+/* line 274, ../../sass/screen.scss */
 .searchResults li:hover {
   text-decoration: underline;
   cursor: pointer;
 }
-/* line 252, ../../sass/screen.scss */
+/* line 282, ../../sass/screen.scss */
 .searchResults .authorship {
   color: #888888;
 }

@@ -20,7 +20,10 @@ $mono-stack: Pragmata, Menlo, 'DejaVu LGC Sans Mono', 'DejaVu LGC Sans Mono', 'D
 	text-rendering: optimizeLegibility;
 	
 }
-@mixin sans-font { font-family: $sans-stack; }
+@mixin sans-font { 
+	font-family: $sans-stack;
+	font-weight: 400;
+}
 @mixin mono-font { font-family: $mono-stack; }
 
 abbr {
