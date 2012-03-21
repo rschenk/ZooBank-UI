@@ -97,3 +97,10 @@ nav {
 .lsid {
 	@include mono-font;
 }
+
+.searchResults {
+	
+	.actName {
+		line-height: ms(3);
+	}
+}

@@ -234,3 +234,23 @@ input.hasLSID{
 	background-repeat: no-repeat;
 	background-position: center right;
 }
+
+
+
+/* Search results */
+.searchResults {
+	text-align: left;
+	
+	li:hover {
+		text-decoration: underline;
+		cursor: pointer;
+	}
+	
+	.actName {
+	}
+	
+	.authorship{
+		color: $light-text;
+	}
+	
+}

@@ -163,6 +163,11 @@ nav {
   font-family: Pragmata, Menlo, "DejaVu LGC Sans Mono", "DejaVu LGC Sans Mono", "DejaVu Sans Mono", Consolas, "Everson Mono", "Lucida Console", "Andale Mono", "Nimbus Mono L", "Liberation Mono", FreeMono, "Lucida Sans Typewriter", "Lucida Typewriter", "Osaka Monospaced", "Bitstream Vera Sans Mono", Courier, "New Courier", monospace;
 }
 
+/* line 103, ../../sass/_typography.scss */
+.searchResults .actName {
+  line-height: 23px;
+}
+
 /* ------------------------------------------------------------------------------
 
    Copyright (c) 2010, Dragan Babic
@@ -680,6 +685,13 @@ form#registration .inlineLabels .formHint {
 
 /* line 135, ../../sass/_grid.scss */
 .actSummary {
+  clear: both;
+  margin-left: 1.37%;
+  margin-right: 1.37%;
+}
+
+/* line 139, ../../sass/_grid.scss */
+.searchResults {
   clear: both;
   margin-left: 1.37%;
   margin-right: 1.37%;
@@ -1301,4 +1313,19 @@ input.hasLSID {
   background-image: url(../images/lsid-token.gif);
   background-repeat: no-repeat;
   background-position: center right;
+}
+
+/* Search results */
+/* line 241, ../../sass/screen.scss */
+.searchResults {
+  text-align: left;
+}
+/* line 244, ../../sass/screen.scss */
+.searchResults li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+/* line 252, ../../sass/screen.scss */
+.searchResults .authorship {
+  color: #888888;
 }
