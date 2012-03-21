@@ -135,13 +135,15 @@ nav {
   font-size: 11px;
   line-height: 14px;
 }
+
 /* line 76, ../../sass/_typography.scss */
-.uniForm .primaryAction {
+.primaryAction {
   font-family: "Open Sans", Arial, Verdana, sans-serif;
   font-size: 18px;
 }
+
 /* line 81, ../../sass/_typography.scss */
-.uniForm .secondaryAction {
+.secondaryAction {
   font-family: "Open Sans", Arial, Verdana, sans-serif;
   font-size: 14px;
   font-weight: normal;
@@ -893,8 +895,56 @@ form#registration .inlineLabels .formHint {
   -o-box-shadow: #e5a600 0 1px 2px inset;
   box-shadow: #e5a600 0 1px 2px inset;
 }
+/* line 122, ../../sass/_uni-form-theme.scss */
+.uniForm .primaryAction.small,
+.primaryAction.small {
+  font-size: 14px;
+  padding: 0.3em 1.5em;
+  display: inline-block;
+  cursor: pointer;
+  line-height: 1.5;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ffcb42;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffcb42), color-stop(100%, #ffbd0f));
+  background: -webkit-linear-gradient(#ffcb42, #ffbd0f);
+  background: -moz-linear-gradient(#ffcb42, #ffbd0f);
+  background: -o-linear-gradient(#ffcb42, #ffbd0f);
+  background: -ms-linear-gradient(#ffcb42, #ffbd0f);
+  background: linear-gradient(#ffcb42, #ffbd0f);
+  -moz-box-shadow: #ffe08f 0 1px 0 inset;
+  -webkit-box-shadow: #ffe08f 0 1px 0 inset;
+  -o-box-shadow: #ffe08f 0 1px 0 inset;
+  box-shadow: #ffe08f 0 1px 0 inset;
+  border: 1px solid #f4b100;
+  color: #fff8e7;
+  text-shadow: #bc8900 0 -1px 0;
+}
+/* line 28, ../../../../../.rvm/gems/ruby-1.9.3-p125@zoobank/gems/sassy-buttons-0.0.9/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.uniForm .primaryAction.small:hover,
+.primaryAction.small:hover {
+  background-color: #f4b100;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffc428), color-stop(100%, #f4b100));
+  background: -webkit-linear-gradient(#ffc428, #f4b100);
+  background: -moz-linear-gradient(#ffc428, #f4b100);
+  background: -o-linear-gradient(#ffc428, #f4b100);
+  background: -ms-linear-gradient(#ffc428, #f4b100);
+  background: linear-gradient(#ffc428, #f4b100);
+}
+/* line 31, ../../../../../.rvm/gems/ruby-1.9.3-p125@zoobank/gems/sassy-buttons-0.0.9/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.uniForm .primaryAction.small:active,
+.primaryAction.small:active {
+  -moz-box-shadow: #e5a600 0 1px 2px inset;
+  -webkit-box-shadow: #e5a600 0 1px 2px inset;
+  -o-box-shadow: #e5a600 0 1px 2px inset;
+  box-shadow: #e5a600 0 1px 2px inset;
+}
 
-/* line 123, ../../sass/_uni-form-theme.scss */
+/* line 129, ../../sass/_uni-form-theme.scss */
 .uniForm .secondaryAction,
 .secondaryAction {
   float: none;

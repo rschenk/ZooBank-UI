@@ -72,18 +72,18 @@ nav {
 		font-size:   ms(0);
 		line-height: ms(1);
 	}	
-	
-	.primaryAction {
-		@include sans-font;
-		font-size: ms(2);
-	}
-	
-	.secondaryAction {
-		@include sans-font;
-		font-size: ms(1);
-		font-weight: normal;
-	}
+}	
+.primaryAction {
+	@include sans-font;
+	font-size: ms(2);
 }
+	
+.secondaryAction {
+	@include sans-font;
+	font-size: ms(1);
+	font-weight: normal;
+}
+
 
 .biblio-entry {
 	font-size: ms(0);
