@@ -83,9 +83,10 @@ body {
   font-family: "Open Sans", Arial, Verdana, sans-serif;
   font-weight: 400;
   font-size: 14px;
+  line-height: 18px;
 }
 
-/* line 38, ../../sass/_typography.scss */
+/* line 39, ../../sass/_typography.scss */
 h2 {
   font-family: Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Times New Roman", serif;
   font-variant-ligatures: common-ligatures;
@@ -95,23 +96,32 @@ h2 {
 }
 
 /* line 45, ../../sass/_typography.scss */
-em {
+h3 {
+  font-family: Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Times New Roman", serif;
+  font-variant-ligatures: common-ligatures;
+  text-rendering: optimizeLegibility;
+  font-size: 23px;
+  line-height: 29px;
+}
+
+/* line 53, ../../sass/_typography.scss */
+em, i {
   font-style: italic;
 }
 
-/* line 48, ../../sass/_typography.scss */
+/* line 57, ../../sass/_typography.scss */
 .logo {
   font-family: UniversLTStd-Cn;
   font-size: 47px;
   line-height: 59px;
 }
 
-/* line 54, ../../sass/_typography.scss */
+/* line 63, ../../sass/_typography.scss */
 nav {
   font-size: 14px;
 }
 
-/* line 58, ../../sass/_typography.scss */
+/* line 67, ../../sass/_typography.scss */
 .introduction {
   font-family: Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Times New Roman", serif;
   font-variant-ligatures: common-ligatures;
@@ -120,31 +130,31 @@ nav {
   line-height: 29.9px;
 }
 
-/* line 64, ../../sass/_typography.scss */
+/* line 73, ../../sass/_typography.scss */
 .tagline {
   font-size: 47px;
   line-height: 51.7px;
 }
 
-/* line 69, ../../sass/_typography.scss */
+/* line 78, ../../sass/_typography.scss */
 .cta {
   font-size: 29px;
 }
 
-/* line 74, ../../sass/_typography.scss */
+/* line 83, ../../sass/_typography.scss */
 .uniForm .formHint {
   font-size: 11px;
   line-height: 14px;
 }
 
-/* line 79, ../../sass/_typography.scss */
+/* line 88, ../../sass/_typography.scss */
 .primaryAction {
   font-family: "Open Sans", Arial, Verdana, sans-serif;
   font-weight: 400;
   font-size: 18px;
 }
 
-/* line 84, ../../sass/_typography.scss */
+/* line 93, ../../sass/_typography.scss */
 .secondaryAction {
   font-family: "Open Sans", Arial, Verdana, sans-serif;
   font-weight: 400;
@@ -152,23 +162,23 @@ nav {
   font-weight: normal;
 }
 
-/* line 91, ../../sass/_typography.scss */
+/* line 100, ../../sass/_typography.scss */
 .biblio-entry {
   font-size: 11px;
   line-height: 18px;
 }
 
-/* line 97, ../../sass/_typography.scss */
+/* line 106, ../../sass/_typography.scss */
 .actSummary .biblio-entry {
   line-height: 14px;
 }
 
-/* line 100, ../../sass/_typography.scss */
+/* line 109, ../../sass/_typography.scss */
 .lsid {
   font-family: Pragmata, Menlo, "DejaVu LGC Sans Mono", "DejaVu LGC Sans Mono", "DejaVu Sans Mono", Consolas, "Everson Mono", "Lucida Console", "Andale Mono", "Nimbus Mono L", "Liberation Mono", FreeMono, "Lucida Sans Typewriter", "Lucida Typewriter", "Osaka Monospaced", "Bitstream Vera Sans Mono", Courier, "New Courier", monospace;
 }
 
-/* line 105, ../../sass/_typography.scss */
+/* line 114, ../../sass/_typography.scss */
 .searchResults .actName {
   line-height: 23px;
 }
@@ -689,7 +699,7 @@ form#registration .inlineLabels .formHint {
 }
 
 /* line 135, ../../sass/_grid.scss */
-.actSummary {
+.actSummary, .outlink {
   clear: both;
   margin-left: 1.37%;
   margin-right: 1.37%;
@@ -1094,41 +1104,40 @@ body {
 #header {
   background-color: #31309c;
   height: 47px;
-  margin-bottom: 14px;
 }
 
-/* line 38, ../../sass/screen.scss */
+/* line 37, ../../sass/screen.scss */
 .logo {
   float: left;
 }
-/* line 40, ../../sass/screen.scss */
+/* line 39, ../../sass/screen.scss */
 .logo a {
   color: #f5f5ff;
   text-decoration: none;
 }
 
-/* line 42, ../../sass/screen.scss */
+/* line 41, ../../sass/screen.scss */
 nav {
   padding-top: 30px;
   float: right;
 }
-/* line 45, ../../sass/screen.scss */
+/* line 44, ../../sass/screen.scss */
 nav li {
   display: inline;
 }
-/* line 47, ../../sass/screen.scss */
+/* line 46, ../../sass/screen.scss */
 nav li a {
   padding-left: 1em;
   color: #f5f5ff;
   text-decoration: none;
 }
-/* line 52, ../../sass/screen.scss */
+/* line 51, ../../sass/screen.scss */
 nav li a:hover {
   text-decoration: underline;
   color: #ffcb42;
 }
 
-/* line 60, ../../sass/screen.scss */
+/* line 59, ../../sass/screen.scss */
 #footer {
   margin-top: 3em;
   text-align: center;
@@ -1149,26 +1158,26 @@ table td.numeric,
 table th.numeric {
   text-align: right;
 }
-/* line 68, ../../sass/screen.scss */
+/* line 67, ../../sass/screen.scss */
 table th, table td {
   vertical-align: top;
   text-align: left;
   font-weight: normal;
 }
 
-/* line 75, ../../sass/screen.scss */
+/* line 74, ../../sass/screen.scss */
 .introduction {
   text-shadow: 0 1px 1px white;
   margin: 2em 0;
   text-align: center;
 }
 
-/* line 80, ../../sass/screen.scss */
+/* line 79, ../../sass/screen.scss */
 .tagline {
   display: block;
 }
 
-/* line 85, ../../sass/screen.scss */
+/* line 84, ../../sass/screen.scss */
 .searchBar {
   background-color: #ebebff;
   border-top: 1px solid #e1e1ff;
@@ -1176,18 +1185,18 @@ table th, table td {
   padding: 1em 0;
   margin-bottom: 1em;
 }
-/* line 92, ../../sass/screen.scss */
+/* line 91, ../../sass/screen.scss */
 .searchBar .container {
   text-align: center;
 }
-/* line 96, ../../sass/screen.scss */
+/* line 95, ../../sass/screen.scss */
 .searchBar .search_input_field {
   font-size: 14px;
   padding-top: 0.3em;
   padding-bottom: 0.3em;
 }
 
-/* line 104, ../../sass/screen.scss */
+/* line 103, ../../sass/screen.scss */
 .cta {
   text-shadow: 0 -1px 1px rgba(132, 78, 0, 0.3);
   -moz-border-radius: 3px;
@@ -1209,7 +1218,7 @@ table th, table td {
   text-align: center;
   padding: 0.25em 0;
 }
-/* line 115, ../../sass/screen.scss */
+/* line 114, ../../sass/screen.scss */
 .cta:before {
   position: absolute;
   top: 0px;
@@ -1221,7 +1230,7 @@ table th, table td {
   content: url(../images/cta-loop.gif);
 }
 
-/* line 127, ../../sass/screen.scss */
+/* line 126, ../../sass/screen.scss */
 .ui-tabs ul {
   overflow: hidden;
   *zoom: 1;
@@ -1229,52 +1238,52 @@ table th, table td {
   width: auto;
 }
 
-/* line 133, ../../sass/screen.scss */
+/* line 132, ../../sass/screen.scss */
 #registrationForm {
   background-color: #ebebff;
   border-top: 1px solid #e1e1ff;
 }
 
-/* line 137, ../../sass/screen.scss */
+/* line 136, ../../sass/screen.scss */
 #publicationTabs {
   padding-top: 1em;
   border-bottom: 1px solid #e1e1ff;
 }
-/* line 142, ../../sass/screen.scss */
+/* line 141, ../../sass/screen.scss */
 #publicationTabs .ui-tabs-nav {
   margin-top: 1em;
 }
-/* line 146, ../../sass/screen.scss */
+/* line 145, ../../sass/screen.scss */
 #publicationTabs .ui-tabs-panel {
   padding: 1em 0;
 }
 
-/* line 151, ../../sass/screen.scss */
+/* line 150, ../../sass/screen.scss */
 fieldset.buttons {
   border-top: 1px solid #e1e1ff;
 }
 
-/* line 156, ../../sass/screen.scss */
+/* line 155, ../../sass/screen.scss */
 .citationList li {
   margin-bottom: 18px !important;
 }
 
-/* line 161, ../../sass/screen.scss */
+/* line 160, ../../sass/screen.scss */
 legend {
   display: none;
 }
 
-/* line 164, ../../sass/screen.scss */
+/* line 163, ../../sass/screen.scss */
 .actSummary {
   margin-bottom: 2em;
 }
-/* line 167, ../../sass/screen.scss */
+/* line 166, ../../sass/screen.scss */
 .actSummary .biblio-entry {
   display: block;
   width: 60%;
 }
 
-/* line 173, ../../sass/screen.scss */
+/* line 172, ../../sass/screen.scss */
 .nextAction {
   padding: 2em 0;
   background-color: #ebebff;
@@ -1282,29 +1291,29 @@ legend {
   border-bottom: 1px solid #e1e1ff;
 }
 
-/* line 180, ../../sass/screen.scss */
+/* line 179, ../../sass/screen.scss */
 .registerAnother {
   color: #31309c;
 }
-/* line 183, ../../sass/screen.scss */
+/* line 182, ../../sass/screen.scss */
 .registerAnother a {
   padding: 0.25em 0.5em;
 }
 
-/* line 188, ../../sass/screen.scss */
+/* line 187, ../../sass/screen.scss */
 .lsidWrapper {
   overflow: hidden;
   *zoom: 1;
   margin-bottom: 1em;
 }
-/* line 192, ../../sass/screen.scss */
+/* line 191, ../../sass/screen.scss */
 .lsidWrapper .lsidLogo, .lsidWrapper .lsid {
   display: inline;
   float: left;
   line-height: 18px;
   padding: 2px 4px;
 }
-/* line 197, ../../sass/screen.scss */
+/* line 196, ../../sass/screen.scss */
 .lsidWrapper .lsidLogo {
   -moz-border-radius-topleft: 3px;
   -webkit-border-top-left-radius: 3px;
@@ -1322,7 +1331,7 @@ legend {
   background-color: #ff733d;
   border: 1px solid #ff733d;
 }
-/* line 204, ../../sass/screen.scss */
+/* line 203, ../../sass/screen.scss */
 .lsidWrapper input.lsid {
   width: 40em;
   margin: 0;
@@ -1332,7 +1341,7 @@ legend {
   -webkit-appearance: none;
   outline: none;
 }
-/* line 213, ../../sass/screen.scss */
+/* line 212, ../../sass/screen.scss */
 .lsidWrapper #clippy {
   display: inline;
   float: left;
@@ -1340,42 +1349,42 @@ legend {
   margin-left: 4px;
 }
 
-/* line 220, ../../sass/screen.scss */
+/* line 219, ../../sass/screen.scss */
 .authorDisambiguation {
   padding-top: 1em;
   margin-top: 1em;
   background-color: #ebebff;
   border-top: 1px solid #e1e1ff;
 }
-/* line 227, ../../sass/screen.scss */
+/* line 226, ../../sass/screen.scss */
 .authorDisambiguation .specialties,
 .authorDisambiguation .sparkline {
   padding-left: 3em;
 }
-/* line 231, ../../sass/screen.scss */
+/* line 230, ../../sass/screen.scss */
 .authorDisambiguation td.specialties {
   color: #888888;
 }
-/* line 238, ../../sass/screen.scss */
+/* line 237, ../../sass/screen.scss */
 .authorDisambiguation thead th {
   font-weight: bold;
   padding-bottom: 1em;
 }
 
-/* line 244, ../../sass/screen.scss */
+/* line 243, ../../sass/screen.scss */
 ul.newAuthor {
   width: 100% !important;
 }
-/* line 246, ../../sass/screen.scss */
+/* line 245, ../../sass/screen.scss */
 ul.newAuthor li {
   width: auto !important;
 }
-/* line 249, ../../sass/screen.scss */
+/* line 248, ../../sass/screen.scss */
 ul.newAuthor .formHint {
   width: 100%;
 }
 
-/* line 258, ../../sass/screen.scss */
+/* line 257, ../../sass/screen.scss */
 #nomenclaturalActs .inlineLabel input,
 #nomenclaturalActs .inlineLabels .inlineLabel input,
 #nomenclaturalActs .blockLabels .inlineLabel input,
@@ -1387,7 +1396,7 @@ ul.newAuthor .formHint {
   border: none;
 }
 
-/* line 262, ../../sass/screen.scss */
+/* line 261, ../../sass/screen.scss */
 input.hasLSID {
   background-image: url(../images/lsid-token.gif);
   background-repeat: no-repeat;
@@ -1395,16 +1404,71 @@ input.hasLSID {
 }
 
 /* Search results */
-/* line 271, ../../sass/screen.scss */
+/* line 270, ../../sass/screen.scss */
 .searchResults {
   text-align: left;
 }
-/* line 274, ../../sass/screen.scss */
+/* line 273, ../../sass/screen.scss */
 .searchResults li:hover {
   text-decoration: underline;
   cursor: pointer;
 }
-/* line 282, ../../sass/screen.scss */
+/* line 281, ../../sass/screen.scss */
 .searchResults .authorship {
   color: #888888;
+}
+
+/* outlinks */
+/* line 289, ../../sass/screen.scss */
+.outlink {
+  margin-bottom: 1em;
+}
+/* line 292, ../../sass/screen.scss */
+.outlink .attribution {
+  margin-bottom: 1em;
+}
+/* line 295, ../../sass/screen.scss */
+.outlink .attributionLogoWrapper {
+  display: inline;
+  float: left;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: #e6e6ff 0 1px 2px inset;
+  -webkit-box-shadow: #e6e6ff 0 1px 2px inset;
+  -o-box-shadow: #e6e6ff 0 1px 2px inset;
+  box-shadow: #e6e6ff 0 1px 2px inset;
+  margin-right: 0.5em;
+  padding: 3px;
+  background-color: #fff;
+  border: 1px solid #e1e1ff;
+  text-decoration: none;
+}
+
+/* Special styles for the BHL outlink */
+/* line 310, ../../sass/screen.scss */
+.bhl_results {
+  background-color: #ebebff;
+  border-top: 1px solid #e1e1ff;
+  border-bottom: 1px solid #e1e1ff;
+  padding: 0.5em 0;
+}
+
+/* line 316, ../../sass/screen.scss */
+.bhlPageImages {
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 319, ../../sass/screen.scss */
+.bhlPageImages .bhlPage {
+  display: inline;
+  float: left;
+  margin-right: 0.5em;
+}
+/* line 323, ../../sass/screen.scss */
+.bhlPageImages .bhlPage .thumbnail {
+  display: block;
 }

@@ -32,7 +32,6 @@ body {
 #header {
 	background-color: $purple;
 	height: ms(6);
-	margin-bottom: ms(1);
 }
 
 	.logo {
@@ -283,4 +282,46 @@ input.hasLSID{
 		color: $light-text;
 	}
 	
+}
+
+/* outlinks */
+
+.outlink {
+	margin-bottom: 1em;
+	
+	.attribution {
+		margin-bottom: 1em;
+	}
+	.attributionLogoWrapper {
+		@include float(left);
+		@include border-radius(3px);
+		@include box-shadow( lighten($border-blue, 1) 0 1px 2px inset);
+		margin-right: 0.5em;
+		padding: 3px;
+		background-color: #fff;
+		border: 1px solid $border-blue;
+		text-decoration: none;
+	}
+}
+
+
+/* Special styles for the BHL outlink */
+
+.bhl_results {
+	background-color: $form-blue;
+	border-top: 1px solid $border-blue;
+	border-bottom: 1px solid $border-blue;
+	padding: 0.5em 0;
+}
+.bhlPageImages {
+	@include clearfix;
+	
+	.bhlPage {
+		@include float(left);
+		margin-right: 0.5em;
+		
+		.thumbnail {
+			display: block;
+		}
+	}
 }

@@ -132,7 +132,7 @@ form#registration {
 	@include columns(2, 12);
 }
 
-.actSummary {
+.actSummary, .outlink {
 	@include full;
 }
 

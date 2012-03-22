@@ -10,11 +10,13 @@ ignore /config\.rb/
 root = Dir.pwd
 
 layout 'layout.html.erb'
+layout 'taxonAct.html.erb' => 'layout-zoobank.html.erb'
 
 
 before 'index.html.erb' do
   system "cd #{ root } && compass compile"
 end
+
 
 
 helpers do

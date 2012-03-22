@@ -33,6 +33,7 @@ abbr {
 body {
 	@include sans-font;
 	font-size: ms(1);
+	line-height: ms(2);
 }
 
 h2 {
@@ -41,10 +42,18 @@ h2 {
 	line-height: ms(5);
 }
 
+h3 {
+	@include serif-font;
+	font-size: ms(3);
+	line-height: ms(4);
+}
 
-em {
+
+
+em, i {
 	font-style: italic;
 }
+
 .logo {
 	font-family: UniversLTStd-Cn;
 	font-size: ms(6);

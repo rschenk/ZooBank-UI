@@ -1,0 +1,231 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+	
+	<meta http-equiv="Content-Language" content="English">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>ZooBank.org</title>
+	
+
+	
+
+
+
+    <!-- <link rel="stylesheet" type="text/css" media="all" href="load.cfres?css=cfcss_ceef5ac1d6768775162e84901475ae39.css"> -->
+	<!-- <script type="text/javascript" src="load.cfres?js=cfjs_3b2df63189a297c7f8cb452d54a3c6a7.js"></script><link type="text/css" rel="stylesheet" href="data:text/css,"> -->
+
+</head>
+<body>
+
+<!-- <script type="text/javascript" src="load.cfres?js=cfjs_8ec90b049197d44d2c821fcaec097f62.js"></script> -->
+
+<!-- <link href="/admin/css/compass.css" media="screen, projection" rel="stylesheet" type="text/css"> -->
+<link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
+
+<header id="header">
+	<div class="container">
+		<h1 class="logo"><a href="index.html">ZooBank</a></h1>
+		<nav>
+			<ul>
+				<li><a href="about.html">about</a></li>
+				<li><a href="contact.html">contact</a></li>
+				<li><a id="login_link">login</a></li>
+			</ul>
+
+			<div id="login_form_layer" style="display:none;" class="login_form">
+				<form action="/do_login.cfm" method="post">
+				Username <input name="username" type="text" value=""><br>
+				Password <input name="password" type="password"><br>
+				<button type="submit" id="btn_login">Log In</button>
+				</form>
+			</div>
+		</nav>
+</div></header>
+<div class="searchBar">
+	<div class="container">
+		<input type="text" value="chaetodon tinkeri" class="search_input_field" id="taxon_act_search_string" onchange="general_search();" dir="ltr" x-webkit-speech="" x-webkit-grammar="builtin:search" lang="en" size="65">
+		<span onclick="general_search();" class="primaryAction small">search</span><span id="search_error"></span>
+	</div>
+</div>
+
+
+<div id="results_display_layer" class="results_display_layer container"></div>
+<div id="detailed_results_container" class="detailed_results_container container">
+	<div id="ref_details_layer" class="ref_details_layer">
+		<div class="actSummary">
+			<h2 class="actName">
+				Chaetodon tinkeri
+			</h2>
+			<div class="lsidWrapper">
+				<span class="lsidLogo">LSID</span><input type="text" value="urn:lsid:zoobank.org:act:08691737-3047-4F2E-95CB-A6FB3AFD4F40" class="selectAll lsid"><object width="110" height="14" id="clippy" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000">
+					<param value="/public/flash/clippy.swf" name="movie">
+					<param value="always" name="allowScriptAccess">
+					<param value="high" name="quality">
+					<param value="noscale" name="scale">
+					<param value="text=urn:lsid:zoobank.org:act:8BDC0735-FEA4-4298-83FA-D04F67C3FBEC" name="FlashVars">
+					<param value="#f5f5ff" name="bgcolor">
+					<embed width="110" height="14" bgcolor="#F5F5FF" flashvars="text=urn:lsid:zoobank.org:act:08691737-3047-4F2E-95CB-A6FB3AFD4F40" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" allowscriptaccess="always" quality="high" name="clippy" src="/public/flash/clippy.swf">
+				</object><script charset="utf-8" type="text/javascript">
+	$(".selectAll").click(function(){ this.select(); });
+				</script>
+			</div>
+			<table>
+				<tbody>
+					<tr>
+						<th scope="row">
+							Rank
+						</th>
+						<td>
+							Species
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">
+							Parent
+						</th>
+						<td>
+							<i>Chaetodon</i>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">
+							Publication
+						</th>
+						<td colspan="2">
+							<span class="biblio-entry"><span class="biblio-authors">Schultz, Leonard P.</span> (1951) <span class="biblio-title"><i>Chaetodon tinkeri</i>, a new species of butterflyfish (Chaetodontidae) from the Hawaiian Islands</span> <i>Proceedings of the United States National Museum</i> <b>101</b>: 485-488, pl. 15.&nbsp;<span class="clickable_layer" onclick="get_pub_acts(19724300);">[show all names in ref.]</span></span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		
+		<div id="bhl_results" class="outlink bhl_results">
+			<h3>Literature</h3>
+			
+			<div class="attribution">
+				<a class="attributionLogoWrapper" href="http://biodiversitylibrary.org" target="_blank" >
+					<img src="images/BHLlogo.png" />
+				</a>
+				<!-- You want to se the line-height below to the height of the logo image above + 6px to get the text to line up nicely-->
+				<p style="line-height: 34px">Literature images courtesy of the <a href="http://biodiversitylibrary.org" target="_blank">Biodiversity Heritage Library</a>.</p>
+			</div>
+			
+			
+			<div class="bhlPageImages">
+				<div class="bhlPage">
+					<a class="thumbnail" href="http://www.biodiversitylibrary.org/pagethumb/7304027,600,800" target="_blank">
+						<img src="http://www.biodiversitylibrary.org/pagethumb/7304027,40,60">
+					</a>
+					<a href="http://biodiversitylibrary.org/page/7304027" target="_blank">Page: 485</a>
+				</div>
+				<div class="bhlPage">
+					<a class="thumbnail" href="http://www.biodiversitylibrary.org/pagethumb/7304028,600,800" target="_blank">
+						<img src="http://www.biodiversitylibrary.org/pagethumb/7304028,40,60">
+					</a>
+					<a href="http://biodiversitylibrary.org/page/7304028" target="_blank">Page 486</a>
+				</div>
+				<div class="bhlPage">
+					<a class="thumbnail" href="http://www.biodiversitylibrary.org/pagethumb/7304031,600,800" target="_blank">
+						<img src="http://www.biodiversitylibrary.org/pagethumb/7304031,40,60">
+					</a>
+					<a href="http://biodiversitylibrary.org/page/7304031" target="_blank">Page: 487</a>
+				</div>
+				<div class="bhlPage">
+					<a class="thumbnail" href="http://www.biodiversitylibrary.org/pagethumb/7304032,600,800" target="_blank">
+						<img src="http://www.biodiversitylibrary.org/pagethumb/7304032,40,60">
+					</a>
+					<a href="http://biodiversitylibrary.org/page/7304032" target="_blank">Page: 488</a>
+				</div>
+			</div>
+			
+		</div>
+		
+		<!-- Not sure if these two divs for GNI are necessary, but I'd like to combine them or nest them under a parent-->
+		<!--
+		<div id="gni_results_layer">
+			<span id="gni_results_layer" class="clickable_layer"><img src="/images/gni.png">15 matches</span>
+		</div>
+		-->
+		<div id="gni_detailed_results_layer" class="outlink gni_results">
+			<h3>Global Names</h3>
+			
+			<div class="attribution">
+				<a class="attributionLogoWrapper" href="http://gni.globalnames.org" target="_blank" >
+					<img src="images/gni-logo.png" />
+				</a>
+				<!-- You want to se the line-height below to the height of the logo image above + 6px to get the text to line up nicely-->
+				<p style="line-height: 42px">Additional names information provided courtesy of the <a href="http://gni.globalnames.org" target="_blank">Global Names Index</a>.</p>
+			</div>
+			
+			<ol>
+				<li>Chaetodon miliaris x C tinkeri</li>
+				<li>Chaetodon miliaris x tinkeri</li>
+				<li>Chaetodon miliaris × tinkeri</li>
+				<li>Chaetodon tinkeri</li>
+				<li>Chaetodon tinkeri group</li>
+				<li>Chaetodon tinkeri Schultz 1951</li>
+				<li>Chaetodon tinkeri Schultz 1951 sec. Allen 1980</li>
+				<li>Chaetodon tinkeri Schultz 1951 sec. Eschmeyer 1998</li>
+				<li>Chaetodon tinkeri Schultz 1951 sec. Eschmeyer 2004</li>
+				<li>Chaetodon tinkeri Schultz 1951 sec. Mundy 2005</li>
+				<li>Chaetodon tinkeri Schultz 1951 sec. Nalbant 1984</li>
+				<li>Chaetodon tinkeri Schultz 1951 sec. Randall In Press</li>
+				<li>Chaetodon tinkeri Schultz 1951 sec. Randall, Allen &amp; Steene 1977</li>
+				<li>Chaetodon tinkeri Schultz, 1951</li>
+				<li>Chaetodon tinkeri x C miliaris</li>
+
+			</ol>
+		</div>
+		<div id="el_results_layer" class="outlink el_results">
+			<h3>Observations from Explorer's Log</h3>
+			<div class="attribution">
+				<a class="attributionLogoWrapper" href="http://www.explorers-log.com" target="_blank" >
+					<img src="images/el-logo.png" />
+				</a>
+				<!-- You want to se the line-height below to the height of the logo image above + 6px to get the text to line up nicely-->
+				<p style="line-height: 34px">Observation data provided courtesy of <a href="http://www.explorers-log.com" target="_blank">Explorer's Log</a>.</p>
+			</div>
+			
+			100 records in Explorers Log<br>
+			51 Video Clips<br>
+			49 Still Images<br>
+			0 Visual Observations<br>
+			<img src="http://www.explorers-log.com/200F0085-6EA1-42A0-996E-FB22095EA447">
+		</div>
+	</div>
+
+	<div id="ref_names_layer" class="ref_names_layer"></div>
+	<div id="ref_authors_layer" class="ref_authors_layer"></div>
+</div>
+
+
+
+<div id="footer">
+	<p class="cellsm">
+	<a href="http://www.iczn.org/">ICZN Home</a>
+	&nbsp;|&nbsp;
+	<a href="http://www.iczn.org/code">The Code</a>
+	&nbsp;|&nbsp;
+	<a href="http://iczn.org/category/browse-bulletin/browse">The Bulletin</a>
+	&nbsp;|&nbsp;
+	<a href="http://iczn.org/content/publications">Official Lists and Indexes</a>
+	&nbsp;|&nbsp;
+	<a href="http://iczn.org/content/make-donation">Support ICZN</a>
+	&nbsp;|&nbsp;
+	<a href="http://iczn.org/content/zoobank-committee">Contact ICZN</a>
+	<br>
+	</p>
+	<br>
+	<span class="cellsm">© 2012 International Trust for Zoological Nomenclature
+	<br>
+	The Global Names Architecture is supported by the US National Science Foundation grant DBI-1062387<br>(The Global Names Architecture, an infrastructure for unifying taxonomic databases and services for managers of biological information).
+	</span>
+</div>
+
+
+
+<script type="text/javascript" src="load.cfres?js=cfjs_8ea839da0a2716fd917cb9159f104fe5.js"></script>
+
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+</body></html>
