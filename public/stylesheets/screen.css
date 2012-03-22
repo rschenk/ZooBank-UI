@@ -1421,13 +1421,15 @@ input.hasLSID {
 /* outlinks */
 /* line 289, ../../sass/screen.scss */
 .outlink {
+  border-top: 1px solid #e1e1ff;
   margin-bottom: 1em;
+  padding-top: 0.5em;
 }
-/* line 292, ../../sass/screen.scss */
+/* line 294, ../../sass/screen.scss */
 .outlink .attribution {
   margin-bottom: 1em;
 }
-/* line 295, ../../sass/screen.scss */
+/* line 297, ../../sass/screen.scss */
 .outlink .attributionLogoWrapper {
   display: inline;
   float: left;
@@ -1449,26 +1451,26 @@ input.hasLSID {
 }
 
 /* Special styles for the BHL outlink */
-/* line 310, ../../sass/screen.scss */
+/* line 312, ../../sass/screen.scss */
 .bhl_results {
-  background-color: #ebebff;
-  border-top: 1px solid #e1e1ff;
-  border-bottom: 1px solid #e1e1ff;
-  padding: 0.5em 0;
+  /*	background-color: $form-blue;
+  	border-top: 1px solid $border-blue;
+  	border-bottom: 1px solid $border-blue;
+  	padding: 0.5em 0;*/
 }
 
-/* line 316, ../../sass/screen.scss */
+/* line 318, ../../sass/screen.scss */
 .bhlPageImages {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 319, ../../sass/screen.scss */
+/* line 321, ../../sass/screen.scss */
 .bhlPageImages .bhlPage {
   display: inline;
   float: left;
   margin-right: 0.5em;
 }
-/* line 323, ../../sass/screen.scss */
+/* line 325, ../../sass/screen.scss */
 .bhlPageImages .bhlPage .thumbnail {
   display: block;
 }

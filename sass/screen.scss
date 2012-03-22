@@ -287,7 +287,9 @@ input.hasLSID{
 /* outlinks */
 
 .outlink {
+	border-top: 1px solid $border-blue;
 	margin-bottom: 1em;
+	padding-top: 0.5em; 
 	
 	.attribution {
 		margin-bottom: 1em;
@@ -308,10 +310,10 @@ input.hasLSID{
 /* Special styles for the BHL outlink */
 
 .bhl_results {
-	background-color: $form-blue;
+/*	background-color: $form-blue;
 	border-top: 1px solid $border-blue;
 	border-bottom: 1px solid $border-blue;
-	padding: 0.5em 0;
+	padding: 0.5em 0;*/
 }
 .bhlPageImages {
 	@include clearfix;
