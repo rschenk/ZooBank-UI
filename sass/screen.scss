@@ -287,16 +287,14 @@ input.hasLSID{
 /* outlinks */
 
 .outlink {
-	border-top: 1px solid $border-blue;
 	margin-bottom: 1em;
-	padding-top: 0.5em; 
 	
 	.attribution {
 		margin-bottom: 1em;
 	}
 	.attributionLogoWrapper {
 		@include float(left);
-		@include border-radius(3px);
+		@include border-radius(5px);
 		@include box-shadow( lighten($border-blue, 1) 0 1px 2px inset);
 		margin-right: 0.5em;
 		padding: 3px;
@@ -308,12 +306,16 @@ input.hasLSID{
 
 
 /* Special styles for the BHL outlink */
-
 .bhl_results {
-/*	background-color: $form-blue;
+	background-color: $form-blue;
 	border-top: 1px solid $border-blue;
 	border-bottom: 1px solid $border-blue;
-	padding: 0.5em 0;*/
+	padding: 0.5em 0;
+	margin-bottom: 1em;
+	
+	.outlink {
+		margin-bottom: 0;
+	}
 }
 .bhlPageImages {
 	@include clearfix;
