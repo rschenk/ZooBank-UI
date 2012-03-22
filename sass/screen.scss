@@ -71,6 +71,12 @@ table {
 	}
 }
 
+.alt_row {
+	background-color: $form-blue;
+	border-top: 1px solid $border-blue;
+	border-bottom: 1px solid $border-blue;
+}
+
 .introduction { 
 	@include text-shadow(0 1px 1px #fff);
 	margin: 2em 0;
@@ -307,9 +313,6 @@ input.hasLSID{
 
 /* Special styles for the BHL outlink */
 .bhl_results {
-	background-color: $form-blue;
-	border-top: 1px solid $border-blue;
-	border-bottom: 1px solid $border-blue;
 	padding: 0.5em 0;
 	margin-bottom: 1em;
 	
