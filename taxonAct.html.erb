@@ -5,6 +5,7 @@
 	<title>ZooBank.org</title>
 	
 
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 	
 
 
@@ -28,28 +29,45 @@
 			<ul>
 				<li><a href="about.html">about</a></li>
 				<li><a href="contact.html">contact</a></li>
-				<li>
+				<li class="login_container">
 					<a id="login_link" href="#login_form_layer">login</a>
-					<div id="login_form_layer" style="" class="login_form">
+					<div id="login_form_layer" style="display:none;" class="login_form">
 						<form action="/do_login.cfm" method="post" class="uniForm">
 							<fieldset>
 							    <div class="ctrlHolder">
-							      <label for="username">Username</label> <input name="username" id="username" type="text" class="textInput auto">
+							      <label for="username">Username</label> <input name="username" id="username" type="text" >
 							    </div>
 							    <div class="ctrlHolder">
-							      <label for="password">Password</label> <input name="password" id="password" type="password" class="textInput auto">
+							      <label for="password">Password</label> <input name="password" id="password" type="password" >
 							    </div>
 							</fieldset>
 							<div class="buttonHolder">
 								<button type="submit" id="btn_login" class="primaryAction small">Log In</button>
+								
+								<!-- You'll need some jquery to hide the login button when Cancel is clicked -->
 								<button type="submit" id="btn_canel_login" class="secondaryAction">Cancel</button>
 							</div>
-							<div>
-								<p><a href="{{{{forgot_password}}}}" class="helpful_link">Forgot your password?</a>
+							<div class="helpful_links">
+								<p><a href="{{{{forgot_password}}}}">Forgot your password?</a></p>
+								<p><a href="{{{{forgot_password}}}}">Create an account</a></p>
 							</div>
 						</form>
 					</div>
 					
+					<!-- Remove me and replace with your real jquery -->
+					<script type="text/javascript" charset="utf-8">
+						$('#login_link').click(function(){
+							if( $(this).hasClass('menu_open') ) {
+								$(this).removeClass('menu_open');
+								$('#login_form_layer').hide();
+							} else {
+								$(this).addClass('menu_open');
+								$('#login_form_layer').show();
+							}
+							
+							return false;
+						});
+					</script>
 				</li>
 			</ul>
 		</nav>

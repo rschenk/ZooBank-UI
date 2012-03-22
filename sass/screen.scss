@@ -47,7 +47,8 @@ body {
 		li { 
 			display: inline;
 			a {
-				padding-left: 1em;
+				margin-left: 0.5em;
+				padding: 0 0.5em;
 				color: $very-light-blue;
 				text-decoration: none;
 				
@@ -58,6 +59,60 @@ body {
 			}
 		}
 	}
+	
+	.login_container {
+		position: relative;
+	}
+	
+	a#login_link{
+		/* the .menu_open state adds a border around the element
+		   which causes the other navigation elements to jump unsightly, 
+		   so this little trick here takes care of that */
+		border-left: 1px solid transparent;
+		border-right: 1px solid transparent;
+		
+		&.menu_open {
+			position: relative;
+			z-index: 10001;
+			@include border-top-left-radius(3px);
+			@include border-top-right-radius(3px);
+			background-color: $border-blue;
+			border: 1px solid darken($border-blue, 3);
+			border-bottom: none;
+			color: $purple;
+		}
+	}
+	
+	.login_form {
+		position: absolute;
+		z-index: 10000;
+		top: ms(2);
+		right: 0;
+		width: 12em;
+		background-color: $border-blue;
+		border: 1px solid darken($border-blue, 3);
+		padding: 0 1em 1em 1em;
+	
+		fieldset {
+			padding: 0.5em 0;
+		}
+		
+		input {
+			width: 100% !important;
+		}
+	
+		.helpful_links {
+			margin-top: 0.5em;
+			
+			a {
+				font-size: ms(0);
+				padding: 0;
+				@include link-colors($link-color, $link-hover-color);
+			}
+		}
+	}
+	
+	
 
 #footer {
 	margin-top: 3em;
@@ -110,16 +165,7 @@ table {
 	}
 }
 
-.login_form {
-	position: absolute;
-	background-color: $form-blue;
-	border: 1px solid $border-blue;
-	
-	a.helpful_link {
-		font-size: ms(0);
-		@include link-colors($link-color, $link-hover-color);		
-	}
-}
+
 
 
 .cta {
