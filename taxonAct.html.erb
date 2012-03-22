@@ -28,16 +28,30 @@
 			<ul>
 				<li><a href="about.html">about</a></li>
 				<li><a href="contact.html">contact</a></li>
-				<li><a id="login_link">login</a></li>
+				<li>
+					<a id="login_link" href="#login_form_layer">login</a>
+					<div id="login_form_layer" style="" class="login_form">
+						<form action="/do_login.cfm" method="post" class="uniForm">
+							<fieldset>
+							    <div class="ctrlHolder">
+							      <label for="username">Username</label> <input name="username" id="username" type="text" class="textInput auto">
+							    </div>
+							    <div class="ctrlHolder">
+							      <label for="password">Password</label> <input name="password" id="password" type="password" class="textInput auto">
+							    </div>
+							</fieldset>
+							<div class="buttonHolder">
+								<button type="submit" id="btn_login" class="primaryAction small">Log In</button>
+								<button type="submit" id="btn_canel_login" class="secondaryAction">Cancel</button>
+							</div>
+							<div>
+								<p><a href="{{{{forgot_password}}}}" class="helpful_link">Forgot your password?</a>
+							</div>
+						</form>
+					</div>
+					
+				</li>
 			</ul>
-
-			<div id="login_form_layer" style="display:none;" class="login_form">
-				<form action="/do_login.cfm" method="post">
-				Username <input name="username" type="text" value=""><br>
-				Password <input name="password" type="password"><br>
-				<button type="submit" id="btn_login">Log In</button>
-				</form>
-			</div>
 		</nav>
 </div></header>
 <div class="searchBar">

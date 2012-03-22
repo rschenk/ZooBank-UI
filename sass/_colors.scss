@@ -20,3 +20,6 @@ $lsid-orange: #ff733d;
 
 $text: #555;
 $light-text: lighten($text, 20);
+
+$link-color: darken($blue, 10);
+$link-hover-color: darken($yellow, 10);

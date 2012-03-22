@@ -18,6 +18,9 @@
 @import "autocomplete";
 @import "tabs";
 
+a{
+	@include link-colors($link-color, $link-hover-color);
+}
 
 
 .check { color: $dark-green; }
@@ -59,6 +62,8 @@ body {
 #footer {
 	margin-top: 3em;
 	text-align: center;
+	
+	border-top: 1px solid $blue;
 }
 
 table {
@@ -102,6 +107,17 @@ table {
 		font-size: ms(1);
 		padding-top: 0.3em;
 		padding-bottom: 0.3em;
+	}
+}
+
+.login_form {
+	position: absolute;
+	background-color: $form-blue;
+	border: 1px solid $border-blue;
+	
+	a.helpful_link {
+		font-size: ms(0);
+		@include link-colors($link-color, $link-hover-color);		
 	}
 }
 
