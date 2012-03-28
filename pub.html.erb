@@ -1,0 +1,77 @@
+<div class="searchBar">
+	<div class="container">
+		<input type="text" value="chaetodon tinkeri" class="search_input_field" id="taxon_act_search_string" onchange="general_search();" dir="ltr" x-webkit-speech="" x-webkit-grammar="builtin:search" lang="en" size="65">
+		<span onclick="general_search();" class="primaryAction small">search</span><span id="search_error"></span>
+	</div>
+</div>
+
+<div class="container">
+	<% lsid = 'urn:lsid:zoobank.org:pub:5CB7EE8B-042F-41D8-BDE7-37CC52E286AF' %>
+	<div class="actSummary">
+		<h2 class="authorName"><span class="biblio-authors">Basset <em>et al</em></span> (2000).&nbsp;&nbsp;<span class="biblio-title">Quantifying biodiversity: Experience with parataxonomists and digital photography in New Guinea and Guyana.</span> <em>BioScience</em> 50(10): 899-908.</span></h2>
+		<div class="lsidWrapper">
+			<span class="lsidLogo">LSID</span>
+			<input type="text" class="selectAll lsid" value="<%= lsid %>"/>
+			<%= clippy lsid, '#f5f5ff' %>
+			<!-- TODO Refactor this to some sort of unobtrusive thing -->
+			<script type="text/javascript" charset="utf-8">
+				$('.selectAll').click(function(){ this.select(); });
+			</script>
+		</div>
+		<table>
+			<tr>
+				<th scope="row">Citation</th>
+				<td><span class="biblio-entry"><span class="biblio-authors">Basset, Yves, Vojtech Novotny, Scott E. Miller & Richard L. Pyle</span> (2000).&nbsp;&nbsp;<span class="biblio-title">Quantifying biodiversity: Experience with parataxonomists and digital photography in New Guinea and Guyana.</span> <em>BioScience</em> 50(10): 899-908.</span></td>
+			</tr>
+			<tr>
+				<th scope="row">Authors</th>
+				<td>
+					<a href="/Authors/8459037A-AF7E-452E-B1AC-D166D2604726">Basset, Yves</a>; <a href="/Authors/A30442BD-C0B1-4443-9A3E-A858FB865E32">Novotny, Vojtech</a>; <a href="/Authors/D70079F1-5135-46BA-A790-CB833B5892EF">Miller, Scott E.</a>; <a href="/Authors/8C466CBE-3F7D-4DC9-8CBD-26DD3F57E212">Pyle, Richard Lawrence Dr.</a>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">Parent Reference</th>
+				<td><em>BioScience</em></td>
+			</tr>
+		
+		</table>
+		
+	</div>
+
+	<div class="facetedResults">		
+		<h3 id="names">Nomenclatural Acts</h3>
+		<ol class="searchResults">
+		
+			<li><a href="/TaxonActs/58DEE2AB-0595-4C53-BD22-21A3A2FF2D62">Pyleaceae [Author(s)?]</a> </li>
+		
+			<li><a href="/TaxonActs/E8124AEB-8022-467A-910E-58244AB119AE"><em>Acmopyle</em> [Author(s)?]</a> </li>
+		
+			<li><a href="/TaxonActs/D7ADBD66-E1BD-417C-A3BF-9631EF162793"><em>Propylea</em> [Author(s)?]</a> </li>
+		
+			<li><a href="/TaxonActs/9D249C53-E1A3-4B09-82B7-5BFE8062105B"><em>Ammodytoides pylei</em> Randall, Ida &amp; Earle</a> </li>
+		
+			<li><a href="/TaxonActs/20889795-7EC7-42F3-A4C3-D1D97704A609"><em>Belonoperca pylei</em> Baldwin &amp; Smith</a> </li>
+		
+			<li><a href="/TaxonActs/670541EF-5383-4357-B328-DE292730F805"><em>Cirrhilabrus pylei</em> Allen &amp; Randall</a> </li>
+		
+			<li><a href="/TaxonActs/8E9A2851-41DC-45A9-AC5B-F0A601623B97"><em>Acmopyle pancheri</em> [Author(s)?]</a> </li>
+		
+			<li><a href="/TaxonActs/CCA65BF0-9256-4B3B-B4C7-51EA932EBF6C"><em>Propylea quatuordecimguttata</em> [Author(s)?]</a> </li>
+		
+			<li><a href="/TaxonActs/3A50D613-9E4E-448E-BC07-20DCC223D8E6"><em>Petroscirtes (Dasson) pylei</em> Smith-Vaniz</a> </li>
+		
+			<li><a href="/TaxonActs/3A50D613-9E4E-448E-BC07-20DCC223D8E6"><em>Petroscirtes pylei</em> Smith-Vaniz</a> </li>
+		
+			<li><a href="/TaxonActs/55F677E7-AE37-47F7-AF50-C14ACFF6F960"><em>Propylea quatuorrdecimpunctata</em> <unspecified agent=""></unspecified></a> </li>
+		
+			<li><a href="/TaxonActs/408C6D07-B89E-4A50-9079-1A0863F3876C"><em>Propylea quatuorrdecimpunctata subsp. japonica</em> Thunberg</a> </li>
+		
+			<li><a href="/TaxonActs/408C6D07-B89E-4A50-9079-1A0863F3876C"><em>Propylea quatuordecimguttata subsp. japonica</em> Thunberg</a> </li>
+		
+			<li><a href="/TaxonActs/954FB107-F4D6-4EBC-AA25-E59659745F4A"><em>Pseudochromis pylei</em> Randall &amp; McCosker</a> </li>
+		
+		</ol>
+				
+	</div>
+
+</div>

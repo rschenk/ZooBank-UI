@@ -1,9 +1,8 @@
 $base-size: 11px 14px; // 14px = body text, 11px = caption
 $ratio: $golden;
 /* modular scale:
--2 -1 0  1  2  3  4  5  6  7  8
- 7  9 11 14 18 23 29 37 47 59 75
-
+scale number: -2 -1 0  1  2  3  4  5  6  7  8
+pixel height:  7  9 11 14 18 23 29 37 47 59 75
 */
 
 
@@ -34,6 +33,10 @@ body {
 	@include sans-font;
 	font-size: ms(1);
 	line-height: ms(2);
+}
+
+p {
+	margin-bottom: 1em;
 }
 
 h2 {
@@ -74,6 +77,37 @@ nav {
 	font-size:   ms(6);
 	line-height: ms(6) * 1.1;
 }
+
+.homeStatistic {
+	.value {
+		font-size: ms(5);
+		line-height: ms(5);
+	}
+	
+	.metric {
+		font-size: ms(1);
+		line-height: ms(2);
+	}
+	
+	.mostRecent {
+		p {
+			font-size: ms(0);
+			line-height: ms(1);
+			margin-bottom: 0;
+		}
+		
+		.mostRecentEntry {
+			font-size: ms(1);
+			line-height: ms(1);
+		}
+	}
+}
+
+.contribute_to_zoobank {
+	font-size: ms(5);
+	line-height: ms(5);
+}
+
 
 .cta {
 	font-size: ms(4);

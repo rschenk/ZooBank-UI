@@ -18,9 +18,25 @@
 @import "autocomplete";
 @import "tabs";
 
-a{
-	@include link-colors($link-color, $link-hover-color);
+
+
+a {
+	color: $link-color;
+	text-decoration: none;
+	border-bottom: 1px dotted lighten($link-color, 30);
+			
+	&:hover {
+		color: $link-hover-color;
+		border-bottom-style: solid;
+		border-bottom-color: $link-hover-color;
+	}
+	
+	&:visited {
+		color: $link-visited-color;
+		border-bottom: none;
+	}
 }
+
 
 
 .check { color: $dark-green; }
@@ -38,8 +54,16 @@ body {
 }
 
 	.logo {
-		float: left;
-		a{ color: $very-light-blue; text-decoration: none;}
+		@include float(left);
+		padding-top: 10px;
+		
+		a, img{ 
+			display: block;
+			width: image-width('zoobank-logo.gif');
+			height: image-height('zoobank-logo.gif');
+			text-decoration: none;
+			border-bottom: none;
+		}
 	}
 	nav {
 		padding-top: ms(6) - ms(1) - 3px;
@@ -51,10 +75,15 @@ body {
 				padding: 0 0.5em;
 				color: $very-light-blue;
 				text-decoration: none;
+				border-bottom: 0;
 				
 				&:hover {
 					text-decoration: underline;
 					color: $yellow;
+				}
+				
+				&:visited {
+					color: $very-light-blue;
 				}
 			}
 		}
@@ -115,10 +144,18 @@ body {
 	
 
 #footer {
-	margin-top: 3em;
+	margin-top: 6em;
+	padding-top: 1em;
 	text-align: center;
+
+	border-top: 1px solid $border-blue;
+	@include background(
+		linear-gradient(top, $form-blue, $very-light-blue)
+	);
 	
-	border-top: 1px solid $blue;
+	color: $light-text;
+	
+	em { font-style: normal; color: $text; }
 }
 
 table {
@@ -139,13 +176,55 @@ table {
 
 .introduction { 
 	@include text-shadow(0 1px 1px #fff);
-	margin: 2em 0;
+	margin-top: 2em;
+	margin-bottom: 2em;
 	text-align: center;
 }
 .tagline {
 	display: block;
 }
 
+#statistics,
+#how_to_contribute
+ {
+	margin-top: 3em;
+}
+.homeStatistic {
+	margin-bottom: 2em; 
+	
+	.icon {
+		text-align: right;
+	}
+	
+	.metric {
+		color: $home-statistic-color;
+		margin-bottom: ms(0);
+	}
+	
+	.mostRecent {
+		color: $light-text;
+		
+		.mostRecentEntry,
+		.userName {
+			color: $text;
+		}
+	}
+}
+
+#how_to_contribute{
+	h2 { 
+		position: relative;
+		left: -2px;
+	}
+	#icznLogo {
+		position: relative;
+		top: -45px;
+		left: 45px;
+		z-index: -10000;
+		text-align: right;
+
+	}
+}
 
 .searchBar {
 	background-color: $form-blue;
@@ -269,7 +348,7 @@ legend { display: none; }
 		border: 1px solid $lsid-orange;
 	}
 	input.lsid {
-		width: 40em;
+		width: 45em;
 		margin: 0;
 	    border: 1px solid $border-blue;
 		border-left: 0;
@@ -335,13 +414,18 @@ input.hasLSID{
 
 
 /* Search results */
+
+
 .searchResults {
 	text-align: left;
+	margin-left: 0;
+	margin-bottom: 1.5em;
 	
-	li:hover {
-		text-decoration: underline;
-		cursor: pointer;
+	li {
+		margin-bottom: 1em;
 	}
+	
+
 	
 	.actName {
 	}
@@ -351,6 +435,33 @@ input.hasLSID{
 	}
 	
 }
+
+a.biblio-entry{
+	color: $text;
+			
+	.biblio-authors {
+		color: $link-color;
+	}
+			
+	&:hover {
+		color: $link-hover-color;
+		border-bottom: 1px solid $link-hover-color;
+		.biblio-authors { color: $link-hover-color; }
+	}
+}
+
+
+.facetedNavigation.sticky {
+	position: relative;
+	
+	.facetedInfo {
+		position: fixed;
+		top: 0;
+	}
+
+}
+
+
 
 /* outlinks */
 

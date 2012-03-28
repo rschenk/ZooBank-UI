@@ -14,8 +14,31 @@ $side-gutter-width: $gutter-width;  /* 1em padding at the edges of the page as w
 	@include grid-container;
 }
 
-header .introduction {
+.introduction {
 	@include full;
+}
+
+#statistics {
+	@include columns(7);
+	@include alpha();
+	
+	.homeStatistic {
+		@include columns(7, 7);
+	}
+	
+	.icon {
+		@include columns(1, 7);
+	}
+	
+	.info {
+		@include columns(6,7);
+		@include omega(7);
+	}
+}
+
+#how_to_contribute {
+	@include columns(5);
+	@include omega();
 }
 
 .cta {
@@ -136,7 +159,13 @@ form#registration {
 	@include full;
 }
 
-.searchResults {
-	@include full;
+.facetedNavigation {
+	@include alpha();
+	@include columns(2);
+}
 
+.facetedResults {
+	@include columns(8);
+	@include suffix(2);
+	@include omega();
 }

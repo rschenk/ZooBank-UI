@@ -118,6 +118,9 @@
 .primaryAction {
 	@include sassy-button('simple', 3px, ms(2), $yellow, darken($yellow, 10), $very-light-yellow);
 	text-decoration: none;
+	&:hover {
+		color: $very-light-yellow !important;
+	}
 	
 	&.small {
 		@include sassy-button('simple', 3px, ms(1), $yellow, darken($yellow, 10), $very-light-yellow);

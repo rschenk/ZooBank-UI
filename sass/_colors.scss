@@ -21,5 +21,8 @@ $lsid-orange: #ff733d;
 $text: #555;
 $light-text: lighten($text, 20);
 
-$link-color: darken($blue, 10);
-$link-hover-color: darken($yellow, 10);
+$link-color: #696bb7;
+$link-hover-color: darken($yellow, 20);
+$link-visited-color: desaturate(darken($link-color, 10), 10);
+
+$home-statistic-color: #9090c7; 

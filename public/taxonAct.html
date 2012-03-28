@@ -1,4 +1,6 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
 	
 	<meta http-equiv="Content-Language" content="English">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -6,72 +8,76 @@
 	
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="javascripts/waypoints.min.js" type="text/javascript" charset="utf-8"></script>
 	
 
 
 
     <!-- <link rel="stylesheet" type="text/css" media="all" href="load.cfres?css=cfcss_ceef5ac1d6768775162e84901475ae39.css"> -->
 	<!-- <script type="text/javascript" src="load.cfres?js=cfjs_3b2df63189a297c7f8cb452d54a3c6a7.js"></script><link type="text/css" rel="stylesheet" href="data:text/css,"> -->
+	
+
+	<!-- <script type="text/javascript" src="load.cfres?js=cfjs_8ec90b049197d44d2c821fcaec097f62.js"></script> -->
+
+	<!-- <link href="/admin/css/compass.css" media="screen, projection" rel="stylesheet" type="text/css"> -->
+	<link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	
 
 </head>
 <body>
-
-<!-- <script type="text/javascript" src="load.cfres?js=cfjs_8ec90b049197d44d2c821fcaec097f62.js"></script> -->
-
-<!-- <link href="/admin/css/compass.css" media="screen, projection" rel="stylesheet" type="text/css"> -->
-<link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-
-
-<header id="header">
-	<div class="container">
-		<h1 class="logo"><a href="index.html">ZooBank</a></h1>
-		<nav>
-			<ul>
-				<li><a href="about.html">about</a></li>
-				<li><a href="contact.html">contact</a></li>
-				<li class="login_container">
-					<a id="login_link" href="#login_form_layer">login</a>
-					<div id="login_form_layer" style="display:none;" class="login_form">
-						<form action="/do_login.cfm" method="post" class="uniForm">
-							<fieldset>
-							    <div class="ctrlHolder">
-							      <label for="username">Username</label> <input name="username" id="username" type="text" >
-							    </div>
-							    <div class="ctrlHolder">
-							      <label for="password">Password</label> <input name="password" id="password" type="password" >
-							    </div>
-							</fieldset>
-							<div class="buttonHolder">
-								<button type="submit" id="btn_login" class="primaryAction small">Log In</button>
+	<header id="header">
+		<div class="container">
+			<h1 class="logo"><a href="index.html"><img src="images/zoobank-logo.gif" alt='ZooBank' /></a></h1>
+			<nav>
+				<ul>
+					<li><a href="about.html">about</a></li>
+					<li><a href="contact.html">contact</a></li>
+					<li class="login_container">
+						<a id="login_link" href="#login_form_layer">login</a>
+						<div id="login_form_layer" style="display:none;" class="login_form">
+							<form action="/do_login.cfm" method="post" class="uniForm">
+								<fieldset>
+								    <div class="ctrlHolder">
+								      <label for="username">Username</label> <input name="username" id="username" type="text" >
+								    </div>
+								    <div class="ctrlHolder">
+								      <label for="password">Password</label> <input name="password" id="password" type="password" >
+								    </div>
+								</fieldset>
+								<div class="buttonHolder">
+									<button type="submit" id="btn_login" class="primaryAction small">Log In</button>
 								
-								<!-- You'll need some jquery to hide the login button when Cancel is clicked -->
-								<button type="submit" id="btn_canel_login" class="secondaryAction">Cancel</button>
-							</div>
-							<div class="helpful_links">
-								<p><a href="{{{{forgot_password}}}}">Forgot your password?</a></p>
-								<p><a href="{{{{forgot_password}}}}">Create an account</a></p>
-							</div>
-						</form>
-					</div>
+									<!-- You'll need some jquery to hide the login button when Cancel is clicked -->
+									<button type="submit" id="btn_canel_login" class="secondaryAction">Cancel</button>
+								</div>
+								<div class="helpful_links">
+									<p><a href="{{{{forgot_password}}}}">Forgot your password?</a></p>
+									<p><a href="{{{{forgot_password}}}}">Create an account</a></p>
+								</div>
+							</form>
+						</div>
 					
-					<!-- Remove me and replace with your real jquery -->
-					<script type="text/javascript" charset="utf-8">
-						$('#login_link').click(function(){
-							if( $(this).hasClass('menu_open') ) {
-								$(this).removeClass('menu_open');
-								$('#login_form_layer').hide();
-							} else {
-								$(this).addClass('menu_open');
-								$('#login_form_layer').show();
-							}
+						<!-- Remove me and replace with your real jquery -->
+						<script type="text/javascript" charset="utf-8">
+							$('#login_link').click(function(){
+								if( $(this).hasClass('menu_open') ) {
+									$(this).removeClass('menu_open');
+									$('#login_form_layer').hide();
+								} else {
+									$(this).addClass('menu_open');
+									$('#login_form_layer').show();
+								}
 							
-							return false;
-						});
-					</script>
-				</li>
-			</ul>
-		</nav>
-</div></header>
+								return false;
+							});
+						</script>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+
 <div class="searchBar">
 	<div class="container">
 		<input type="text" value="chaetodon tinkeri" class="search_input_field" id="taxon_act_search_string" onchange="general_search();" dir="ltr" x-webkit-speech="" x-webkit-grammar="builtin:search" lang="en" size="65">
@@ -248,6 +254,7 @@
 
 
 
+
 <div id="footer">
 	<p class="cellsm">
 	<a href="http://www.iczn.org/">ICZN Home</a>
@@ -264,7 +271,7 @@
 	<br>
 	</p>
 	<br>
-	<span class="cellsm">© 2012 International Trust for Zoological Nomenclature
+	<span class="cellsm">&copy; 2012 International Trust for Zoological Nomenclature
 	<br>
 	The Global Names Architecture is supported by the US National Science Foundation grant DBI-1062387<br>(The Global Names Architecture, an infrastructure for unifying taxonomic databases and services for managers of biological information).
 	</span>
@@ -276,4 +283,6 @@
 
 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 
-</body></html>
+</body>
+</html>
+
