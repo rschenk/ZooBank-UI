@@ -208,6 +208,15 @@ table {
 		.userName {
 			color: $text;
 		}
+		
+		a {
+			border-bottom: 0;
+			
+			&:hover {
+				color: $link-hover-color;
+				text-decoration: underline;
+			}
+		}
 	}
 }
 
