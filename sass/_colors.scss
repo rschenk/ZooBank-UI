@@ -1,6 +1,7 @@
 /* colors */
 
 $purple: #31309c;
+$dark-purple: #0d0c6a;
 $blue: #8f92ff;
 $very-light-blue: #f5f5ff;
 $form-blue: darken($very-light-blue, 2); 
@@ -22,7 +23,7 @@ $text: #555;
 $light-text: lighten($text, 20);
 
 $link-color: #696bb7;
-$link-hover-color: darken($yellow, 20);
+$link-hover-color: $lsid-orange;
 $link-visited-color: desaturate(darken($link-color, 10), 10);
 
 $home-statistic-color: #9090c7; 

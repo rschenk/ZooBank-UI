@@ -9,12 +9,9 @@ ignore /config\.rb/
 
 root = Dir.pwd
 
-layout 'layout.html.erb'
-layout 'taxonAct.html.erb' => 'layout-zoobank.html.erb'
-layout 'home.html.erb'     => 'layout-zoobank.html.erb'
-layout 'searchResults.html.erb' => 'layout-zoobank.html.erb'
-layout 'author.html.erb'   => 'layout-zoobank.html.erb'
-layout 'publication.html.erb'   => 'layout-zoobank.html.erb'
+layout 'layout-zoobank.html.erb'
+layout 'index.html.erb' => 'layout.html.erb'
+
 
 before 'index.html.erb' do
   system "cd #{ root } && compass compile"

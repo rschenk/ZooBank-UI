@@ -79,6 +79,10 @@
 				text-align: left;
 			}
 		}
+		
+		.buttonHolder {
+			margin-left: 33.3%;
+		}
 	}
 }
 
@@ -125,6 +129,12 @@
 	&.small {
 		@include sassy-button('simple', 3px, ms(1), $yellow, darken($yellow, 10), $very-light-yellow);
 		width: auto !important;
+	}
+	
+	&.tiny {
+		@include sassy-button('simple', 3px, ms(0), $yellow, darken($yellow, 10), $very-light-yellow);
+		padding: 0 0.5em;
+		line-height: 1.2em;
 	}
 }
 

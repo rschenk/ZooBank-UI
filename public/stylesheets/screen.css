@@ -904,8 +904,12 @@ form#registration .inlineLabels .formHint {
 .uniForm .inlineLabels ul .readOnlyLabel {
   text-align: left;
 }
+/* line 83, ../../sass/_uni-form-theme.scss */
+.uniForm .inlineLabels .buttonHolder {
+  margin-left: 33.3%;
+}
 
-/* line 85, ../../sass/_uni-form-theme.scss */
+/* line 89, ../../sass/_uni-form-theme.scss */
 .message, .okMsg, .errorMsg {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -919,40 +923,40 @@ form#registration .inlineLabels .formHint {
   margin-bottom: 1em;
 }
 
-/* line 93, ../../sass/_uni-form-theme.scss */
+/* line 97, ../../sass/_uni-form-theme.scss */
 .okMsg {
   background-color: #ddffc6;
   border-color: #b6e05c;
   color: #6d990f;
 }
 
-/* line 100, ../../sass/_uni-form-theme.scss */
+/* line 104, ../../sass/_uni-form-theme.scss */
 .errorMsg {
   border-color: #ff8d6d;
   background-color: #ffbcb6;
   color: #cf390a;
 }
-/* line 106, ../../sass/_uni-form-theme.scss */
+/* line 110, ../../sass/_uni-form-theme.scss */
 .errorMsg h3 {
   margin-bottom: 1em;
 }
-/* line 107, ../../sass/_uni-form-theme.scss */
+/* line 111, ../../sass/_uni-form-theme.scss */
 .errorMsg ol {
   list-style: disc inside;
 }
 
-/* line 109, ../../sass/_uni-form-theme.scss */
+/* line 113, ../../sass/_uni-form-theme.scss */
 .infoMsg p {
   padding: 0.7em 0 0.7em 30px;
   margin-left: -5px;
   color: #31309c;
 }
-/* line 114, ../../sass/_uni-form-theme.scss */
+/* line 118, ../../sass/_uni-form-theme.scss */
 .infoMsg p:first-child {
   background: url(../images/icon-info.png) left center no-repeat;
 }
 
-/* line 118, ../../sass/_uni-form-theme.scss */
+/* line 122, ../../sass/_uni-form-theme.scss */
 .uniForm .primaryAction,
 .primaryAction {
   font-size: 18px;
@@ -1001,12 +1005,12 @@ form#registration .inlineLabels .formHint {
   -o-box-shadow: #e5a600 0 1px 2px inset;
   box-shadow: #e5a600 0 1px 2px inset;
 }
-/* line 121, ../../sass/_uni-form-theme.scss */
+/* line 125, ../../sass/_uni-form-theme.scss */
 .uniForm .primaryAction:hover,
 .primaryAction:hover {
   color: #fff8e7 !important;
 }
-/* line 125, ../../sass/_uni-form-theme.scss */
+/* line 129, ../../sass/_uni-form-theme.scss */
 .uniForm .primaryAction.small,
 .primaryAction.small {
   font-size: 14px;
@@ -1055,8 +1059,58 @@ form#registration .inlineLabels .formHint {
   -o-box-shadow: #e5a600 0 1px 2px inset;
   box-shadow: #e5a600 0 1px 2px inset;
 }
+/* line 134, ../../sass/_uni-form-theme.scss */
+.uniForm .primaryAction.tiny,
+.primaryAction.tiny {
+  font-size: 11px;
+  padding: 0.3em 1.5em;
+  display: inline-block;
+  cursor: pointer;
+  line-height: 1.5;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ffcb42;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffcb42), color-stop(100%, #ffbd0f));
+  background: -webkit-linear-gradient(#ffcb42, #ffbd0f);
+  background: -moz-linear-gradient(#ffcb42, #ffbd0f);
+  background: -o-linear-gradient(#ffcb42, #ffbd0f);
+  background: -ms-linear-gradient(#ffcb42, #ffbd0f);
+  background: linear-gradient(#ffcb42, #ffbd0f);
+  -moz-box-shadow: #ffe08f 0 1px 0 inset;
+  -webkit-box-shadow: #ffe08f 0 1px 0 inset;
+  -o-box-shadow: #ffe08f 0 1px 0 inset;
+  box-shadow: #ffe08f 0 1px 0 inset;
+  border: 1px solid #f4b100;
+  color: #fff8e7;
+  text-shadow: #bc8900 0 -1px 0;
+  padding: 0 0.5em;
+  line-height: 1.2em;
+}
+/* line 28, ../../../../../.rvm/gems/ruby-1.9.3-p125@zoobank/gems/sassy-buttons-0.0.9/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.uniForm .primaryAction.tiny:hover,
+.primaryAction.tiny:hover {
+  background-color: #f4b100;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffc428), color-stop(100%, #f4b100));
+  background: -webkit-linear-gradient(#ffc428, #f4b100);
+  background: -moz-linear-gradient(#ffc428, #f4b100);
+  background: -o-linear-gradient(#ffc428, #f4b100);
+  background: -ms-linear-gradient(#ffc428, #f4b100);
+  background: linear-gradient(#ffc428, #f4b100);
+}
+/* line 31, ../../../../../.rvm/gems/ruby-1.9.3-p125@zoobank/gems/sassy-buttons-0.0.9/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.uniForm .primaryAction.tiny:active,
+.primaryAction.tiny:active {
+  -moz-box-shadow: #e5a600 0 1px 2px inset;
+  -webkit-box-shadow: #e5a600 0 1px 2px inset;
+  -o-box-shadow: #e5a600 0 1px 2px inset;
+  box-shadow: #e5a600 0 1px 2px inset;
+}
 
-/* line 133, ../../sass/_uni-form-theme.scss */
+/* line 143, ../../sass/_uni-form-theme.scss */
 .uniForm .secondaryAction,
 .secondaryAction {
   float: none;
@@ -1195,41 +1249,49 @@ a {
   border-bottom: 1px dotted #d0d1e9;
 }
 /* line 28, ../../sass/screen.scss */
-a:hover {
-  color: #db9f00;
-  border-bottom-style: solid;
-  border-bottom-color: #db9f00;
-}
-/* line 34, ../../sass/screen.scss */
 a:visited {
   color: #595a94;
   border-bottom: none;
 }
+/* line 34, ../../sass/screen.scss */
+a:hover {
+  color: #ff733d;
+  border-bottom-style: solid;
+  border-bottom-color: #ff733d;
+}
 
-/* line 42, ../../sass/screen.scss */
+/* line 45, ../../sass/screen.scss */
 .check {
   color: #6d990f;
 }
 
-/* line 44, ../../sass/screen.scss */
+/* line 47, ../../sass/screen.scss */
 body {
   background-color: #f5f5ff;
   color: #555555;
 }
 
-/* line 51, ../../sass/screen.scss */
+/* line 54, ../../sass/screen.scss */
 #header {
-  background-color: #31309c;
+  display: block;
+  background: #31309c;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #31309c), color-stop(100%, #0d0c6a));
+  background: -webkit-linear-gradient(top, #31309c, #0d0c6a);
+  background: -moz-linear-gradient(top, #31309c, #0d0c6a);
+  background: -o-linear-gradient(top, #31309c, #0d0c6a);
+  background: -ms-linear-gradient(top, #31309c, #0d0c6a);
+  background: linear-gradient(top, #31309c, #0d0c6a);
   height: 47px;
+  border-bottom: 2px solid #000;
 }
 
-/* line 56, ../../sass/screen.scss */
+/* line 64, ../../sass/screen.scss */
 .logo {
   display: inline;
   float: left;
-  padding-top: 10px;
+  padding-top: 8px;
 }
-/* line 60, ../../sass/screen.scss */
+/* line 68, ../../sass/screen.scss */
 .logo a, .logo img {
   display: block;
   width: 200px;
@@ -1238,16 +1300,16 @@ body {
   border-bottom: none;
 }
 
-/* line 68, ../../sass/screen.scss */
+/* line 76, ../../sass/screen.scss */
 nav {
-  padding-top: 30px;
+  padding-top: 27px;
   float: right;
 }
-/* line 71, ../../sass/screen.scss */
+/* line 79, ../../sass/screen.scss */
 nav li {
   display: inline;
 }
-/* line 73, ../../sass/screen.scss */
+/* line 81, ../../sass/screen.scss */
 nav li a {
   margin-left: 0.5em;
   padding: 0 0.5em;
@@ -1255,22 +1317,22 @@ nav li a {
   text-decoration: none;
   border-bottom: 0;
 }
-/* line 80, ../../sass/screen.scss */
+/* line 88, ../../sass/screen.scss */
 nav li a:hover {
   text-decoration: underline;
   color: #ffcb42;
 }
-/* line 85, ../../sass/screen.scss */
+/* line 93, ../../sass/screen.scss */
 nav li a:visited {
   color: #f5f5ff;
 }
 
-/* line 92, ../../sass/screen.scss */
+/* line 100, ../../sass/screen.scss */
 .login_container {
   position: relative;
 }
 
-/* line 96, ../../sass/screen.scss */
+/* line 104, ../../sass/screen.scss */
 a#login_link {
   /* the .menu_open state adds a border around the element
      which causes the other navigation elements to jump unsightly, 
@@ -1278,7 +1340,7 @@ a#login_link {
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
 }
-/* line 103, ../../sass/screen.scss */
+/* line 111, ../../sass/screen.scss */
 a#login_link.menu_open {
   position: relative;
   z-index: 10001;
@@ -1300,7 +1362,7 @@ a#login_link.menu_open {
   color: #31309c;
 }
 
-/* line 115, ../../sass/screen.scss */
+/* line 123, ../../sass/screen.scss */
 .login_form {
   position: absolute;
   z-index: 10000;
@@ -1311,19 +1373,19 @@ a#login_link.menu_open {
   border: 1px solid #d1d1ff;
   padding: 0 1em 1em 1em;
 }
-/* line 125, ../../sass/screen.scss */
+/* line 133, ../../sass/screen.scss */
 .login_form fieldset {
   padding: 0.5em 0;
 }
-/* line 129, ../../sass/screen.scss */
+/* line 137, ../../sass/screen.scss */
 .login_form input {
   width: 100% !important;
 }
-/* line 133, ../../sass/screen.scss */
+/* line 141, ../../sass/screen.scss */
 .login_form .helpful_links {
   margin-top: 0.5em;
 }
-/* line 136, ../../sass/screen.scss */
+/* line 144, ../../sass/screen.scss */
 .login_form .helpful_links a {
   font-size: 11px;
   padding: 0;
@@ -1331,10 +1393,10 @@ a#login_link.menu_open {
 }
 /* line 24, ../../../../../.rvm/gems/ruby-1.9.3-p125@zoobank/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 .login_form .helpful_links a:hover {
-  color: #db9f00;
+  color: #ff733d;
 }
 
-/* line 146, ../../sass/screen.scss */
+/* line 154, ../../sass/screen.scss */
 #footer {
   margin-top: 6em;
   padding-top: 1em;
@@ -1348,7 +1410,7 @@ a#login_link.menu_open {
   background: linear-gradient(top, #ebebff, #f5f5ff);
   color: #888888;
 }
-/* line 158, ../../sass/screen.scss */
+/* line 166, ../../sass/screen.scss */
 #footer em {
   font-style: normal;
   color: #555555;
@@ -1369,77 +1431,82 @@ table td.numeric,
 table th.numeric {
   text-align: right;
 }
-/* line 164, ../../sass/screen.scss */
+/* line 172, ../../sass/screen.scss */
 table th, table td {
   vertical-align: top;
   text-align: left;
   font-weight: normal;
 }
 
-/* line 171, ../../sass/screen.scss */
+/* line 179, ../../sass/screen.scss */
 .alt_row {
   background-color: #ebebff;
   border-top: 1px solid #e1e1ff;
   border-bottom: 1px solid #e1e1ff;
 }
 
-/* line 177, ../../sass/screen.scss */
+/* line 185, ../../sass/screen.scss */
+.intro {
+  background: url(../images/animal-tile.gif) repeat -30% 0;
+}
+
+/* line 189, ../../sass/screen.scss */
 .introduction {
   text-shadow: 0 1px 1px white;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
   text-align: center;
 }
 
-/* line 183, ../../sass/screen.scss */
+/* line 195, ../../sass/screen.scss */
 .tagline {
   display: block;
 }
 
-/* line 189, ../../sass/screen.scss */
+/* line 201, ../../sass/screen.scss */
 #statistics,
 #how_to_contribute {
   margin-top: 3em;
 }
 
-/* line 192, ../../sass/screen.scss */
+/* line 204, ../../sass/screen.scss */
 .homeStatistic {
   margin-bottom: 2em;
 }
-/* line 195, ../../sass/screen.scss */
+/* line 207, ../../sass/screen.scss */
 .homeStatistic .icon {
   text-align: right;
 }
-/* line 199, ../../sass/screen.scss */
+/* line 211, ../../sass/screen.scss */
 .homeStatistic .metric {
   color: #9090c7;
   margin-bottom: 11px;
 }
-/* line 204, ../../sass/screen.scss */
+/* line 216, ../../sass/screen.scss */
 .homeStatistic .mostRecent {
   color: #888888;
 }
-/* line 208, ../../sass/screen.scss */
+/* line 220, ../../sass/screen.scss */
 .homeStatistic .mostRecent .mostRecentEntry,
 .homeStatistic .mostRecent .userName {
   color: #555555;
 }
-/* line 212, ../../sass/screen.scss */
+/* line 224, ../../sass/screen.scss */
 .homeStatistic .mostRecent a {
   border-bottom: 0;
 }
-/* line 215, ../../sass/screen.scss */
+/* line 227, ../../sass/screen.scss */
 .homeStatistic .mostRecent a:hover {
-  color: #db9f00;
+  color: #ff733d;
   text-decoration: underline;
 }
 
-/* line 224, ../../sass/screen.scss */
+/* line 236, ../../sass/screen.scss */
 #how_to_contribute h2 {
   position: relative;
   left: -2px;
 }
-/* line 228, ../../sass/screen.scss */
+/* line 240, ../../sass/screen.scss */
 #how_to_contribute #icznLogo {
   position: relative;
   top: -45px;
@@ -1448,7 +1515,7 @@ table th, table td {
   text-align: right;
 }
 
-/* line 238, ../../sass/screen.scss */
+/* line 250, ../../sass/screen.scss */
 .searchBar {
   background-color: #ebebff;
   border-top: 1px solid #e1e1ff;
@@ -1456,18 +1523,18 @@ table th, table td {
   padding: 1em 0;
   margin-bottom: 1em;
 }
-/* line 245, ../../sass/screen.scss */
+/* line 257, ../../sass/screen.scss */
 .searchBar .container {
   text-align: center;
 }
-/* line 249, ../../sass/screen.scss */
+/* line 261, ../../sass/screen.scss */
 .searchBar .search_input_field {
   font-size: 14px;
   padding-top: 0.3em;
   padding-bottom: 0.3em;
 }
 
-/* line 259, ../../sass/screen.scss */
+/* line 271, ../../sass/screen.scss */
 .cta {
   text-shadow: 0 -1px 1px rgba(132, 78, 0, 0.3);
   -moz-border-radius: 3px;
@@ -1489,7 +1556,7 @@ table th, table td {
   text-align: center;
   padding: 0.25em 0;
 }
-/* line 270, ../../sass/screen.scss */
+/* line 282, ../../sass/screen.scss */
 .cta:before {
   position: absolute;
   top: 0px;
@@ -1501,7 +1568,7 @@ table th, table td {
   content: url(../images/cta-loop.gif);
 }
 
-/* line 282, ../../sass/screen.scss */
+/* line 294, ../../sass/screen.scss */
 .ui-tabs ul {
   overflow: hidden;
   *zoom: 1;
@@ -1509,52 +1576,52 @@ table th, table td {
   width: auto;
 }
 
-/* line 288, ../../sass/screen.scss */
+/* line 300, ../../sass/screen.scss */
 #registrationForm {
   background-color: #ebebff;
   border-top: 1px solid #e1e1ff;
 }
 
-/* line 292, ../../sass/screen.scss */
+/* line 304, ../../sass/screen.scss */
 #publicationTabs {
   padding-top: 1em;
   border-bottom: 1px solid #e1e1ff;
 }
-/* line 297, ../../sass/screen.scss */
+/* line 309, ../../sass/screen.scss */
 #publicationTabs .ui-tabs-nav {
   margin-top: 1em;
 }
-/* line 301, ../../sass/screen.scss */
+/* line 313, ../../sass/screen.scss */
 #publicationTabs .ui-tabs-panel {
   padding: 1em 0;
 }
 
-/* line 306, ../../sass/screen.scss */
+/* line 318, ../../sass/screen.scss */
 fieldset.buttons {
   border-top: 1px solid #e1e1ff;
 }
 
-/* line 311, ../../sass/screen.scss */
+/* line 323, ../../sass/screen.scss */
 .citationList li {
   margin-bottom: 18px !important;
 }
 
-/* line 316, ../../sass/screen.scss */
+/* line 328, ../../sass/screen.scss */
 legend {
   display: none;
 }
 
-/* line 319, ../../sass/screen.scss */
+/* line 331, ../../sass/screen.scss */
 .actSummary {
   margin-bottom: 2em;
 }
-/* line 322, ../../sass/screen.scss */
+/* line 334, ../../sass/screen.scss */
 .actSummary .biblio-entry {
   display: block;
   width: 60%;
 }
 
-/* line 328, ../../sass/screen.scss */
+/* line 340, ../../sass/screen.scss */
 .nextAction {
   padding: 2em 0;
   background-color: #ebebff;
@@ -1562,29 +1629,29 @@ legend {
   border-bottom: 1px solid #e1e1ff;
 }
 
-/* line 335, ../../sass/screen.scss */
+/* line 347, ../../sass/screen.scss */
 .registerAnother {
   color: #31309c;
 }
-/* line 338, ../../sass/screen.scss */
+/* line 350, ../../sass/screen.scss */
 .registerAnother a {
   padding: 0.25em 0.5em;
 }
 
-/* line 343, ../../sass/screen.scss */
+/* line 355, ../../sass/screen.scss */
 .lsidWrapper {
   overflow: hidden;
   *zoom: 1;
   margin-bottom: 1em;
 }
-/* line 347, ../../sass/screen.scss */
+/* line 359, ../../sass/screen.scss */
 .lsidWrapper .lsidLogo, .lsidWrapper .lsid {
   display: inline;
   float: left;
   line-height: 18px;
   padding: 2px 4px;
 }
-/* line 352, ../../sass/screen.scss */
+/* line 364, ../../sass/screen.scss */
 .lsidWrapper .lsidLogo {
   -moz-border-radius-topleft: 3px;
   -webkit-border-top-left-radius: 3px;
@@ -1602,7 +1669,7 @@ legend {
   background-color: #ff733d;
   border: 1px solid #ff733d;
 }
-/* line 359, ../../sass/screen.scss */
+/* line 371, ../../sass/screen.scss */
 .lsidWrapper input.lsid {
   width: 45em;
   margin: 0;
@@ -1612,7 +1679,7 @@ legend {
   -webkit-appearance: none;
   outline: none;
 }
-/* line 368, ../../sass/screen.scss */
+/* line 380, ../../sass/screen.scss */
 .lsidWrapper #clippy {
   display: inline;
   float: left;
@@ -1620,42 +1687,55 @@ legend {
   margin-left: 4px;
 }
 
-/* line 375, ../../sass/screen.scss */
+/* line 387, ../../sass/screen.scss */
+.lsidButton {
+  display: inline-block;
+  text-indent: -9999em;
+  height: 11px;
+  width: 29px;
+  background: url(../images/lsid-sprite.gif) no-repeat top left;
+}
+/* line 394, ../../sass/screen.scss */
+a:hover .lsidButton {
+  background-position: left bottom;
+}
+
+/* line 399, ../../sass/screen.scss */
 .authorDisambiguation {
   padding-top: 1em;
   margin-top: 1em;
   background-color: #ebebff;
   border-top: 1px solid #e1e1ff;
 }
-/* line 382, ../../sass/screen.scss */
+/* line 406, ../../sass/screen.scss */
 .authorDisambiguation .specialties,
 .authorDisambiguation .sparkline {
   padding-left: 3em;
 }
-/* line 386, ../../sass/screen.scss */
+/* line 410, ../../sass/screen.scss */
 .authorDisambiguation td.specialties {
   color: #888888;
 }
-/* line 393, ../../sass/screen.scss */
+/* line 417, ../../sass/screen.scss */
 .authorDisambiguation thead th {
   font-weight: bold;
   padding-bottom: 1em;
 }
 
-/* line 399, ../../sass/screen.scss */
+/* line 423, ../../sass/screen.scss */
 ul.newAuthor {
   width: 100% !important;
 }
-/* line 401, ../../sass/screen.scss */
+/* line 425, ../../sass/screen.scss */
 ul.newAuthor li {
   width: auto !important;
 }
-/* line 404, ../../sass/screen.scss */
+/* line 428, ../../sass/screen.scss */
 ul.newAuthor .formHint {
   width: 100%;
 }
 
-/* line 413, ../../sass/screen.scss */
+/* line 437, ../../sass/screen.scss */
 #nomenclaturalActs .inlineLabel input,
 #nomenclaturalActs .inlineLabels .inlineLabel input,
 #nomenclaturalActs .blockLabels .inlineLabel input,
@@ -1667,7 +1747,7 @@ ul.newAuthor .formHint {
   border: none;
 }
 
-/* line 417, ../../sass/screen.scss */
+/* line 441, ../../sass/screen.scss */
 input.hasLSID {
   background-image: url(../images/lsid-token.gif);
   background-repeat: no-repeat;
@@ -1675,59 +1755,59 @@ input.hasLSID {
 }
 
 /* Search results */
-/* line 428, ../../sass/screen.scss */
+/* line 452, ../../sass/screen.scss */
 .searchResults {
   text-align: left;
   margin-left: 0;
   margin-bottom: 1.5em;
 }
-/* line 433, ../../sass/screen.scss */
+/* line 457, ../../sass/screen.scss */
 .searchResults li {
   margin-bottom: 1em;
 }
-/* line 442, ../../sass/screen.scss */
+/* line 466, ../../sass/screen.scss */
 .searchResults .authorship {
   color: #888888;
 }
 
-/* line 448, ../../sass/screen.scss */
+/* line 472, ../../sass/screen.scss */
 a.biblio-entry {
   color: #555555;
 }
-/* line 451, ../../sass/screen.scss */
+/* line 475, ../../sass/screen.scss */
 a.biblio-entry .biblio-authors {
   color: #696bb7;
 }
-/* line 455, ../../sass/screen.scss */
+/* line 479, ../../sass/screen.scss */
 a.biblio-entry:hover {
-  color: #db9f00;
-  border-bottom: 1px solid #db9f00;
+  color: #ff733d;
+  border-bottom: 1px solid #ff733d;
 }
-/* line 458, ../../sass/screen.scss */
+/* line 482, ../../sass/screen.scss */
 a.biblio-entry:hover .biblio-authors {
-  color: #db9f00;
+  color: #ff733d;
 }
 
-/* line 463, ../../sass/screen.scss */
+/* line 487, ../../sass/screen.scss */
 .facetedNavigation.sticky {
   position: relative;
 }
-/* line 466, ../../sass/screen.scss */
+/* line 490, ../../sass/screen.scss */
 .facetedNavigation.sticky .facetedInfo {
   position: fixed;
   top: 0;
 }
 
 /* outlinks */
-/* line 477, ../../sass/screen.scss */
+/* line 501, ../../sass/screen.scss */
 .outlink {
   margin-bottom: 1em;
 }
-/* line 480, ../../sass/screen.scss */
+/* line 504, ../../sass/screen.scss */
 .outlink .attribution {
   margin-bottom: 1em;
 }
-/* line 483, ../../sass/screen.scss */
+/* line 507, ../../sass/screen.scss */
 .outlink .attributionLogoWrapper {
   display: inline;
   float: left;
@@ -1749,28 +1829,52 @@ a.biblio-entry:hover .biblio-authors {
 }
 
 /* Special styles for the BHL outlink */
-/* line 497, ../../sass/screen.scss */
+/* line 521, ../../sass/screen.scss */
 .bhl_results {
   padding: 0.5em 0;
   margin-bottom: 1em;
 }
-/* line 501, ../../sass/screen.scss */
+/* line 525, ../../sass/screen.scss */
 .bhl_results .outlink {
   margin-bottom: 0;
 }
 
-/* line 505, ../../sass/screen.scss */
+/* line 529, ../../sass/screen.scss */
 .bhlPageImages {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 508, ../../sass/screen.scss */
+/* line 532, ../../sass/screen.scss */
 .bhlPageImages .bhlPage {
   display: inline;
   float: left;
   margin-right: 0.5em;
 }
-/* line 512, ../../sass/screen.scss */
+/* line 536, ../../sass/screen.scss */
 .bhlPageImages .bhlPage .thumbnail {
   display: block;
+}
+
+/* line 543, ../../sass/screen.scss */
+.pubNames {
+  background-color: #ebebff;
+  border-top: 1px solid #e1e1ff;
+}
+/* line 549, ../../sass/screen.scss */
+.pubNames .candidateNomenclaturalActs li .registerButton {
+  display: none;
+}
+/* line 554, ../../sass/screen.scss */
+.pubNames .candidateNomenclaturalActs li:hover .registerButton {
+  display: inline-block;
+}
+/* line 560, ../../sass/screen.scss */
+.pubNames .candidateNomenclaturalActs li.open .registerButton {
+  display: inline-block;
+}
+/* line 567, ../../sass/screen.scss */
+.pubNames .inlineRegistration {
+  border: 1px solid #e1e1ff;
+  background-color: #f5f5ff;
+  width: 35em;
 }

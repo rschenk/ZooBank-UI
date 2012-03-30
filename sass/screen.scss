@@ -24,17 +24,20 @@ a {
 	color: $link-color;
 	text-decoration: none;
 	border-bottom: 1px dotted lighten($link-color, 30);
-			
+	
+	&:visited {
+		color: $link-visited-color;
+		border-bottom: none;
+	}
+	
+	
 	&:hover {
 		color: $link-hover-color;
 		border-bottom-style: solid;
 		border-bottom-color: $link-hover-color;
 	}
 	
-	&:visited {
-		color: $link-visited-color;
-		border-bottom: none;
-	}
+
 }
 
 
@@ -49,13 +52,18 @@ body {
 
 
 #header {
-	background-color: $purple;
+	display: block;
+	background: $purple;
+	@include background(
+		linear-gradient(top, $purple, $dark-purple)
+	);
 	height: ms(6);
+	border-bottom: 2px solid #000;
 }
 
 	.logo {
 		@include float(left);
-		padding-top: 10px;
+		padding-top: 8px;
 		
 		a, img{ 
 			display: block;
@@ -66,7 +74,7 @@ body {
 		}
 	}
 	nav {
-		padding-top: ms(6) - ms(1) - 3px;
+		padding-top: ms(6) - ms(1) - 6px;
 		float:right;
 		li { 
 			display: inline;
@@ -174,10 +182,14 @@ table {
 	border-bottom: 1px solid $border-blue;
 }
 
+.intro {
+	background: url(../images/animal-tile.gif) repeat -30% 0;
+}
+
 .introduction { 
 	@include text-shadow(0 1px 1px #fff);
-	margin-top: 2em;
-	margin-bottom: 2em;
+	padding-top: 2em;
+	padding-bottom: 2em;
 	text-align: center;
 }
 .tagline {
@@ -372,6 +384,18 @@ legend { display: none; }
 	}
 }
 
+.lsidButton {
+	display: inline-block;
+	text-indent: -9999em;
+	height: 11px;
+	width: 29px;
+	background: url(../images/lsid-sprite.gif) no-repeat top left;
+	
+	a:hover & {
+		background-position: left bottom;
+	}
+}
+
 .authorDisambiguation {
 	padding-top: 1em;
 	margin-top: 1em;
@@ -512,5 +536,37 @@ a.biblio-entry{
 		.thumbnail {
 			display: block;
 		}
+	}
+}
+
+
+.pubNames {
+	background-color: $form-blue;
+	border-top: 1px solid $border-blue;
+	
+	.candidateNomenclaturalActs {
+		li {
+			.registerButton{
+				display: none;
+			}
+			
+			&:hover {
+				.registerButton {
+					display: inline-block;
+				}
+			}
+			
+			&.open{
+				.registerButton {
+					display: inline-block;
+				}
+			}
+		}
+	}
+	
+	.inlineRegistration {
+		border: 1px solid $border-blue;
+		background-color: $very-light-blue;
+		width: 35em;
 	}
 }
