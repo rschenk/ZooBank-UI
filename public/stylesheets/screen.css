@@ -985,6 +985,8 @@ form#registration .inlineLabels .formHint {
   color: #fff8e7;
   text-shadow: #bc8900 0 -1px 0;
   text-decoration: none;
+  color: #fff8e7 !important;
+  border-bottom-color: #F4B100 !important;
 }
 /* line 28, ../../../../../.rvm/gems/ruby-1.9.3-p125@zoobank/gems/sassy-buttons-0.0.9/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 .uniForm .primaryAction:hover,
@@ -1005,12 +1007,7 @@ form#registration .inlineLabels .formHint {
   -o-box-shadow: #e5a600 0 1px 2px inset;
   box-shadow: #e5a600 0 1px 2px inset;
 }
-/* line 125, ../../sass/_uni-form-theme.scss */
-.uniForm .primaryAction:hover,
-.primaryAction:hover {
-  color: #fff8e7 !important;
-}
-/* line 129, ../../sass/_uni-form-theme.scss */
+/* line 128, ../../sass/_uni-form-theme.scss */
 .uniForm .primaryAction.small,
 .primaryAction.small {
   font-size: 14px;
@@ -1059,7 +1056,7 @@ form#registration .inlineLabels .formHint {
   -o-box-shadow: #e5a600 0 1px 2px inset;
   box-shadow: #e5a600 0 1px 2px inset;
 }
-/* line 134, ../../sass/_uni-form-theme.scss */
+/* line 133, ../../sass/_uni-form-theme.scss */
 .uniForm .primaryAction.tiny,
 .primaryAction.tiny {
   font-size: 11px;
@@ -1110,7 +1107,7 @@ form#registration .inlineLabels .formHint {
   box-shadow: #e5a600 0 1px 2px inset;
 }
 
-/* line 143, ../../sass/_uni-form-theme.scss */
+/* line 142, ../../sass/_uni-form-theme.scss */
 .uniForm .secondaryAction,
 .secondaryAction {
   float: none;
