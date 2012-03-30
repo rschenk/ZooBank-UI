@@ -85,14 +85,16 @@ body {
 				text-decoration: none;
 				border-bottom: 0;
 				
+				&:visited {
+					color: $very-light-blue;
+				}
+				
 				&:hover {
 					text-decoration: underline;
 					color: $yellow;
 				}
 				
-				&:visited {
-					color: $very-light-blue;
-				}
+
 			}
 		}
 	}
