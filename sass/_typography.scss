@@ -113,6 +113,14 @@ nav {
 	font-size: ms(4);
 }
 
+.textPage {
+	line-height: ms(3);
+	
+	ol, ul {
+		li{ margin-bottom: ms(2); }
+	}
+}
+
 .uniForm {
 	.formHint {
 		font-size:   ms(0);
