@@ -114,18 +114,23 @@ em, i {
 }
 
 /* line 60, ../../sass/_typography.scss */
+strong, b {
+  font-weight: bold;
+}
+
+/* line 64, ../../sass/_typography.scss */
 .logo {
   font-family: UniversLTStd-Cn;
   font-size: 47px;
   line-height: 59px;
 }
 
-/* line 66, ../../sass/_typography.scss */
+/* line 70, ../../sass/_typography.scss */
 nav {
   font-size: 14px;
 }
 
-/* line 70, ../../sass/_typography.scss */
+/* line 74, ../../sass/_typography.scss */
 .introduction {
   font-family: Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Times New Roman", serif;
   font-variant-ligatures: common-ligatures;
@@ -134,68 +139,68 @@ nav {
   line-height: 29.9px;
 }
 
-/* line 76, ../../sass/_typography.scss */
+/* line 80, ../../sass/_typography.scss */
 .tagline {
   font-size: 47px;
   line-height: 51.7px;
 }
 
-/* line 82, ../../sass/_typography.scss */
+/* line 86, ../../sass/_typography.scss */
 .homeStatistic .value {
   font-size: 37px;
   line-height: 37px;
 }
-/* line 87, ../../sass/_typography.scss */
+/* line 91, ../../sass/_typography.scss */
 .homeStatistic .metric {
   font-size: 14px;
   line-height: 18px;
 }
-/* line 93, ../../sass/_typography.scss */
+/* line 97, ../../sass/_typography.scss */
 .homeStatistic .mostRecent p {
   font-size: 11px;
   line-height: 14px;
   margin-bottom: 0;
 }
-/* line 99, ../../sass/_typography.scss */
+/* line 103, ../../sass/_typography.scss */
 .homeStatistic .mostRecent .mostRecentEntry {
   font-size: 14px;
   line-height: 14px;
 }
 
-/* line 106, ../../sass/_typography.scss */
+/* line 110, ../../sass/_typography.scss */
 .contribute_to_zoobank {
   font-size: 37px;
   line-height: 37px;
 }
 
-/* line 112, ../../sass/_typography.scss */
+/* line 116, ../../sass/_typography.scss */
 .cta {
   font-size: 29px;
 }
 
-/* line 116, ../../sass/_typography.scss */
+/* line 120, ../../sass/_typography.scss */
 .textPage {
   line-height: 23px;
 }
-/* line 120, ../../sass/_typography.scss */
+/* line 124, ../../sass/_typography.scss */
 .textPage ol li, .textPage ul li {
   margin-bottom: 18px;
 }
 
-/* line 125, ../../sass/_typography.scss */
+/* line 129, ../../sass/_typography.scss */
 .uniForm .formHint {
   font-size: 11px;
   line-height: 14px;
 }
 
-/* line 130, ../../sass/_typography.scss */
+/* line 134, ../../sass/_typography.scss */
 .primaryAction {
   font-family: "Open Sans", Arial, Verdana, sans-serif;
   font-weight: 400;
   font-size: 18px;
 }
 
-/* line 135, ../../sass/_typography.scss */
+/* line 139, ../../sass/_typography.scss */
 .secondaryAction {
   font-family: "Open Sans", Arial, Verdana, sans-serif;
   font-weight: 400;
@@ -203,23 +208,23 @@ nav {
   font-weight: normal;
 }
 
-/* line 142, ../../sass/_typography.scss */
+/* line 146, ../../sass/_typography.scss */
 .biblio-entry {
   font-size: 11px;
   line-height: 18px;
 }
 
-/* line 148, ../../sass/_typography.scss */
+/* line 152, ../../sass/_typography.scss */
 .actSummary .biblio-entry {
   line-height: 14px;
 }
 
-/* line 151, ../../sass/_typography.scss */
+/* line 155, ../../sass/_typography.scss */
 .lsid {
   font-family: Pragmata, Menlo, "DejaVu LGC Sans Mono", "DejaVu LGC Sans Mono", "DejaVu Sans Mono", Consolas, "Everson Mono", "Lucida Console", "Andale Mono", "Nimbus Mono L", "Liberation Mono", FreeMono, "Lucida Sans Typewriter", "Lucida Typewriter", "Osaka Monospaced", "Bitstream Vera Sans Mono", Courier, "New Courier", monospace;
 }
 
-/* line 156, ../../sass/_typography.scss */
+/* line 160, ../../sass/_typography.scss */
 .searchResults .actName {
   line-height: 23px;
 }
