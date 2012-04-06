@@ -673,16 +673,17 @@ nav {
   clear: both;
   margin-left: 1.37%;
   margin-right: 1.37%;
-  padding-right: 32.877%;
+  padding-right: 24.658%;
+  min-width: 40em;
 }
 
-/* line 59, ../../sass/_grid.scss */
+/* line 60, ../../sass/_grid.scss */
 form#registration .ctrlHolder {
   clear: both;
   margin-left: 1.37%;
   margin-right: 1.37%;
 }
-/* line 65, ../../sass/_grid.scss */
+/* line 66, ../../sass/_grid.scss */
 form#registration .ctrlHolder ul li .formHint {
   float: none;
   display: block;
@@ -690,7 +691,7 @@ form#registration .ctrlHolder ul li .formHint {
   margin-right: auto;
   padding-left: 0%;
 }
-/* line 70, ../../sass/_grid.scss */
+/* line 71, ../../sass/_grid.scss */
 form#registration .ctrlHolder ul li label {
   float: none;
   display: block;
@@ -700,28 +701,28 @@ form#registration .ctrlHolder ul li label {
   margin-left: 1.37%;
   margin-right: 1.37%;
 }
-/* line 78, ../../sass/_grid.scss */
+/* line 79, ../../sass/_grid.scss */
 form#registration .ui-tabs-nav {
   clear: both;
   margin-left: 1.37%;
   margin-right: 1.37%;
   padding-left: 16.438%;
 }
-/* line 83, ../../sass/_grid.scss */
+/* line 84, ../../sass/_grid.scss */
 form#registration .buttonHolder {
   clear: both;
   margin-left: 1.37%;
   margin-right: 1.37%;
   padding-left: 16.438%;
 }
-/* line 88, ../../sass/_grid.scss */
+/* line 89, ../../sass/_grid.scss */
 form#registration .infoMsg {
   clear: both;
   margin-left: 1.37%;
   margin-right: 1.37%;
   padding-left: 16.438%;
 }
-/* line 96, ../../sass/_grid.scss */
+/* line 97, ../../sass/_grid.scss */
 form#registration .inlineLabels label,
 form#registration .inlineLabels .label,
 form#registration .inlineLabels .readORegisternlyLabel {
@@ -730,7 +731,7 @@ form#registration .inlineLabels .readORegisternlyLabel {
   width: 15.493%;
   margin-right: 1.408%;
 }
-/* line 105, ../../sass/_grid.scss */
+/* line 106, ../../sass/_grid.scss */
 form#registration .inlineLabels .textInput,
 form#registration .inlineLabels .fileUpload,
 form#registration .inlineLabels .selectInput,
@@ -742,19 +743,19 @@ form#registration .inlineLabels ul {
   width: 40.845%;
   margin-right: 1.408%;
 }
-/* line 109, ../../sass/_grid.scss */
+/* line 110, ../../sass/_grid.scss */
 form#registration .inlineLabels ul.citationList {
   display: inline;
   float: left;
   width: 66.197%;
   margin-right: 1.408%;
 }
-/* line 115, ../../sass/_grid.scss */
+/* line 116, ../../sass/_grid.scss */
 form#registration .inlineLabels .error .errorHint {
   display: inline;
   float: left;
 }
-/* line 124, ../../sass/_grid.scss */
+/* line 125, ../../sass/_grid.scss */
 form#registration .inlineLabels ul .textInput,
 form#registration .inlineLabels ul .fileUpload,
 form#registration .inlineLabels ul .selectInput,
@@ -764,7 +765,7 @@ form#registration .inlineLabels ul textarea {
   margin-right: 0;
   width: 100%;
 }
-/* line 135, ../../sass/_grid.scss */
+/* line 136, ../../sass/_grid.scss */
 form#registration .inlineLabels ul .subInput .textInput,
 form#registration .inlineLabels ul .subInput .fileUpload,
 form#registration .inlineLabels ul .subInput .selectInput,
@@ -774,7 +775,7 @@ form#registration .inlineLabels ul .subInput textarea {
   margin-right: 0;
   width: 70%;
 }
-/* line 144, ../../sass/_grid.scss */
+/* line 145, ../../sass/_grid.scss */
 form#registration .inlineLabels .formHint {
   display: inline;
   float: left;
@@ -784,25 +785,25 @@ form#registration .inlineLabels .formHint {
   margin-left: 0;
 }
 
-/* line 152, ../../sass/_grid.scss */
+/* line 153, ../../sass/_grid.scss */
 .okMsg {
   clear: both;
   margin-left: 1.37%;
   margin-right: 1.37%;
 }
 
-/* line 156, ../../sass/_grid.scss */
+/* line 157, ../../sass/_grid.scss */
 .registerAnother {
   clear: both;
   margin-left: 1.37%;
   margin-right: 1.37%;
 }
-/* line 159, ../../sass/_grid.scss */
+/* line 160, ../../sass/_grid.scss */
 .registerAnother p {
   clear: both;
 }
 
-/* line 164, ../../sass/_grid.scss */
+/* line 165, ../../sass/_grid.scss */
 #registrationForm .optionalInformation .textInput {
   display: inline;
   float: left;
@@ -810,14 +811,14 @@ form#registration .inlineLabels .formHint {
   margin-right: 1.408%;
 }
 
-/* line 168, ../../sass/_grid.scss */
+/* line 169, ../../sass/_grid.scss */
 .actSummary, .outlink {
   clear: both;
   margin-left: 1.37%;
   margin-right: 1.37%;
 }
 
-/* line 172, ../../sass/_grid.scss */
+/* line 173, ../../sass/_grid.scss */
 .facetedNavigation {
   margin-left: 1.37%;
   display: inline;
@@ -826,7 +827,7 @@ form#registration .inlineLabels .formHint {
   margin-right: 1.37%;
 }
 
-/* line 177, ../../sass/_grid.scss */
+/* line 178, ../../sass/_grid.scss */
 .facetedResults {
   display: inline;
   float: left;
@@ -839,7 +840,7 @@ form#registration .inlineLabels .formHint {
   #margin-left: -1em;
 }
 
-/* line 183, ../../sass/_grid.scss */
+/* line 184, ../../sass/_grid.scss */
 .inThisRecord {
   clear: both;
   margin-left: 1.37%;
