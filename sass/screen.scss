@@ -132,6 +132,7 @@ body {
 		background-color: $border-blue;
 		border: 1px solid darken($border-blue, 3);
 		padding: 0 1em 1em 1em;
+		color: $text;
 	
 		fieldset {
 			padding: 0.5em 0;
@@ -192,7 +193,7 @@ table {
 .introduction { 
 	@include text-shadow(0 1px 1px #fff);
 	padding-top: 2em;
-	padding-bottom: 2em;
+	padding-bottom: 1em;
 	text-align: center;
 }
 .tagline {
@@ -254,7 +255,7 @@ table {
 	background-color: $form-blue;
 	border-top: 1px solid $border-blue;
 	border-bottom: 1px solid $border-blue;
-	padding: 1em 0;
+	padding: 0.5em 0;
 	margin-bottom: 1em;
 	
 	.container {
@@ -317,6 +318,12 @@ table {
 		padding: 1em 0;
 	}
 }
+
+#author_confirm_table {
+	td, th {
+		padding-left: 1em;
+	}
+}
 	
 fieldset.buttons {
 	border-top: 1px solid $border-blue;
@@ -330,6 +337,58 @@ fieldset.buttons {
 
 legend { display: none; }
 
+#author_search_string,
+#selected_author_list {
+	display:block;
+	width: 300px;
+	background-color: #fff;
+	border: 1px solid #777;
+	margin: 0;
+	padding: 3px;
+}
+
+#author_search_string {
+	clear:left;
+	border-top: 0;
+	
+	&:focus{
+		outline: none;
+	}
+}
+#selected_author_list{
+	border-bottom: 0;
+	
+	li{	
+		border-radius: 3px;	
+		border: 1px solid dddddd;
+		background: #ececec;
+		color: #555555;
+		font-size: 11px;
+		line-height: 18px;
+		
+		
+		.ui-icon {
+			display: inline-block;
+			backround-image: url(/images/grippy.gif);
+			background-repeat: no-repeat;
+			margin-top: 2px;
+			cursor: move;
+		}
+		
+		.remove {
+			float: right;
+			height: 16px;
+			width: 16px;
+			margin-top: 1px;
+			text-align: center;
+			cursor: pointer;
+		}
+		
+		
+	}
+
+}
+
 
 .actSummary {
 	margin-bottom: 2em;
@@ -341,7 +400,8 @@ legend { display: none; }
 }
 
 .nextAction {
-	padding: 2em 0;
+	margin-bottom: 1em;
+	padding-top: 1em;
 	background-color: $form-blue;
 	border-top: 1px solid $border-blue;
 	border-bottom: 1px solid $border-blue;
@@ -544,8 +604,6 @@ a.biblio-entry{
 
 
 .pubNames {
-	background-color: $form-blue;
-	border-top: 1px solid $border-blue;
 	
 	.candidateNomenclaturalActs {
 		li {
@@ -572,4 +630,9 @@ a.biblio-entry{
 		background-color: $very-light-blue;
 		width: 35em;
 	}
+}
+
+#create_pub_layer .dateSelect .formHint {
+	float: none;
+	width: auto;
 }

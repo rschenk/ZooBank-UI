@@ -41,8 +41,7 @@
 		
 	}
 	
-	label em,
-	.label em{ float: none; width: auto; margin: auto; color: $red; font-style: normal; }
+
 	
 
 	.errorHint {
@@ -138,6 +137,10 @@
 }
 
 
+label em,
+.label em{ float: none; width: auto; margin: auto; color: $red; font-style: normal; }
+
+
 .uniForm .secondaryAction,
 .secondaryAction {
 	float: none;
@@ -147,5 +150,5 @@
 	margin: 0 0 0 1em;
 	padding: 0;
 	text-decoration: underline;
-	
+	cursor: pointer;
 }

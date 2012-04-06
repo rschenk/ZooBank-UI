@@ -174,3 +174,7 @@ form#registration {
 	@include suffix(2);
 	@include omega();
 }
+
+.inThisRecord {
+	@include full;
+}
