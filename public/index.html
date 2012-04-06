@@ -1,45 +1,85 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>
-			ZooBank Mockup 2
-		</title>
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400' rel='stylesheet' type='text/css'>
-		<link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-		<link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />		
-		<!--[if IE]>
-				<link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
-		<![endif]-->
+<head>
 	
-		<!-- These should be minified, concatenated, and go at the bottom of the finished design -->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-			<script>window.jQuery || document.write("<script src='javascripts/jquery.min.js'><\/script>")</script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
-			<script>window.jQuery.ui || document.write('<script src="javascripts/jquery-ui.min.js"><\/script>')</script>
-		<script src="javascripts/underscore.js" type="text/javascript" charset="utf-8"></script>
-		<script src="javascripts/underscore.string.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="javascripts/backbone-min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="javascripts/backbone.modelbinding.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="javascripts/jquery.ui.autocomplete.custom.js" type="text/javascript" charset="utf-8"></script>
-		<script src="javascripts/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
-		<script src="javascripts/uni-form-validation.jquery.js" type="text/javascript" charset="utf-8"></script>
-		
+	<meta http-equiv="Content-Language" content="English">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>ZooBank.org</title>
 	
-	</head>
-	<body>
-		<header id="header">
-			<div class="container">
-				<h1 class="logo"><a href="index.html">ZooBank</a></h1>
-				<nav>
-					<ul>
-						<li><a href="about.html">about</a></li>
-						<li><a href="contact.html">contact</a></li>
-					</ul>
-				</nav>
-		</header>
 
-	<div class="container">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="javascripts/waypoints.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://documentcloud.github.com/underscore/underscore-min.js" type="text/javascript" charset="utf-8"></script>
+	
+
+
+
+    <!-- <link rel="stylesheet" type="text/css" media="all" href="load.cfres?css=cfcss_ceef5ac1d6768775162e84901475ae39.css"> -->
+	<!-- <script type="text/javascript" src="load.cfres?js=cfjs_3b2df63189a297c7f8cb452d54a3c6a7.js"></script><link type="text/css" rel="stylesheet" href="data:text/css,"> -->
+	
+
+	<!-- <script type="text/javascript" src="load.cfres?js=cfjs_8ec90b049197d44d2c821fcaec097f62.js"></script> -->
+
+	<!-- <link href="/admin/css/compass.css" media="screen, projection" rel="stylesheet" type="text/css"> -->
+	<link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	
+
+</head>
+<body>
+	<header id="header">
+		<div class="container">
+			<h1 class="logo"><a href="index.html"><img src="images/zoobank-logo.gif" alt='ZooBank' /></a></h1>
+			<nav>
+				<ul>
+					<li><a href="about.html">about</a></li>
+					<li><a href="contact.html">contact</a></li>
+					<li>logged in as <a href="/editor">rschenk</a></li>
+					<li><a href="/log_out">log out</a></li>
+					<!--
+					<li class="login_container">
+						<a id="login_link" href="#login_form_layer">login</a>
+						<div id="login_form_layer" style="display:none;" class="login_form">
+							<form action="/do_login.cfm" method="post" class="uniForm">
+								<fieldset>
+								    <div class="ctrlHolder">
+								      <label for="username">Username</label> <input name="username" id="username" type="text" >
+								    </div>
+								    <div class="ctrlHolder">
+								      <label for="password">Password</label> <input name="password" id="password" type="password" >
+								    </div>
+								</fieldset>
+								<div class="buttonHolder">
+									<button type="submit" id="btn_login" class="primaryAction small">Log In</button>
+								
+									<button type="submit" id="btn_canel_login" class="secondaryAction">Cancel</button>
+								</div>
+								<div class="helpful_links">
+									<p><a href="{{{{forgot_password}}}}">Forgot your password?</a></p>
+									<p><a href="{{{{forgot_password}}}}">Create an account</a></p>
+								</div>
+							</form>
+						</div>
+					
+						<script type="text/javascript" charset="utf-8">
+							$('#login_link').click(function(){
+								if( $(this).hasClass('menu_open') ) {
+									$(this).removeClass('menu_open');
+									$('#login_form_layer').hide();
+								} else {
+									$(this).addClass('menu_open');
+									$('#login_form_layer').show();
+								}
+							
+								return false;
+							});
+						</script>
+					</li> -->
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+<div class="container">
 	<p class="introduction"><span class="tagline">The official registry of zoological nomenclature.</span> ZooBank provides a means for authors and publishers to electronically register new nomenclatural acts, and assigns unique Life Science Identifiers (<abbr title="Life Science Identifier">lsid</abbr>s) to those names. </p>
 </div>
 
@@ -332,8 +372,34 @@
 	
 <script src="javascripts/scripts.js" type="text/javascript" charset="utf-8"></script>
 
+<div id="footer">
+	<p class="cellsm">
+	<a href="http://www.iczn.org/">ICZN Home</a>
+	&nbsp;|&nbsp;
+	<a href="http://www.iczn.org/code">The Code</a>
+	&nbsp;|&nbsp;
+	<a href="http://iczn.org/category/browse-bulletin/browse">The Bulletin</a>
+	&nbsp;|&nbsp;
+	<a href="http://iczn.org/content/publications">Official Lists and Indexes</a>
+	&nbsp;|&nbsp;
+	<a href="http://iczn.org/content/make-donation">Support ICZN</a>
+	&nbsp;|&nbsp;
+	<a href="http://iczn.org/content/zoobank-committee">Contact ICZN</a>
+	<br>
+	</p>
+	<br>
+	<span class="cellsm">&copy; 2012 International Trust for Zoological Nomenclature
+	<br>
+	The Global Names Architecture is supported by the US National Science Foundation grant DBI-1062387<br>(The Global Names Architecture, an infrastructure for unifying taxonomic databases and services for managers of biological information).
+	</span>
+</div>
 
-	
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-	</body>
+
+
+<script type="text/javascript" src="load.cfres?js=cfjs_8ea839da0a2716fd917cb9159f104fe5.js"></script>
+
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+</body>
 </html>
+
