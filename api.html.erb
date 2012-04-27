@@ -1,0 +1,64 @@
+<div class="searchBar">
+	<div class="container">
+		<input type="text" value="chaetodon tinkeri" class="search_input_field" id="taxon_act_search_string" onchange="general_search();" dir="ltr" x-webkit-speech="" x-webkit-grammar="builtin:search" lang="en" size="65">
+		<span onclick="general_search();" class="primaryAction small">search</span><span id="search_error"></span>
+	</div>
+</div>
+
+
+<div class="container">
+	<div class="textPage api_reference">
+		<h2>ZooBank API</h2>
+		<h3>Authors</h3>
+		<label>Search for an Author [json data]</label> <a href="/Authors.json?search_term=pyle" target="_blank">http://zoobank.explorers-log.com/Authors.json?search_term=pyle</a><br>
+		<label>Search for an Author [json data]</label> <a href="/Authors.json?term=pyle" target="_blank">http://zoobank.explorers-log.com/Authors.json?term=pyle</a> - useful in jQuery Autocompletes<br>
+		<label>Search for an Author [HTML]</label> <a href="/Authors?search_term=pyle" target="_blank">http://zoobank.explorers-log.com/Authors?search_term=pyle</a><br>
+		<label>Get an Author by identifier</label> <a href="/Authors/8C466CBE-3F7D-4DC9-8CBD-26DD3F57E212" target="_blank">http://zoobank.explorers-log.com/Authors/8C466CBE-3F7D-4DC9-8CBD-26DD3F57E212</a><br>
+		<label>View a histogram displaying an Authors publication range</label> <a href="/PublicationHistogram/10F0B043-B68B-4C69-AD12-C2AEC5FA584F" target="_blank">http://zoobank.explorers-log.com/PublicationHistogram/10F0B043-B68B-4C69-AD12-C2AEC5FA584F</a><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/PublicationHistogram/10F0B043-B68B-4C69-AD12-C2AEC5FA584F"><br>
+		<h3>
+			Publications
+		</h3><label>Search for a Publication [json data]</label> <a href="/References.json?search_term=pyle" target="_blank">http://zoobank.explorers-log.com/References.json?search_term=pyle</a><br>
+		<label>Search for a Publication [json data]</label> <a href="/References.json?term=pyle" target="_blank">http://zoobank.explorers-log.com/References.json?term=pyle</a>- useful in jQuery Autocompletes<br>
+		<label>Search for a Publication [HTML]</label> <a href="/References?term=pyle" target="_blank">http://zoobank.explorers-log.com/References?term=pyle</a><br>
+		<label>Get a Publication by identifier [HTML]</label> <a href="/References/427D7953-E8FC-41E8-BEA7-8AE644E6DE77" target="_blank">http://zoobank.explorers-log.com/References/427D7953-E8FC-41E8-BEA7-8AE644E6DE77</a><br>
+		<label>Get a Publication by identifier [json]</label> <a href="/References.json/427D7953-E8FC-41E8-BEA7-8AE644E6DE77" target="_blank">http://zoobank.explorers-log.com/References.json/427D7953-E8FC-41E8-BEA7-8AE644E6DE77</a><br>
+		<br>
+		<h3>
+			Taxon Name Usages
+		</h3><label>Get a Nomenclatural Act by identifier [HTML]</label> <a href="/NomenclaturalActs/6EA8BB2A-A57B-47C1-953E-042D8CD8E0E2" target="_blank">http://zoobank.explorers-log.com/NomenclaturalActs/6EA8BB2A-A57B-47C1-953E-042D8CD8E0E2</a><br>
+		<label>Get a Nomenclatural Act by identifier [json]</label> <a href="/NomenclaturalActs.json/6EA8BB2A-A57B-47C1-953E-042D8CD8E0E2" target="_blank">http://zoobank.explorers-log.com/NomenclaturalActs.json/6EA8BB2A-A57B-47C1-953E-042D8CD8E0E2</a><br>
+		<label>Get Nomenclatural Acts by name [HTML]</label> <a href="/NomenclaturalActs/Pseudanthias_carlsoni" target="_blank">http://zoobank.explorers-log.com/NomenclaturalActs/Pseudanthias_carlsoni</a><br>
+		<label>Get Nomenclatural Acts by name [json]</label> <a href="/NomenclaturalActs.json/Pseudanthias_carlsoni" target="_blank">http://zoobank.explorers-log.com/NomenclaturalActs.json/Pseudanthias_carlsoni</a><br>
+		<label>Search for a Nomenclatural Act [HTML]</label> <a href="/NomenclaturalActs?search_term=pyle" target="_blank">http://zoobank.explorers-log.com/NomenclaturalActs?search_term=pyle</a><br>
+		<label>Search for a Nomenclatural Act [json]</label> <a href="/NomenclaturalActs.json?search_term=pyle" target="_blank">http://zoobank.explorers-log.com/NomenclaturalActs.json?search_term=pyle</a><br>
+		<br>
+		<h3>
+			Identifiers
+		</h3><label>Get Identifiers by id [json]</label> <a href="/Identifiers.json/6EA8BB2A-A57B-47C1-953E-042D8CD8E0E2" target="_blank">http://zoobank.explorers-log.com/Identifiers.json/6EA8BB2A-A57B-47C1-953E-042D8CD8E0E2</a><br>
+		<br>
+		<h3>
+			Graphics
+		</h3>ZooBank Logo [gif]
+		<div class="container" style="background-color:#31309c;width:220px;padding:5px">
+			<h1 class="logo">
+				<img alt="ZooBank Logo" src="/images/zoobank-logo.gif">
+			</h1>
+		</div>ZooBank Logo [jpg] <img src="/images/ZooBankBanner.jpg"><br>
+		<h3>
+			Definitions
+		</h3><label>Reference</label>A static documentation source. Examples include: Publications, printed documents, static electronic documents, snapshop versions of databases.<br>
+		<br>
+		<label>Taxon Name Usage</label>Usage instances or treatment of a name of an organism within a reference.<br>
+		<br>
+		<label>Nomenclatural Act</label>The subset of taxon name usage instances that involve code-goverened actions on scientific names. Examples: Establishment of names for new taxa, subsequent new combinations (ICNafp), lectotypifications, neotypifications, first-reviser actions (ICZN).<br>
+		<br>
+		<label>Original Name Usage</label>A subset of nomenclatural acts that represent the establishment of a name for a new taxon, in compliance with the relevent code.<br>
+		<br>
+		<label>Protonym</label>The first usage of a particular scientific name within a reference, regardless of whether or naot it is established in complicance with the relevent code.<br>
+		<br>
+		<label>Scientific Names</label>Distinct full name string (genus and higher - all alternate spellings of a given name) Ranks below genus, all variant spellings and variant combinations . Each row is a distinct text string name, including authorship. ProtonymID can be repeated across multiple results.<br>
+		All text string renderings of a complete scientific name, anchored to a protonym.<br>
+		<br>
+	</div>
+</div>

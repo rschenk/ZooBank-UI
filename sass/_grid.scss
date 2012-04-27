@@ -56,6 +56,11 @@ $side-gutter-width: $gutter-width;  /* 1em padding at the edges of the page as w
 	min-width: 40em;
 }
 
+.api_instructions {
+	@include full;
+	@include suffix(0);
+}
+
 form#registration {
 	.ctrlHolder {
 		@include full;
